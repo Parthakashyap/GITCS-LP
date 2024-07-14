@@ -12,7 +12,7 @@ const BusinessPotentialSection: React.FC = () => {
           </button>
         </div>
         <div className="hidden lg:flex space-x-4">
-          <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center absolute right-70 -rotate-12">
+          <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center absolute lg:right-70 -rotate-12">
             <h3 className="text-lg font-medium mb-2">Total Sales</h3>
             <p className="text-2xl font-bold">$513,068.98</p>
             <p className="text-green-500 text-sm">+12% on this week</p>
