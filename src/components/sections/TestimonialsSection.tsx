@@ -1,6 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
+import 'swiper/swiper-bundle.css'; // Import Swiper styles
+import 'swiper/css/navigation'; // Import Swiper navigation module styles
 import { Navigation } from 'swiper/modules';
 
 const testimonials = [
@@ -21,6 +22,20 @@ const testimonials = [
 const TestimonialsSection: React.FC = () => {
   return (
     <section className="py-24">
+      <style>
+        {`
+          /* Hide default Swiper navigation buttons */
+          .swiper-button-prev,
+          .swiper-button-next {
+            display: none !important;
+          }
+
+          /* Custom styles for the navigation buttons */
+          .custom-swiper-button {
+            display: flex !important;
+          }
+        `}
+      </style>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center items-center gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8 max-w-sm sm:max-w-2xl lg:max-w-full mx-auto">
           <div className="w-full lg:w-2/5">
@@ -31,7 +46,7 @@ const TestimonialsSection: React.FC = () => {
             <p className='mb-8'>Saas dashboard that enable users to perform various tasks and activities related to their business</p>
             <div className="swiper-wrapper flex items-center justify-center lg:justify-start gap-10">
               <button id="slider-button-left"
-                className="swiper-button-prev group flex justify-center items-center border border-solid border-pink-500 w-12 h-12 transition-all duration-500 rounded-full hover:bg-pink-500"
+                className="custom-swiper-button group flex justify-center items-center border border-solid border-pink-500 w-12 h-12 transition-all duration-500 rounded-full hover:bg-pink-500"
                 data-carousel-prev>
                 <svg className="h-6 w-6 text-pink-500 group-hover:text-white" viewBox="0 0 24 24" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +57,7 @@ const TestimonialsSection: React.FC = () => {
                 </svg>
               </button>
               <button id="slider-button-right"
-                className="swiper-button-next group flex justify-center items-center border border-solid border-pink-500 w-12 h-12 transition-all duration-500 rounded-full hover:bg-pink-500"
+                className="custom-swiper-button group flex justify-center items-center border border-solid border-pink-500 w-12 h-12 transition-all duration-500 rounded-full hover:bg-pink-500"
                 data-carousel-next>
                 <svg className="h-6 w-6 text-pink-500 group-hover:text-white" viewBox="0 0 24 24" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +88,6 @@ const TestimonialsSection: React.FC = () => {
                     </div>
                   </div>
                   <div className="flex items-center mb-5 sm:mb-9 gap-2 text-amber-500 transition-all duration-500">
-                    {/* Assuming the rating stars are to be displayed */}
                     {[...Array(5)].map((_, starIndex) => (
                       <svg key={starIndex} className="w-5 h-5" viewBox="0 0 18 17" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -94,7 +108,4 @@ const TestimonialsSection: React.FC = () => {
   );
 };
 
-
-  
-  export default TestimonialsSection;
-  
+export default TestimonialsSection;
