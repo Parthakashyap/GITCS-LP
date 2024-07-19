@@ -7,7 +7,6 @@ import FaqSection from "./sections/FaqSection";
 import { BentoDemo } from "./feature-bento-grid";
 import AnimatedShinyText from "./animated-introduction";
 import { VelocityScroll } from "./scroll-velocity";
-import OrbitingCircles from "./all-in-one";
 
 const Body: React.FC = () => {
   return (
@@ -50,9 +49,12 @@ const Body: React.FC = () => {
           </p>
         </div>
         <BentoDemo />
-
-    
-
+        <div className="mt-12">
+          <VelocityScroll
+            text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure,"
+            className=" text-7xl font-bold"
+          />
+        </div>
       </div>
       <TestimonialsSection />
       <PricingSection />
