@@ -31,11 +31,11 @@ const Body: React.FC = () => {
           </button>
         </div>
 
-        <BorderBeam/>
-          <div className="relative w-[90%] mx-auto mt-8">
-            <img src={landingImage} alt="hero" className="w-full" />
-            <div className="absolute inset-x-0 bottom-0 h-[50%] rounded-xl bg-gradient-to-t from-black to-transparent"></div>
-          </div>
+        <div className="relative w-[90%] mx-auto mt-8">
+          <img src={landingImage} alt="hero" className="w-full" />
+          <div className="absolute inset-x-0 bottom-0 h-[50%] rounded-3xl bg-gradient-to-t from-black to-transparent"></div>
+          <BorderBeam className=" rounded-3xl" />
+        </div>
       </div>
       <div className="hidden sm:block">
         <HeroScrollDemo />

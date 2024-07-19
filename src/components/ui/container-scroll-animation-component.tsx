@@ -1,9 +1,17 @@
 "use client";
 
 import AnimatedShinyText from "../animated-introduction";
+import AvatarCircles from "../magicui/avatar";
 import { ContainerScroll } from "./container-scroll-animation";
 
 export function HeroScrollDemo() {
+  const avatarUrls = [
+    "https://picsum.photos/id/10/300/300",
+    "https://picsum.photos/id/11/300/300",
+    "https://picsum.photos/id/12/300/300",
+    "https://picsum.photos/id/13/300/300",
+    "https://picsum.photos/id/14/300/300",
+  ];
   return (
     <div className="flex flex-col overflow-hidden">
       <ContainerScroll
@@ -13,7 +21,6 @@ export function HeroScrollDemo() {
               <div className="bg-black/10 p-1 mb-11 border-2 border-purple-500/40 rounded-full">
                 <AnimatedShinyText children="🎉 7 Day Free Trial - No Credit card required 	&rarr;" />
               </div>
-
             </div>
             <h1 className="text-8xl font-bold text-center tracking-tight">
               Unlock the
@@ -28,6 +35,9 @@ export function HeroScrollDemo() {
               Turn Data into Actionable Insights <br />
               with Our SaaS Dashboard
             </p>
+            <div className="flex justify-center items-center">
+              <AvatarCircles avatarUrls={avatarUrls} />
+            </div>
             <button className="mt-8 mb-24 bg-black text-white py-4 px-6 rounded-full">
               Get Started &rarr;
             </button>
