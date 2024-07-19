@@ -5,7 +5,7 @@ import Footer from './components/footer';
 
 const App: React.FC = () => {
   return (
-    <div>
+    <div className=' overflow-hidden'>
       <Navbar />
       <Body/>
       <Footer/>
