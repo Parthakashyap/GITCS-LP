@@ -3,7 +3,8 @@
 import AnimatedShinyText from "../animated-introduction";
 import AvatarCircles from "../magicui/avatar";
 import { ContainerScroll } from "./container-scroll-animation";
-
+import homesvg from "../../svg/Vector_6.svg"
+import bodyBg from "../../Images/SaaS-Dashboard.png"
 export function HeroScrollDemo() {
   const avatarUrls = [
     "https://picsum.photos/id/10/300/300",
@@ -27,9 +28,9 @@ export function HeroScrollDemo() {
               <br /> <span className="text-blue-500">Power</span> of Data
             </h1>
             <img
-              src={"./src/svg/Vector_6.svg"}
+              src={homesvg}
               alt="Vector 6"
-              className="absolute w-32 ml-[100rem] sm:ml-[24rem] md:ml-[23rem] lg:ml-[36rem]"
+              className="absolute w-40 scale-125 ml-[120rem] sm:ml-[24rem] md:ml-[29rem] lg:ml-[40rem]"
             />
             <p className="text-center text-lg mt-8">
               Turn Data into Actionable Insights <br />
@@ -45,7 +46,7 @@ export function HeroScrollDemo() {
         }
       >
         <img
-          src={`./src/Images/SaaS-Dashboard.png`}
+          src={bodyBg}
           alt="hero"
           height={720}
           width={1400}
