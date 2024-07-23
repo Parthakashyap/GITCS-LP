@@ -13,6 +13,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "./navigation-menu";
+import { Cookie } from "lucide-react";
 
 interface Category {
   title: string;
@@ -24,255 +25,334 @@ interface Categories {
   [key: string]: Category[];
 }
 
+const company = [
+  {
+    title: "About",
+    href: "/about",
+  },
+  {
+    title: "Brain Stories",
+    href: "/stories",
+  },
+  {
+    title: "Careers",
+    href: "/careers",
+  },
+];
 const categories: Categories = {
-  Sales: [
+  MDO: [
     {
-      title: "CRM",
+      title: "Organisation Structure Maker ",
       href: "/sales/crm",
       description: "Comprehensive CRM platform for customer-facing teams.",
     },
     {
-      title: "Bigin",
+      title: "Flow Chart Maker ",
       href: "/sales/bigin",
       description: "Simple CRM for small businesses moving from spreadsheets.",
     },
     {
-      title: "Forms",
+      title: "Designation Profile ",
       href: "/sales/forms",
       description: "Build online forms for every business need.",
     },
     {
-      title: "SalesIQ",
+      title: "Task Delegation ",
       href: "/sales/salesiq",
       description: "Live chat app to engage and convert website visitors.",
     },
     {
-      title: "Bookings",
+      title: "Events ",
       href: "/sales/bookings",
-      description: "Appointment scheduling app for consultations with customers.",
+      description:
+        "Appointment scheduling app for consultations with customers.",
     },
     {
-      title: "Sign",
+      title: "Vault",
       href: "/sales/sign",
       description: "Digital signature app for businesses.",
     },
     {
-      title: "RouteIQ",
+      title: "Group Chat",
       href: "/sales/routeiq",
-      description: "Comprehensive sales map visualization and optimal route planning solution.",
+      description:
+        "Comprehensive sales map visualization and optimal route planning solution.",
     },
     {
-      title: "Thrive",
+      title: "Master List ",
       href: "/sales/thrive",
       description: "Complete loyalty and affiliate management platform. NEW",
     },
     {
       title: "CRM Plus",
       href: "/sales/crm-plus",
-      description: "Unified platform to deliver top-notch customer experience. SUITE",
+      description:
+        "Unified platform to deliver top-notch customer experience. SUITE",
     },
   ],
-  Marketing: [
+  HR: [
     {
-      title: "Social",
+      title: "Hiring Brainflow",
       href: "/marketing/social",
       description: "All-in-one social media management software.",
     },
     {
-      title: "Campaigns",
+      title: "Recruitment Brainflow",
       href: "/marketing/campaigns",
-      description: "Create, send, and track targeted email campaigns that drive sales.",
+      description:
+        "Create, send, and track targeted email campaigns that drive sales.",
     },
     {
-      title: "Forms",
+      title: "Onboarding Brainflow",
       href: "/marketing/forms",
       description: "Build online forms for every business need.",
     },
     {
-      title: "Survey",
+      title: "Training & Evaluation Brainflow ",
       href: "/marketing/survey",
       description: "Design surveys to reach and interact with your audience.",
     },
     {
-      title: "Sites",
+      title: "Joining & Handover Brainflow",
       href: "/marketing/sites",
-      description: "Online website builder with extensive customisation options.",
+      description:
+        "Online website builder with extensive customisation options.",
     },
     {
-      title: "PageSense",
+      title: "Seperation Brainflow",
       href: "/marketing/pagesense",
-      description: "Website conversion optimization and personalisation platform.",
+      description:
+        "Website conversion optimization and personalisation platform.",
     },
+  ],
+  ADMIN: [
     {
-      title: "Backstage",
-      href: "/marketing/backstage",
-      description: "End-to-end event management software.",
-    },
-    {
-      title: "Webinar",
-      href: "/marketing/webinar",
-      description: "Webinar platform for webcasting online webinars.",
-    },
-    {
-      title: "Commerce",
-      href: "/marketing/commerce",
+      title: "Task Management ",
+      href: "/commerce/commerce",
       description: "eCommerce platform to manage and market your online store.",
     },
     {
-      title: "Marketing Automation",
-      href: "/marketing/automation",
-      description: "All-in-one marketing automation software.",
+      title: "Front Office ",
+      href: "/commerce/commerce",
+      description: "eCommerce platform to manage and market your online store.",
     },
     {
-      title: "LandingPage",
-      href: "/marketing/landingpage",
-      description: "Smart landing page builder to increase conversion rates. NEW",
+      title: "Fuel Mgmt System  ",
+      href: "/commerce/commerce",
+      description: "eCommerce platform to manage and market your online store.",
     },
     {
-      title: "SalesIQ",
-      href: "/marketing/salesiq",
-      description: "Live chat app to engage and convert website visitors.",
+      title: "Event Mgmt System  ",
+      href: "/commerce/commerce",
+      description: "eCommerce platform to manage and market your online store.",
     },
     {
-      title: "Sign",
-      href: "/marketing/sign",
-      description: "Digital signature app for businesses.",
+      title: "Greetings Mgmt System  ",
+      href: "/commerce/commerce",
+      description: "eCommerce platform to manage and market your online store.",
     },
     {
-      title: "Thrive",
-      href: "/marketing/thrive",
-      description: "Complete loyalty and affiliate management platform. NEW",
-    },
-    {
-      title: "Publish",
-      href: "/marketing/publish",
-      description: "Manage all your local business listings on a single platform.",
-    },
-    {
-      title: "Marketing Plus",
-      href: "/marketing/marketing-plus",
-      description: "Unified marketing platform for marketing teams. SUITE",
-    },
-  ],
-  "Commerce and POS": [
-    {
-      title: "Commerce",
+      title: "Asset Mgmt System  ",
       href: "/commerce/commerce",
       description: "eCommerce platform to manage and market your online store.",
     },
   ],
-  Service: [
+  IT: [
     {
-      title: "Desk",
+      title: "IT Mgmt System",
       href: "/service/desk",
       description: "Helpdesk software to deliver great customer support.",
     },
-    {
-      title: "Assist",
-      href: "/service/assist",
-      description: "Remote support and unattended remote access software.",
-    },
-    {
-      title: "Lens",
-      href: "/service/lens",
-      description: "Interactive remote assistance software with augmented reality.",
-    },
-    {
-      title: "FSM",
-      href: "/service/fsm",
-      description: "End-to-end field service management platform for service businesses. NEW",
-    },
-    {
-      title: "SalesIQ",
-      href: "/service/salesiq",
-      description: "Live chat app to engage and convert website visitors.",
-    },
-    {
-      title: "Bookings",
-      href: "/service/bookings",
-      description: "Appointment scheduling app for consultations with customers.",
-    },
   ],
-  Finance: [
+  MARKETING: [
     {
-      title: "Accounting",
+      title: "Lead to Order ",
       href: "/finance/accounting",
       description: "Manage your finances and accounts.",
     },
     {
-      title: "Billing",
+      title: "FMS - Fund Demand",
       href: "/finance/billing",
       description: "Manage and automate your billing processes.",
     },
     {
-      title: "Expense",
+      title: "Cash Collection Engine ",
       href: "/finance/expense",
       description: "Track and manage your business expenses.",
     },
     {
-      title: "Financial Planning",
+      title: "Legal Matter System ",
       href: "/finance/planning",
       description: "Plan and forecast your financial strategy.",
     },
     {
-      title: "Payroll",
+      title: "Bank Guarantee System",
       href: "/finance/payroll",
       description: "Manage employee payroll efficiently.",
     },
   ],
-  "Email and Collaboration": [
+  PROCUREMENT: [
     {
-      title: "Email Marketing",
+      title: "Procurement System ",
+      href: "/email/marketing",
+      description: "Send marketing emails to your customers.",
+    },
+    {
+      title: "Procurement Funnel  ",
+      href: "/email/marketing",
+      description: "Send marketing emails to your customers.",
+    },
+    {
+      title: "Vendor Funnel",
       href: "/email/marketing",
       description: "Send marketing emails to your customers.",
     },
   ],
-  "Human Resources": [
+  STORES: [
     {
-      title: "Employee Management",
+      title: "Warehouse Mgmt System",
+      href: "/hr/management",
+      description: "Manage your employees and their information.",
+    },
+    {
+      title: "Challan Issue System",
+      href: "/hr/management",
+      description: "Manage your employees and their information.",
+    },
+    {
+      title: "Material Mgm System",
+      href: "/hr/management",
+      description: "Manage your employees and their information.",
+    },
+    {
+      title: "Inventory Mgmt System",
       href: "/hr/management",
       description: "Manage your employees and their information.",
     },
   ],
-  Legal: [
+  PROJECTS: [
     {
-      title: "Compliance",
+      title: "Attendance System",
+      href: "/legal/compliance",
+      description: "Ensure your business complies with laws.",
+    },
+    {
+      title: "Contractor Management System",
+      href: "/legal/compliance",
+      description: "Ensure your business complies with laws.",
+    },
+    {
+      title: "BOM Mgmt System",
+      href: "/legal/compliance",
+      description: "Ensure your business complies with laws.",
+    },
+    {
+      title: "Project Mgmt System ",
+      href: "/legal/compliance",
+      description: "Ensure your business complies with laws.",
+    },
+    {
+      title: "TPI System ",
       href: "/legal/compliance",
       description: "Ensure your business complies with laws.",
     },
   ],
-  "Security and IT Management": [
+  FINANCE: [
     {
-      title: "Cybersecurity",
+      title: "CFR",
+      href: "/security/cybersecurity",
+      description: "Protect your business from cyber threats.",
+    },
+    {
+      title: "Statutory Complainces",
+      href: "/security/cybersecurity",
+      description: "Protect your business from cyber threats.",
+    },
+    {
+      title: "Budgeting ",
+      href: "/security/cybersecurity",
+      description: "Protect your business from cyber threats.",
+    },
+    {
+      title: "Payment Mgmt System (Recurring Payments)  ",
       href: "/security/cybersecurity",
       description: "Protect your business from cyber threats.",
     },
   ],
-  "BI and Analytics": [
+  ACCOUNTS: [
     {
-      title: "Data Analytics",
+      title: "Expense Mgmt System ",
+      href: "/bi/analytics",
+      description: "Analyze your business data.",
+    },
+    {
+      title: "Financial Summary System",
       href: "/bi/analytics",
       description: "Analyze your business data.",
     },
   ],
-  "Project Management": [
+  "PROJECT MANAGEMENT": [
     {
       title: "Task Management",
       href: "/project/task",
       description: "Manage your projects and tasks.",
     },
   ],
-  "Developer Platforms": [
+  GIGS: [
     {
-      title: "API Documentation",
+      title: "Help Ticket System ",
       href: "/developer/api",
       description: "Access API documentation for development.",
+    },
+    {
+      title: "Annual Legal Compliance Calendar",
+      href: "/developer/api",
+      description: "Access API documentation for development.",
+    },
+    {
+      title: "Score Card (MIS)",
+      href: "/developer/api",
+      description: "Access API documentation for development.",
+    },
+    {
+      title: "To Do List ",
+      href: "/developer/api",
+      description: "Access API documentation for development.",
+    },
+    {
+      title: "One Time Task",
+      href: "/developer/api",
+      description: "Access API documentation for development.",
+    },
+    {
+      title: "Calender",
+      href: "/developer/api",
+      description: "Access API documentation for development.",
+    },
+    {
+      title: "Learning Center ",
+      href: "/developer/api",
+      description: "Access API documentation for development.",
+    },
+  ],
+  LOGISTICS: [
+    {
+      title: "FMS – Logistics",
+      href: "/logistics/fms",
+      description: "Manage your logistics and transportation.",
+    },
+  ],
+  AUDIT: [
+    {
+      title: "RT – Audit",
+      href: "/audit/audit",
+      description: "Manage your audits and compliance.",
     },
   ],
 };
 
 export function NavigationMenuDemo() {
-  const [activeCategory, setActiveCategory] = useState("Sales");
+  const [activeCategory, setActiveCategory] = useState("MDO");
 
   return (
     <NavigationMenu>
@@ -280,7 +360,7 @@ export function NavigationMenuDemo() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Products</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div className="flex">
+            <div className="flex p-5">
               <ul className="w-1/4">
                 {Object.keys(categories).map((category) => (
                   <li key={category}>
@@ -293,16 +373,19 @@ export function NavigationMenuDemo() {
                   </li>
                 ))}
               </ul>
-              <div className="w-3/4">
+              <div className="w-[85%]">
                 <ul className="grid gap-3 p-4 md:w-[1300px] lg:w-[1400px] lg:grid-cols-[1fr.90fr_3fr]">
                   {categories[activeCategory]?.map((component) => (
-                    <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
-                    >
-                      {component.description}
-                    </ListItem>
+                    <div className="flex items-center gap-3">
+                      <Cookie />
+                      <ListItem
+                        key={component.title}
+                        title={component.title}
+                        href={component.href}
+                      >
+                        {component.description}
+                      </ListItem>
+                    </div>
                   ))}
                 </ul>
               </div>
@@ -313,14 +396,12 @@ export function NavigationMenuDemo() {
           <NavigationMenuTrigger>Company</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[300px] gap-3 p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px]">
-              {Object.values(categories).flat().map((component) => (
+              {company.map((component) => (
                 <ListItem
                   key={component.title}
                   title={component.title}
                   href={component.href}
-                >
-                  {component.description}
-                </ListItem>
+                ></ListItem>
               ))}
             </ul>
           </NavigationMenuContent>
