@@ -14,8 +14,17 @@ import {
   NavigationMenuTrigger,
 } from "./navigation-menu";
 
+interface Category {
+  title: string;
+  href: string;
+  description: string;
+}
 
-const categories = {
+interface Categories {
+  [key: string]: Category[];
+}
+
+const categories: Categories = {
   Sales: [
     {
       title: "CRM",
@@ -286,7 +295,7 @@ export function NavigationMenuDemo() {
               </ul>
               <div className="w-3/4">
                 <ul className="grid gap-3 p-4 md:w-[1300px] lg:w-[1400px] lg:grid-cols-[1fr.90fr_3fr]">
-                  {categories[activeCategory].map((component) => (
+                  {categories[activeCategory]?.map((component) => (
                     <ListItem
                       key={component.title}
                       title={component.title}
