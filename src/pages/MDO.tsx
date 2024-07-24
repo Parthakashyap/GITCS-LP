@@ -5,7 +5,12 @@ import FaqSection from "../components/sections/FaqSection";
 const MDO: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col items-center bg-gradient-to-r from-[#E5F3FA] via-[#EAF4F6] to-[#E5F3FA]">
-      <div className="text-center mt-16 px-4">
+      <img
+        src="./src/Images/crm-banner-bg.jpg"
+        alt="MDO"
+        className=" absolute w-[93rem] h-[32rem] rounded-b-[30%]"
+      />
+      <div className="text-center mt-16 px-4 z-10">
         <h1 className="text-6xl font-black text-[#0033FF]">
           IT'S EASY TO GROW
         </h1>
@@ -14,7 +19,7 @@ const MDO: React.FC = () => {
           resiliently, with the magic of contextual AI and thoughtful UI.
         </p>
       </div>
-      <div className="mt-8 flex justify-center items-center w-full px-4 space-x-4">
+      <div className="mt-8 flex z-10 justify-center items-center w-full px-4 space-x-4">
         <div className="bg-white p-4 rounded-lg shadow-lg max-w-xs">
           <p className="text-gray-700 font-bold">
             Visionary in 2023 Magic Quadrant™
@@ -75,7 +80,7 @@ const MDO: React.FC = () => {
         </div>
       </div>
 
-      <div className="mt-16 text-center">
+      <div className="mt-16 z-10 text-center">
         <h2 className="text-3xl font-bold text-[#0033FF]">
           Over 100 Million superheroes grow with us
         </h2>
@@ -90,7 +95,7 @@ const MDO: React.FC = () => {
         </div>
       </div>
 
-      <div className="mt-16 p-8 rounded-xl max-w-5xl w-full text-center flex flex-col items-center">
+      <div className="mt-16 mb-12 z-10 p-8 rounded-xl max-w-5xl w-full text-center flex flex-col items-center">
         <div className="flex items-center">
           <img
             src="./src/Images/undraw_online_stats_0g94.svg"
@@ -112,6 +117,29 @@ const MDO: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <div className="mt-16 mb-12 z-10 p-8 rounded-xl max-w-5xl w-full text-center flex flex-col items-center">
+        
+        <div className="flex items-center mt-12">
+          <div className="text-left">
+            <p className="text-gray-700 text-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              unde neque magnam dolorum! Ipsam vitae, laudantium adipisci
+              molestias, aperiam blanditiis velit mollitia deleniti, aliquid
+              delectus deserunt ratione architecto eaque enim.
+            </p>
+            
+            <p className="mt-2 text-gray-700 font-bold">Ponappa PM</p>
+            <p className="text-gray-500">Head, Brigade Plus</p>
+          </div>
+          <img
+          src="./src/Images/illustration-2.svg"
+          alt="Person"
+          className=" w-[32rem] mr-4"
+        />
+        </div>
+      </div>
+
       <PricingSection />
       <FaqSection />
     </div>
