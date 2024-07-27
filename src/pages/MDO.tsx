@@ -1,146 +1,277 @@
-import React from "react";
-import PricingSection from "../components/sections/PricingSection";
+import { Check } from "lucide-react";
+import resume from "../assets/resume.svg";
+import charts from "../Images/charts.svg";
+import flow_chart from "../Images/undraw_bear_market_ania.svg";
+import designation from "../Images/undraw_post_re_mtr4.svg";
+import tasks from "../Images/undraw_add_tasks_re_s5yj.svg";
 import FaqSection from "../components/sections/FaqSection";
+import events from "../Images/undraw_events_re_98ue.svg";
+import PricingSection from "../components/sections/PricingSection";
+import vault from "../Images/undraw_vault_re_s4my.svg";
+import group_chat from "../Images/undraw_group_chat_re_frmo.svg";
+import master_chat from "../Images/undraw_professor_re_mj1s.svg";
+import crm_plus from "../Images/undraw_projections_re_ulc6.svg"
 
-const MDO: React.FC = () => {
+const MDO = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center bg-gradient-to-r from-[#E5F3FA] via-[#EAF4F6] to-[#E5F3FA]">
-      <img
-        src="./src/Images/crm-banner-bg.jpg"
-        alt="MDO"
-        className=" absolute w-[93rem] h-[32rem] rounded-b-[30%]"
-      />
-      <div className="text-center mt-16 px-4 z-10">
-        <h1 className="text-6xl font-black text-[#0033FF]">
-          IT'S EASY TO GROW
-        </h1>
-        <p className="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
-          Convert more, build lasting relationships, and grow your business
-          resiliently, with the magic of contextual AI and thoughtful UI.
-        </p>
+    <div className="flex justify-center items-center text-center flex-col gap-12 mt-20   p-4">
+      <h1 className=" md:text-7xl text-5xl font-bold">
+        Deliver exceptional <br className=" hidden md:block" /> employee
+        experiences
+      </h1>
+      <p className=" md:w-[50%] text-center opacity-60">
+        The world of work is changing rapidly and so should your HR practices.
+        Brain People is a cloud-based HR software crafted to nurture employees,
+        quickly adapt to changes, and make HR management agile and effective.
+        Simplify your HR operations, retain talent, and build a high-performing
+        workforce while putting employee experience first.
+      </p>
+      <div className="flex gap-3">
+        <button className="bg-red-500 text-white px-4 py-3 rounded-md">
+          Get started
+        </button>
+        <button className="bg-white text-blue-500 px-4 py-3 rounded-md border ">
+          Learn more
+        </button>
       </div>
-      <div className="mt-8 flex z-10 justify-center items-center w-full px-4 space-x-4">
-        <div className="bg-white p-4 rounded-lg shadow-lg max-w-xs">
-          <p className="text-gray-700 font-bold">
-            Visionary in 2023 Magic Quadrant™
+      <img src={resume} alt="" className=" w-[600px]" />
+      <section className="flex items-center md:flex-row flex-col p-4 gap-20 md:gap-40 w-full justify-center mt-44">
+        <img src={charts} alt="" className=" md:w-1/3" />
+        <div className="flex gap-8 flex-col">
+          <h1 className="text-5xl font-bold text-left">
+            Organisation Chart Maker
+          </h1>
+          <p className=" max-w-xl text-lg text-left opacity-60">
+            Say goodbye to mundane spreadsheets or rigid systems to manage HR
+            tasks. Get smarter and more efficient software with features
+            designed to free you from administrative work.
           </p>
-          <p className="text-gray-500">for Sales Force Automation Platforms</p>
-          <a href="#" className="text-blue-500">
-            Read more &gt;&gt;
-          </a>
+          <ul className="flex flex-col gap-3 items-start">
+            {[1, 2, 3, 4, 5].map((_, index) => (
+              <div
+                className="flex gap-3 items-center break-words flex-wrap"
+                key={index}
+              >
+                <div className="bg-green-500/10 p-2 rounded-full">
+                  <Check size={10} />
+                </div>
+                <li>Employee Database </li>
+              </div>
+            ))}
+          </ul>
         </div>
-        {/* <div className="bg-white p-8 rounded-xl shadow-lg max-w-md w-full">
-          <h2 className="text-2xl font-bold mb-4">Get started with your 15-day free trial</h2>
-          <form className="flex flex-col space-y-4">
-            <input
-              type="text"
-              placeholder="Full Name"
-              className="p-2 border border-gray-300 rounded"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="p-2 border border-gray-300 rounded"
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              className="p-2 border border-gray-300 rounded"
-            />
-            <input
-              type="tel"
-              placeholder="Phone"
-              className="p-2 border border-gray-300 rounded"
-            />
-            <div className="flex items-center space-x-2">
-              <input type="checkbox" id="terms" className="h-4 w-4" />
-              <label htmlFor="terms" className="text-sm text-gray-600">
-                I agree to the Terms of Service and Privacy Policy.
-              </label>
-            </div>
-            <button className="bg-red-500 text-white p-2 rounded">GET STARTED</button>
-          </form>
-          <div className="mt-4 flex flex-col space-y-2 justify-center">
-            <button className="bg-blue-500 text-white p-2 rounded flex items-center justify-center">
-              <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google logo" className="mr-2" />
-              Sign in using Google
-            </button>
-            <button className="bg-blue-700 text-white p-2 rounded flex items-center justify-center">
-              <img src="https://img.icons8.com/color/16/000000/linkedin.png" alt="LinkedIn logo" className="mr-2" />
-              Sign in using LinkedIn
-            </button>
-          </div>
-        </div> */}
-        <div className="bg-white p-4 rounded-lg shadow-lg max-w-xs">
-          <p className="text-gray-700 font-bold">Nucleus Research - Leader</p>
-          <p className="text-gray-500">SFA Technology Value Matrix 2024</p>
-          <a href="#" className="text-blue-500">
-            Read more &gt;&gt;
-          </a>
-        </div>
-      </div>
+      </section>
 
-      <div className="mt-16 z-10 text-center">
-        <h2 className="text-3xl font-bold text-[#0033FF]">
-          Over 100 Million superheroes grow with us
-        </h2>
-        <div className="flex justify-center mt-4 space-x-4">
-          <img src="logo1.png" alt="Logo 1" className="h-12" />
-          <img src="logo2.png" alt="Logo 2" className="h-12" />
-          <img src="logo3.png" alt="Logo 3" className="h-12" />
-          <img src="logo4.png" alt="Logo 4" className="h-12" />
-          <img src="logo5.png" alt="Logo 5" className="h-12" />
-          <img src="logo6.png" alt="Logo 6" className="h-12" />
-          <img src="logo7.png" alt="Logo 7" className="h-12" />
-        </div>
-      </div>
+      <hr className=" bg-black w-full" />
 
-      <div className="mt-16 mb-12 z-10 p-8 rounded-xl max-w-5xl w-full text-center flex flex-col items-center">
-        <div className="flex items-center">
-          <img
-            src="./src/Images/undraw_online_stats_0g94.svg"
-            alt="Person"
-            className=" w-[32rem] mr-4"
-          />
-          <div className="text-left">
-            <p className="text-gray-700 text-lg">
-              Zoho CRM has helped us achieve 4x ROI in just two years, allowing
-              us to excel as one of the largest full-service stores for
-              interiors in the real estate industry. Zoho's 360-degree view has
-              enabled us to offer great value and experiences to our customers.
-            </p>
-            <a href="#" className="text-blue-500">
-              Read more &gt;&gt;
-            </a>
-            <p className="mt-2 text-gray-700 font-bold">Ponappa PM</p>
-            <p className="text-gray-500">Head, Brigade Plus</p>
-          </div>
+      <section className="flex items-center p-4 gap-20 md:gap-40 md:flex-row flex-col w-full justify-center mt-44">
+        <div className="flex gap-8 flex-col">
+          <h1 className="text-5xl font-bold text-left">Flow Chart Maker</h1>
+          <p className=" max-w-xl text-lg text-left opacity-60">
+            Say goodbye to mundane spreadsheets or rigid systems to manage HR
+            tasks. Get smarter and more efficient software with features
+            designed to free you from administrative work.
+          </p>
+          <ul className="flex flex-col gap-3 items-start">
+            {[1, 2, 3, 4, 5].map((_, index) => (
+              <div
+                className="flex gap-3 items-center break-words flex-wrap"
+                key={index}
+              >
+                <div className="bg-green-500/10 p-2 rounded-full">
+                  <Check size={10} />
+                </div>
+                <li>Employee Database </li>
+              </div>
+            ))}
+          </ul>
         </div>
-      </div>
 
-      <div className="mt-16 mb-12 z-10 p-8 rounded-xl max-w-5xl w-full text-center flex flex-col items-center">
-        
-        <div className="flex items-center mt-12">
-          <div className="text-left">
-            <p className="text-gray-700 text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              unde neque magnam dolorum! Ipsam vitae, laudantium adipisci
-              molestias, aperiam blanditiis velit mollitia deleniti, aliquid
-              delectus deserunt ratione architecto eaque enim.
-            </p>
-            
-            <p className="mt-2 text-gray-700 font-bold">Ponappa PM</p>
-            <p className="text-gray-500">Head, Brigade Plus</p>
-          </div>
-          <img
-          src="./src/Images/illustration-2.svg"
-          alt="Person"
-          className=" w-[32rem] mr-4"
-        />
+        <img src={flow_chart} alt="" className=" md:w-1/3" />
+      </section>
+
+      <hr className=" bg-black w-full" />
+
+      <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col w-full justify-center mt-44">
+        <img src={designation} alt="" className=" md:w-1/3" />
+        <div className="flex gap-8 flex-col">
+          <h1 className="text-5xl font-bold text-left">Designation Profile</h1>
+          <p className=" max-w-xl text-lg text-left opacity-60">
+            Say goodbye to mundane spreadsheets or rigid systems to manage HR
+            tasks. Get smarter and more efficient software with features
+            designed to free you from administrative work.
+          </p>
+          <ul className="flex flex-col gap-3 items-start">
+            {[1, 2, 3, 4, 5].map((_, index) => (
+              <div
+                className="flex gap-3 items-center break-words flex-wrap"
+                key={index}
+              >
+                <div className="bg-green-500/10 p-2 rounded-full">
+                  <Check size={10} />
+                </div>
+                <li>Employee Database </li>
+              </div>
+            ))}
+          </ul>
         </div>
-      </div>
+      </section>
 
-      <PricingSection />
+      <hr className=" bg-black w-full" />
+
+      <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col-reverse w-full justify-center mt-44">
+        <div className="flex gap-8 flex-col">
+          <h1 className="text-5xl font-bold text-left">Task Deligation</h1>
+          <p className=" max-w-xl text-lg text-left opacity-60">
+            Say goodbye to mundane spreadsheets or rigid systems to manage HR
+            tasks. Get smarter and more efficient software with features
+            designed to free you from administrative work.
+          </p>
+          <ul className="flex flex-col gap-3 items-start">
+            {[1, 2, 3, 4, 5].map((_, index) => (
+              <div
+                className="flex gap-3 items-center break-words flex-wrap"
+                key={index}
+              >
+                <div className="bg-green-500/10 p-2 rounded-full">
+                  <Check size={10} />
+                </div>
+                <li>Employee Database </li>
+              </div>
+            ))}
+          </ul>
+        </div>
+        <img src={tasks} alt="" className=" md:w-1/3" />
+      </section>
+      <hr className=" bg-black w-full" />
+      <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col  w-full justify-center mt-44">
+        <img src={events} alt="" className=" md:w-1/3" />
+        <div className="flex gap-8 flex-col">
+          <h1 className="text-5xl font-bold text-left">Events</h1>
+          <p className=" max-w-xl text-lg text-left opacity-60">
+            Say goodbye to mundane spreadsheets or rigid systems to manage HR
+            tasks. Get smarter and more efficient software with features
+            designed to free you from administrative work.
+          </p>
+          <ul className="flex flex-col gap-3 items-start">
+            {[1, 2, 3, 4, 5].map((_, index) => (
+              <div
+                className="flex gap-3 items-center break-words flex-wrap"
+                key={index}
+              >
+                <div className="bg-green-500/10 p-2 rounded-full">
+                  <Check size={10} />
+                </div>
+                <li>Employee Database </li>
+              </div>
+            ))}
+          </ul>
+        </div>
+      </section>
+      <hr className=" bg-black w-full" />
+      <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col-reverse w-full justify-center mt-44">
+        <div className="flex gap-8 flex-col">
+          <h1 className="text-5xl font-bold text-left">Vaults</h1>
+          <p className=" max-w-xl text-lg text-left opacity-60">
+            Say goodbye to mundane spreadsheets or rigid systems to manage HR
+            tasks. Get smarter and more efficient software with features
+            designed to free you from administrative work.
+          </p>
+          <ul className="flex flex-col gap-3 items-start">
+            {[1, 2, 3, 4, 5].map((_, index) => (
+              <div
+                className="flex gap-3 items-center break-words flex-wrap"
+                key={index}
+              >
+                <div className="bg-green-500/10 p-2 rounded-full">
+                  <Check size={10} />
+                </div>
+                <li>Employee Database </li>
+              </div>
+            ))}
+          </ul>
+        </div>
+        <img src={vault} alt="" className=" md:w-1/3" />
+      </section>
+      <hr className=" bg-black w-full" />
+      <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col w-full justify-center mt-44">
+        <img src={group_chat} alt="" className=" md:w-1/3" />
+        <div className="flex gap-8 flex-col">
+          <h1 className="text-5xl font-bold text-left">Group Chat</h1>
+          <p className=" max-w-xl text-lg text-left opacity-60">
+            Say goodbye to mundane spreadsheets or rigid systems to manage HR
+            tasks. Get smarter and more efficient software with features
+            designed to free you from administrative work.
+          </p>
+          <ul className="flex flex-col gap-3 items-start">
+            {[1, 2, 3, 4, 5].map((_, index) => (
+              <div
+                className="flex gap-3 items-center break-words flex-wrap"
+                key={index}
+              >
+                <div className="bg-green-500/10 p-2 rounded-full">
+                  <Check size={10} />
+                </div>
+                <li>Employee Database </li>
+              </div>
+            ))}
+          </ul>
+        </div>
+      </section>
+      <hr className=" bg-black w-full" />
+      <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col-reverse w-full justify-center mt-44">
+        <div className="flex gap-8 flex-col">
+          <h1 className="text-5xl font-bold text-left">Master Chat</h1>
+          <p className=" max-w-xl text-lg text-left opacity-60">
+            Say goodbye to mundane spreadsheets or rigid systems to manage HR
+            tasks. Get smarter and more efficient software with features
+            designed to free you from administrative work.
+          </p>
+          <ul className="flex flex-col gap-3 items-start">
+            {[1, 2, 3, 4, 5].map((_, index) => (
+              <div
+                className="flex gap-3 items-center break-words flex-wrap"
+                key={index}
+              >
+                <div className="bg-green-500/10 p-2 rounded-full">
+                  <Check size={10} />
+                </div>
+                <li>Employee Database </li>
+              </div>
+            ))}
+          </ul>
+        </div>
+        <img src={master_chat} alt="" className=" md:w-1/3" />
+      </section>
+      <hr className=" bg-black w-full" />
+      <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col w-full justify-center mt-44">
+        <img src={crm_plus} alt="" className=" md:w-1/3" />
+        <div className="flex gap-8 flex-col">
+          <h1 className="text-5xl font-bold text-left">CRM PLUS+</h1>
+          <p className=" max-w-xl text-lg text-left opacity-60">
+            Say goodbye to mundane spreadsheets or rigid systems to manage HR
+            tasks. Get smarter and more efficient software with features
+            designed to free you from administrative work.
+          </p>
+          <ul className="flex flex-col gap-3 items-start">
+            {[1, 2, 3, 4, 5].map((_, index) => (
+              <div
+                className="flex gap-3 items-center break-words flex-wrap"
+                key={index}
+              >
+                <div className="bg-green-500/10 p-2 rounded-full">
+                  <Check size={10} />
+                </div>
+                <li>Employee Database </li>
+              </div>
+            ))}
+          </ul>
+        </div>
+      </section>
+      <hr className=" bg-black w-full" />
+      <div className="mt-20">
+        <PricingSection />
+      </div>
       <FaqSection />
     </div>
   );
