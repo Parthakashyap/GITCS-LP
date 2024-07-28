@@ -20,13 +20,13 @@ const MDO = () => {
   return (
     <div className="flex justify-center w-full items-center text-center flex-col gap-12 mt-20   p-4">
       <div className="md:max-w-3xl">
-        <WordPullUp
-          words=" Deliver exceptional  employee experiences"
-          className=" md:text-7xl  text-5xl font-bold"
+      <WordPullUp
+          words="Deliver exceptional employee experiences."
+          className="lg:text-6xl text-4xl capitalize font-bold md:max-w-3xl text-center break-words"
         />
       </div>
 
-      <p className=" md:w-[50%] text-center opacity-60">
+      <p className=" md:w-[50%] text-md md:text-lg text-center opacity-60">
         <FadeText
           text="The world of work is changing rapidly and so should your HR practices.
         Brain People is a cloud-based HR software crafted to nurture employees,
