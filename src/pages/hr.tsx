@@ -8,7 +8,6 @@ import {
 } from "lucide-react";
 import React from "react";
 import hrbg from "../Images/undraw_job_offers_re_634p.svg";
-import LetterPullup from "../components/magicui/letter-pull-up";
 import WordPullUp from "../components/magicui/word-pull-up";
 import { FadeText } from "../components/magicui/fade-text";
 import { Check } from "lucide-react";
@@ -25,6 +24,7 @@ import master_chat from "../Images/undraw_professor_re_mj1s.svg";
 import crm_plus from "../Images/undraw_projections_re_ulc6.svg";
 import BoxReveal from "../components/magicui/box-reveal";
 import BlurIn from "../components/magicui/blur-in";
+import GradualSpacing from "../components/magicui/gradual-spacing";
 const HR: React.FC = () => {
   return (
     <div className="flex flex-col gap-5 w-full min-h-screen">
@@ -63,9 +63,9 @@ const HR: React.FC = () => {
         <h1 className="text-center text-4xl font-bold md:hidden">
           What Brain Brings To The Table
         </h1>
-        <LetterPullup
-          words="What Brain Brings To The Table"
-          className=" hidden md:block"
+        <GradualSpacing
+          className="hidden md:block font-display text-center text-4xl font-bold tracking-[-0.1em]  text-black dark:text-white md:text-7xl md:leading-[5rem]"
+          text="What Brain Brings To The Table"
         />
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">

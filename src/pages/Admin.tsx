@@ -9,8 +9,6 @@ import {
 } from "lucide-react";
 import BlurIn from "../components/magicui/blur-in";
 import BoxReveal from "../components/magicui/box-reveal";
-import LetterPullup from "../components/magicui/letter-pull-up";
-import Particles from "../components/magicui/particle";
 import TypingAnimation from "../components/magicui/typing-animation";
 import WordPullUp from "../components/magicui/word-pull-up";
 
@@ -22,6 +20,7 @@ import tasks from "../Images/undraw_add_tasks_re_s5yj.svg";
 import FaqSection from "../components/sections/FaqSection";
 import events from "../Images/undraw_events_re_98ue.svg";
 import PricingSection from "../components/sections/PricingSection";
+import GradualSpacing from "../components/magicui/gradual-spacing";
 const Admin = () => {
   return (
     <div className="relative  flex min-h-screen w-full flex-col  overflow-hidden rounded-lg border bg-background md:shadow-xl">
@@ -66,7 +65,10 @@ const Admin = () => {
           <h1 className="text-center text-4xl mb-10 font-bold md:hidden">
             What Brain Brings To The Table
           </h1>
-          <LetterPullup words="What Do We Offer" className=" hidden md:block" />
+          <GradualSpacing
+            className="hidden md:block mb-12 font-display text-center text-4xl font-bold tracking-[-0.1em]  text-black dark:text-white md:text-7xl md:leading-[5rem]"
+            text="What Do We Offer"
+          />
 
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
             <div className=" p-8 rounded-md border border-black/10 hover:border-blue-600 duration-200">
@@ -307,13 +309,6 @@ const Admin = () => {
           <FaqSection />
         </div>
       </div>
-      <Particles
-        className=" hidden md:block absolute inset-0"
-        quantity={130}
-        ease={10}
-        color={"#000000"}
-        refresh
-      />
     </div>
   );
 };

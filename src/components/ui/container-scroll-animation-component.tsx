@@ -3,8 +3,9 @@
 import AnimatedShinyText from "../animated-introduction";
 import AvatarCircles from "../magicui/avatar";
 import { ContainerScroll } from "./container-scroll-animation";
-import homesvg from "../../svg/Vector_6.svg"
-import bodyBg from "../../Images/SaaS-Dashboard.png"
+import homesvg from "../../svg/Vector_6.svg";
+import bodyBg from "../../Images/SaaS-Dashboard.png";
+import { CoolMode } from "../magicui/cool-mode";
 export function HeroScrollDemo() {
   const avatarUrls = [
     "https://picsum.photos/id/10/300/300",
@@ -39,9 +40,11 @@ export function HeroScrollDemo() {
             <div className="flex justify-center items-center">
               <AvatarCircles avatarUrls={avatarUrls} />
             </div>
-            <button className="mt-8 mb-24 bg-black text-white py-4 px-6 rounded-full">
-              Get Started &rarr;
-            </button>
+            <CoolMode>
+              <button className="mt-8 mb-24 bg-black text-white py-4 px-6 rounded-full">
+                Get Started &rarr;
+              </button>
+            </CoolMode>
           </>
         }
       >
