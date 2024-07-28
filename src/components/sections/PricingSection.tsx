@@ -1,12 +1,7 @@
-import React, { useState } from 'react';
+import { Check } from "lucide-react";
+import React, { useState } from "react";
 
 const PricingSection: React.FC = () => {
-  const [billingType, setBillingType] = useState<'monthly' | 'yearly'>('monthly');
-
-  const handleBillingChange = (type: 'monthly' | 'yearly') => {
-    setBillingType(type);
-  };
-
   const prices = {
     monthly: {
       starter: 29,
@@ -19,281 +14,224 @@ const PricingSection: React.FC = () => {
       enterprise: 125,
     },
   };
+  const [isToggled, setIsToggled] = useState(false);
 
+  const handleToggle = () => {
+    setIsToggled(!isToggled);
+  };
   return (
-    <div>
-      <div className="text-center mb-4">
-        <div className="bg-gray-200 text-gray-800 rounded-full px-4 py-2 mb-4 inline-block text-sm font-medium">
-          Plans & Features
-        </div>
-        <h2 className="text-5xl font-bold">Pricing</h2>
-      </div>
-      <div className="sm:flex sm:flex-col sm:align-center p-10">
-        <div className="relative self-center bg-slate-200 rounded-lg p-0.5 flex">
+    <div className="flex flex-col w-full p-4 md:p-0 md:gap-8 gap-4 items-center text-center justify-center">
+      <h1 className=" md:text-3xl text-lg font-bold">Pricing</h1>
+      <h1 className=" md:text-6xl  text-4xl font-bold tracking-wide leading-1 md:h-16">
+        Simple pricing for everyone.
+      </h1>
+      <p className="  md:text-lg text-md opacity-60 md:max-w-4xl mt-5 md:mt-0 text-center">
+        Choose an <b>affordable plan</b> that's packed with the best features
+        for engaging your audience, creating customer loyalty, and driving
+        sales.
+      </p>
+      <div className="flex flex-wrap items-center gap-4 justify-center">
+        <div className="flex gap-2">
           <button
-            type="button"
-            className={`relative w-1/2 rounded-md py-2 text-sm font-medium whitespace-nowrap focus:outline-none sm:w-auto sm:px-8 ${
-              billingType === 'monthly' ? 'bg-slate-50 border-slate-50 text-slate-900 shadow-sm' : 'border border-transparent text-slate-900'
+            className={`w-12 h-6 flex items-center rounded-full p-1 duration-300 ease-in-out ${
+              isToggled ? "bg-black" : "bg-gray-300"
             }`}
-            onClick={() => handleBillingChange('monthly')}
+            onClick={handleToggle}
           >
-            Monthly billing
+            <div
+              className={`bg-white w-4 h-4 rounded-full shadow-md transform duration-300 ease-in-out ${
+                isToggled ? "translate-x-6" : ""
+              }`}
+            ></div>
           </button>
-          <button
-            type="button"
-            className={`ml-0.5 relative w-1/2 rounded-md py-2 text-sm font-medium whitespace-nowrap focus:outline-none sm:w-auto sm:px-8 ${
-              billingType === 'yearly' ? 'bg-slate-50 border-slate-50 text-slate-900 shadow-sm' : 'border border-transparent text-slate-900'
-            }`}
-            onClick={() => handleBillingChange('yearly')}
-          >
-            Yearly billing
-          </button>
+          <span className="ml-2 text-md font-medium text-gray-700">Annual</span>
         </div>
-        <div className="mt-12 space-y-3 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-3 sm:gap-6 md:max-w-5xl md:mx-auto xl:grid-cols-3">
-          <div className="border border-slate-200 bg-white rounded-2xl shadow-sm divide-y divide-slate-200">
-            <div className="p-6">
-              <h2 className="text-4xl leading-6 font-bold text-slate-900 flex justify-center mb-4">Starter</h2>
-              <p className="mt-2 text-base text-slate-700 leading-tight text-center mb-[3.2rem]">
-                Small businesses and startups looking to gain data insights
-              </p>
-              <p className="mt-8">
-                <span className=" text-4xl font-bold text-slate-900 tracking-tighter">${prices[billingType].starter}</span>
-                <span className="text-base font-medium text-slate-500">/mo</span>
-              </p>
-              <a
-                href="/sign-up"
-                className="mt-8 block w-full bg-pink-500 rounded-xl py-2 text-sm font-semibold text-white text-center"
-              >
-                Learn more
-              </a>
-            </div>
-            <div className="pt-6 pb-8 px-6">
-              <h3 className="text-sm font-bold text-slate-900 tracking-wide uppercase">What's included</h3>
-              <ul role="list" className="mt-4 space-y-3">
-                <li className="flex space-x-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="flex-shrink-0 h-5 w-5 text-green-400"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    stroke="currentColor"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M5 12l5 5l10 -10"></path>
-                  </svg>
-                  <span className="text-base text-slate-700">Data Visualization</span>
-                </li>
-                <li className="flex space-x-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="flex-shrink-0 h-5 w-5 text-green-400"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    stroke="currentColor"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M5 12l5 5l10 -10"></path>
-                  </svg>
-                  <span className="text-base text-slate-700">Real-Time Analytics</span>
-                </li>
-                <li className="flex space-x-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="flex-shrink-0 h-5 w-5 text-green-400"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    stroke="currentColor"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M5 12l5 5l10 -10"></path>
-                  </svg>
-                  <span className="text-base text-slate-700">Customization</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border border-slate-200 bg-white rounded-2xl shadow-sm divide-y divide-slate-200">
-            <div className="p-6">
-              <h2 className="text-4xl leading-6 font-bold text-slate-900 flex justify-center mb-4">Business</h2>
-              <p className="mt-2 text-base text-slate-700 leading-tight text-center">
-                Growing businesses that need comprehensive data management and teamwork features
-              </p>
-              <p className="mt-8">
-                <span className=" text-4xl font-bold text-slate-900 tracking-tighter">${prices[billingType].business}</span>
-                <span className="text-base font-medium text-slate-500">/mo</span>
-              </p>
-              <a
-                href="/sign-up"
-                className="mt-8 block w-full bg-purple-500 rounded-xl py-2 text-sm font-semibold text-white text-center"
-              >
-                Learn more
-              </a>
-            </div>
-            <div className="pt-6 pb-8 px-6">
-              <h3 className="text-sm font-bold text-slate-900 tracking-wide uppercase">What's included</h3>
-              <ul role="list" className="mt-4 space-y-3">
-                <li className="flex space-x-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="flex-shrink-0 h-5 w-5 text-green-400"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    stroke="currentColor"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M5 12l5 5l10 -10"></path>
-                  </svg>
-                  <span className="text-base text-slate-700">All Basic Plan Features</span>
-                </li>
-                <li className="flex space-x-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="flex-shrink-0 h-5 w-5 text-green-400"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    stroke="currentColor"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M5 12l5 5l10 -10"></path>
-                  </svg>
-                  <span className="text-base text-slate-700">Integrations</span>
-                </li>
-                <li className="flex space-x-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="flex-shrink-0 h-5 w-5 text-green-400"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    stroke="currentColor"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M5 12l5 5l10 -10"></path>
-                  </svg>
-                  <span className="text-base text-slate-700">Advanced Reporting</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border border-slate-200 bg-white rounded-2xl shadow-sm divide-y divide-slate-200">
-            <div className="p-6">
-              <h2 className="text-4xl leading-6 font-bold text-slate-900 flex justify-center mb-4">Enterprise</h2>
-              <p className="mt-2 text-base text-slate-700 leading-tight text-center">
-                Larger enterprises requiring advanced data solutions and personalized support.
-              </p>
-              <p className="mt-8">
-                <span className="text-4xl font-bold text-slate-900 tracking-tighter">${prices[billingType].enterprise}</span>
-                <span className="text-base font-medium text-slate-500">/mo</span>
-              </p>
-              <a
-                href="/sign-up"
-                className="mt-8 block w-full bg-blue-500 rounded-xl py-2 text-sm font-semibold text-white text-center"
-              >
-                Learn more
-              </a>
-            </div>
-            <div className="pt-6 pb-8 px-6">
-              <h3 className="text-sm font-bold text-slate-900 tracking-wide uppercase">What's included</h3>
-              <ul role="list" className="mt-4 space-y-3">
-                <li className="flex space-x-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="flex-shrink-0 h-5 w-5 text-green-400"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    stroke="currentColor"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M5 12l5 5l10 -10"></path>
-                  </svg>
-                  <span className="text-base text-slate-700">All Pro Plan Features</span>
-                </li>
-                <li className="flex space-x-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="flex-shrink-0 h-5 w-5 text-green-400"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    stroke="currentColor"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M5 12l5 5l10 -10"></path>
-                  </svg>
-                  <span className="text-base text-slate-700">Full Access to API</span>
-                </li>
-                <li className="flex space-x-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="flex-shrink-0 h-5 w-5 text-green-400"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    stroke="currentColor"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M5 12l5 5l10 -10"></path>
-                  </svg>
-                  <span className="text-base text-slate-700">Dedicated Support</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div className="bg-black px-4 py-1 rounded-full text-white">
+          2 months free ✨
         </div>
       </div>
+
+      <section className="grid w-full p-4 lg:max-w-[80%] max-w-full gap-8 lg:grid-cols-4 md:grid-cols-3 grid-cols-1">
+        <div className=" border border-black/20 rounded-md text-left p-6">
+          <div className="flex flex-col gap-4">
+            <h1 className=" font-bold text-xl">Basic</h1>
+            <p className="text-lg break-words opacity-70">
+              A basic plan for startups and individual users
+            </p>
+            <div className="mt-2">
+              <h1 className="text-3xl font-bold flex items-end">
+                ${isToggled ? prices.yearly.starter : prices.monthly.starter}{" "}
+                <p className="text-lg">/month</p>
+              </h1>
+            </div>
+            <button className="text-white bg-black rounded-lg w-full p-3">
+              Subscribe
+            </button>
+            <hr className="w-full bg-black/30 h-[2px]" />
+            <ul className="flex flex-col gap-3">
+              <li className="flex gap-2 items-center">
+                <div className="bg-green-600 rounded-full">
+                  <Check size={20} />
+                </div>
+                <p>Al-powered analytics</p>
+              </li>
+              <li className="flex gap-2 items-center">
+                <div className="bg-green-600 rounded-full">
+                  <Check size={20} />
+                </div>
+                <p>Al-powered analytics</p>
+              </li>
+              <li className="flex gap-2 items-center">
+                <div className="bg-green-600 rounded-full">
+                  <Check size={20} />
+                </div>
+                <p>Al-powered analytics</p>
+              </li>
+              <li className="flex gap-2 items-center">
+                <div className="bg-green-600 rounded-full">
+                  <Check size={20} />
+                </div>
+                <p>Al-powered analytics</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className=" border border-black shadow-black shadow-md rounded-md text-left p-6">
+          <div className="flex flex-col gap-4">
+            <h1 className=" font-bold text-xl">Premium</h1>
+            <p className="text-lg break-words opacity-70">
+              A Premium plan for startups and individual users
+            </p>
+            <div className="mt-2">
+              <h1 className="text-3xl font-bold flex items-end">
+                ${isToggled ? prices.yearly.business : prices.monthly.business}{" "}
+                <p className="text-lg">/month</p>
+              </h1>
+            </div>
+            <button className="text-white bg-black rounded-lg w-full p-3">
+              Subscribe
+            </button>
+            <hr className="w-full bg-black/30 h-[2px]" />
+            <ul className="flex flex-col gap-3">
+              <li className="flex gap-2 items-center">
+                <div className="bg-green-600 rounded-full">
+                  <Check size={20} />
+                </div>
+                <p>Al-powered analytics</p>
+              </li>
+              <li className="flex gap-2 items-center">
+                <div className="bg-green-600 rounded-full">
+                  <Check size={20} />
+                </div>
+                <p>Al-powered analytics</p>
+              </li>
+              <li className="flex gap-2 items-center">
+                <div className="bg-green-600 rounded-full">
+                  <Check size={20} />
+                </div>
+                <p>Al-powered analytics</p>
+              </li>
+              <li className="flex gap-2 items-center">
+                <div className="bg-green-600 rounded-full">
+                  <Check size={20} />
+                </div>
+                <p>Al-powered analytics</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className=" border border-black/20 rounded-md text-left p-6">
+          <div className="flex flex-col gap-4">
+            <h1 className=" font-bold text-xl">Enterprise</h1>
+            <p className="text-lg break-words opacity-70">
+              A Enterprise plan for startups and individual users
+            </p>
+            <div className="mt-2">
+              <h1 className="text-3xl font-bold flex items-end">
+                ${isToggled ? prices.yearly.enterprise : prices.monthly.enterprise}{" "}
+                <p className="text-lg">/month</p>
+              </h1>
+            </div>
+            <button className="text-white bg-black rounded-lg w-full p-3">
+              Subscribe
+            </button>
+            <hr className="w-full bg-black/30 h-[2px]" />
+            <ul className="flex flex-col gap-3">
+              <li className="flex gap-2 items-center">
+                <div className="bg-green-600 rounded-full">
+                  <Check size={20} />
+                </div>
+                <p>Al-powered analytics</p>
+              </li>
+              <li className="flex gap-2 items-center">
+                <div className="bg-green-600 rounded-full">
+                  <Check size={20} />
+                </div>
+                <p>Al-powered analytics</p>
+              </li>
+              <li className="flex gap-2 items-center">
+                <div className="bg-green-600 rounded-full">
+                  <Check size={20} />
+                </div>
+                <p>Al-powered analytics</p>
+              </li>
+              <li className="flex gap-2 items-center">
+                <div className="bg-green-600 rounded-full">
+                  <Check size={20} />
+                </div>
+                <p>Al-powered analytics</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className=" border border-black/20 rounded-md text-left p-6">
+          <div className="flex flex-col gap-4">
+            <h1 className=" font-bold text-xl">Ultimate</h1>
+            <p className="text-lg break-words opacity-70">
+              A Ultimate plan for startups and individual users
+            </p>
+            <div className="mt-2">
+              <h1 className="text-3xl font-bold flex items-end">
+                ${isToggled ? prices.yearly.business : prices.monthly.business}{" "}
+                <p className="text-lg">/month</p>
+              </h1>
+            </div>
+            <button className="text-white bg-black rounded-lg w-full p-3">
+              Subscribe
+            </button>
+            <hr className="w-full bg-black/30 h-[2px]" />
+            <ul className="flex flex-col gap-3">
+              <li className="flex gap-2 items-center">
+                <div className="bg-green-600 rounded-full">
+                  <Check size={20} />
+                </div>
+                <p>Al-powered analytics</p>
+              </li>
+              <li className="flex gap-2 items-center">
+                <div className="bg-green-600 rounded-full">
+                  <Check size={20} />
+                </div>
+                <p>Al-powered analytics</p>
+              </li>
+              <li className="flex gap-2 items-center">
+                <div className="bg-green-600 rounded-full">
+                  <Check size={20} />
+                </div>
+                <p>Al-powered analytics</p>
+              </li>
+              <li className="flex gap-2 items-center">
+                <div className="bg-green-600 rounded-full">
+                  <Check size={20} />
+                </div>
+                <p>Al-powered analytics</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
