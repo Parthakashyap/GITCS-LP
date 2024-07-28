@@ -44,10 +44,10 @@ const Navbar: React.FC = () => {
           </div>
         </div>
         <div className="hidden md:flex items-center space-x-4">
-          <button className="bg-black text-white py-3 px-4 rounded-full flex gap-2 items-center">
+          <button className="bg-black text-white py-3 px-4 rounded-md flex gap-2 items-center">
             Sign In <LogIn />
           </button>
-          <button className="bg-black text-white py-3 px-4 rounded-full flex gap-2 items-center">
+          <button className="bg-black text-white py-3 px-4 rounded-md flex gap-2 items-center">
             Register <User2Icon />
           </button>
         </div>
