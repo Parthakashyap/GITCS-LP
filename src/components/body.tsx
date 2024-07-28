@@ -1,6 +1,5 @@
 import React from "react";
 import { HeroScrollDemo } from "./ui/container-scroll-animation-component";
-import TestimonialsSection from "./sections/TestimonialsSection";
 import PricingSection from "./sections/PricingSection";
 import BusinessPotentialSection from "./sections/BusinessPotentialSection";
 import FaqSection from "./sections/FaqSection";
@@ -8,6 +7,8 @@ import { BentoDemo } from "./feature-bento-grid";
 import AnimatedShinyText from "./animated-introduction";
 import landingImage from "../Images/SaaS-Dashboard.png";
 import { BorderBeam } from "./magicui/border-beam";
+import { MarqueeDemo } from "./sections/TestimonialsSection";
+import GradualSpacing from "./magicui/gradual-spacing";
 const Body: React.FC = () => {
   return (
     <div className="bg-gray-100 z-10 min-h-screen flex flex-col items-center justify-center">
@@ -56,7 +57,14 @@ const Body: React.FC = () => {
         </div>
         <BentoDemo />
       </div>
-      <TestimonialsSection />
+      <div className="m-auto max-w-7xl mt-20 mb-20">
+        <GradualSpacing
+          text="What People are Saying"
+          className="hidden md:block mb-20 font-display text-center text-4xl font-bold tracking-[-0.1em]  text-black dark:text-white md:text-7xl md:leading-[5rem]"
+        />
+          <h1 className=" mb-7 p-4 text-3xl font-bold md:hidden">What people are saying</h1>
+        <MarqueeDemo />
+      </div>
       <PricingSection />
 
       <BusinessPotentialSection />
