@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import MDO from "./pages/MDO";
 import HR from "./pages/hr";
+import Admin from "./pages/Admin";
 const App: React.FC = () => {
   return (
     <BrowserRouter>
@@ -15,7 +16,8 @@ const App: React.FC = () => {
           <Route path="/" element={<Body />} />
           <Route path="/mdo" element={<MDO />} />
           <Route path="/hr" element={<HR />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer />
       </div>

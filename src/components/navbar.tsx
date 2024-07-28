@@ -2,6 +2,7 @@ import { LogIn, User2Icon } from "lucide-react";
 import React, { useState, useEffect, useRef } from "react";
 import { NavigationMenuDemo } from "./navbar-expand";
 import { NavigationMenuDemoMobile } from "./navbar-expand-M";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +39,7 @@ const Navbar: React.FC = () => {
     <nav className="sticky z-50 top-0 backdrop-blur-xl shadow-sm">
       <div className="mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex gap-8 items-center">
-          <div className="text-xl font-bold">BRAIN</div>
+          <Link to={"/"} className="text-xl font-bold">BRAIN</Link>
           <div className="hidden md:block">
             <NavigationMenuDemo />
           </div>

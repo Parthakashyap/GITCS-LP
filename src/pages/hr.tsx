@@ -1,4 +1,11 @@
-import { ArrowRight,  DoorClosed, DoorOpen, Handshake, LockOpen, Plus, TestTube } from "lucide-react";
+import {
+  DoorClosed,
+  DoorOpen,
+  Handshake,
+  LockOpen,
+  Plus,
+  TestTube,
+} from "lucide-react";
 import React from "react";
 import hrbg from "../Images/undraw_job_offers_re_634p.svg";
 import LetterPullup from "../components/magicui/letter-pull-up";
@@ -17,6 +24,7 @@ import group_chat from "../Images/undraw_group_chat_re_frmo.svg";
 import master_chat from "../Images/undraw_professor_re_mj1s.svg";
 import crm_plus from "../Images/undraw_projections_re_ulc6.svg";
 import BoxReveal from "../components/magicui/box-reveal";
+import BlurIn from "../components/magicui/blur-in";
 const HR: React.FC = () => {
   return (
     <div className="flex flex-col gap-5 w-full min-h-screen">
@@ -36,12 +44,14 @@ const HR: React.FC = () => {
               />
             </div>
             <div className="flex gap-3 flex-wrap items-center">
-              <button className=" bg-orange-600 py-3 rounded-md flex gap-2 justify-center items-center px-8">
-                Get Started <ArrowRight />
-              </button>
-              <button className=" border border-white text-white flex justify-center gap-4 items-center py-3 rounded-md px-8">
-                Learn More <Plus />
-              </button>
+              <BlurIn
+                word={`Get Started `}
+                className=" bg-orange-600 py-3 rounded-md flex gap-2 justify-center items-center px-8"
+              />
+              <BlurIn
+                word="Learn More"
+                className=" border border-white text-white flex justify-center gap-4 items-center py-3 rounded-md px-8"
+              />
             </div>
           </div>
 
@@ -50,8 +60,13 @@ const HR: React.FC = () => {
       </div>
 
       <div className="flex justify-center flex-col gap-8 items-center p-9">
-        <h1 className="text-center text-4xl font-bold md:hidden">What Brain Brings To The Table</h1>
-        <LetterPullup words="What Brain Brings To The Table" className=" hidden md:block" />
+        <h1 className="text-center text-4xl font-bold md:hidden">
+          What Brain Brings To The Table
+        </h1>
+        <LetterPullup
+          words="What Brain Brings To The Table"
+          className=" hidden md:block"
+        />
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
           <div className=" p-8 rounded-md border border-black/10 hover:border-blue-600 duration-200">
@@ -79,7 +94,9 @@ const HR: React.FC = () => {
 
           <div className=" p-8 rounded-md border border-black/10 hover:border-blue-600 duration-200">
             <TestTube size={50} className=" mb-6" />
-            <h1 className=" text-2xl font-bold">Traning & Evaluation Brain Flow</h1>
+            <h1 className=" text-2xl font-bold">
+              Traning & Evaluation Brain Flow
+            </h1>
             <p className=" break-words max-w-[80%] mt-2">
               All in one social media management software
             </p>
@@ -87,7 +104,9 @@ const HR: React.FC = () => {
 
           <div className=" p-8 rounded-md border border-black/10 hover:border-blue-600 duration-200">
             <Handshake size={50} className=" mb-6" />
-            <h1 className=" text-2xl font-bold">Joining & Handover Brain Flow</h1>
+            <h1 className=" text-2xl font-bold">
+              Joining & Handover Brain Flow
+            </h1>
             <p className=" break-words max-w-[80%] mt-2">
               All in one social media management software
             </p>
