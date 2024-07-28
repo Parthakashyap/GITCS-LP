@@ -97,9 +97,9 @@ const PricingSection: React.FC = () => {
           </div>
         </div>
 
-        <div className=" border border-black shadow-black shadow-md rounded-md text-left p-6">
+        <div className=" border border-black shadow-black/50 shadow-lg rounded-md text-left p-6">
           <div className="flex flex-col gap-4">
-            <h1 className=" font-bold text-xl">Premium</h1>
+            <h1 className=" font-bold text-xl">Premium ✨</h1>
             <p className="text-lg break-words opacity-70">
               A Premium plan for startups and individual users
             </p>
