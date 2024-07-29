@@ -64,7 +64,7 @@ const PricingSection: React.FC = () => {
                 <p className="text-lg">/month</p>
               </h1>
             </div>
-            <button className="text-white bg-black rounded-lg w-full p-3">
+            <button className="text-white duration-200 hover:bg-transparent hover:text-black hover:border hover:border-black bg-black rounded-lg w-full p-3">
               Subscribe
             </button>
             <hr className="w-full bg-black/30 h-[2px]" />
@@ -109,7 +109,7 @@ const PricingSection: React.FC = () => {
                 <p className="text-lg">/month</p>
               </h1>
             </div>
-            <button className="text-white bg-black rounded-lg w-full p-3">
+            <button className="text-white duration-200 hover:bg-transparent hover:text-black hover:border hover:border-black bg-black rounded-lg w-full p-3">
               Subscribe
             </button>
             <hr className="w-full bg-black/30 h-[2px]" />
@@ -154,7 +154,7 @@ const PricingSection: React.FC = () => {
                 <p className="text-lg">/month</p>
               </h1>
             </div>
-            <button className="text-white bg-black rounded-lg w-full p-3">
+            <button className="text-white duration-200 hover:bg-transparent hover:text-black hover:border hover:border-black bg-black rounded-lg w-full p-3">
               Subscribe
             </button>
             <hr className="w-full bg-black/30 h-[2px]" />
@@ -199,7 +199,7 @@ const PricingSection: React.FC = () => {
                 <p className="text-lg">/month</p>
               </h1>
             </div>
-            <button className="text-white bg-black rounded-lg w-full p-3">
+            <button className="text-white duration-200 hover:bg-transparent hover:text-black hover:border hover:border-black bg-black rounded-lg w-full p-3">
               Subscribe
             </button>
             <hr className="w-full bg-black/30 h-[2px]" />

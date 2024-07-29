@@ -9,6 +9,7 @@ import landingImage from "../Images/SaaS-Dashboard.png";
 import { BorderBeam } from "./magicui/border-beam";
 import { MarqueeDemo } from "./sections/TestimonialsSection";
 import GradualSpacing from "./magicui/gradual-spacing";
+import { AnimatedBeamDemo } from "./sections/FeatureSection";
 const Body: React.FC = () => {
   return (
     <div className="bg-gray-100 z-10 min-h-screen flex flex-col items-center justify-center">
@@ -55,6 +56,7 @@ const Body: React.FC = () => {
             tasks and activities related to their business
           </p>
         </div>
+        {/* <AnimatedBeamDemo/> */}
         <BentoDemo />
       </div>
       <div className="m-auto max-w-7xl mt-20 mb-20">

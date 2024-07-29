@@ -10,7 +10,7 @@ import Admin from "./pages/Admin";
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <div className=" overflow-hidden">
+      <div className=" overflow-hidden max-w-[2000px] m-auto">
         <Navbar />
         <Routes>
           <Route path="/" element={<Body />} />
