@@ -1,89 +1,28 @@
-import hrbg from "../Images/undraw_programming_re_kg9v-pink.svg";
+import hrbg from "../Images/IT/undraw_fingerprint_re_uf3f.svg";
 import WordPullUp from "../components/magicui/word-pull-up";
 import { FadeText } from "../components/magicui/fade-text";
 import BlurIn from "../components/magicui/blur-in";
 import PricingSection from "../components/sections/PricingSection";
 import FaqSection from "../components/sections/FaqSection";
 import {
-  DoorClosed,
-  DoorOpen,
-  Handshake,
-  LockOpen,
-  Plus,
-  TestTube,
+  Computer,
 } from "lucide-react";
-import charts from "../Images/charts-pink.svg";
-import flow_chart from "../Images/undraw_bear_market_ania-pink.svg";
-import designation from "../Images/undraw_post_re_mtr4-pink.svg";
-import tasks from "../Images/undraw_add_tasks_re_s5yj-pink.svg";
-import events from "../Images/undraw_events_re_98ue-pink.svg";
-import vault from "../Images/undraw_vault_re_s4my-pink.svg";
-import group_chat from "../Images/undraw_group_chat_re_frmo-pink.svg";
-import master_chat from "../Images/undraw_professor_re_mj1s-pink.svg";
-import crm_plus from "../Images/undraw_projections_re_ulc6-pink.svg";
 import { BrainFlowSection } from "../components/BrainFlow";
+import it_management from "../Images/IT/undraw_server_cluster_jwwq.svg"
 const sections = [
   {
-    title: "Hiring Brain Flow",
-    img: charts,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Recruitment Brain Flow",
-    img: flow_chart,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Onboarding Brain Flow",
-    img: designation,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Training And Evaluation Brain Flow",
-    img: tasks,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Events",
-    img: events,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Joining & Handover Brainflow",
-    img: vault,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Seperating BrainFlow",
-    img: group_chat,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Master Chat",
-    img: master_chat,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "CRM PLUS +",
-    img: crm_plus,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+    title: "It Management Software",
+    img: it_management,
+    icon: Computer,
+    description: "Our IT Management feature streamlines your organization's IT operations, offering comprehensive tools for asset management, network monitoring, and helpdesk support. Enhance efficiency and ensure seamless IT infrastructure management with our robust, user-friendly solution."
   },
 ];
 const IT = () => {
   return (
     <div className="flex flex-col gap-5 w-full min-h-screen">
       <div className=" bg-[#6A5ACD] text-white w-full flex flex-col justify-center p-4 md:h-[800px]">
-        <div className="flex justify-between lg:flex-row flex-col items-center md:w-[80%] w-full m-auto">
-          <div className="flex flex-col gap-8  mt-20 mb-20">
+        <div className="flex justify-between lg:flex-row flex-col-reverse items-center md:w-[80%] w-full m-auto">
+          <div className="flex flex-col gap-8  md:mt-20 mt-5 mb-20">
             <WordPullUp
               words="IT Management Systems"
               className="text-5xl font-bold text-left max-w-3xl break-words"
@@ -97,11 +36,11 @@ const IT = () => {
             <div className="flex gap-3 flex-wrap items-center">
               <BlurIn
                 word={`Get Started `}
-                className=" bg-orange-600 py-3 rounded-md flex gap-2 justify-center items-center px-8"
+                className=" bg-black py-3 rounded-md flex gap-2 justify-center items-center px-8"
               />
               <BlurIn
                 word="Learn More"
-                className=" border border-white text-white flex justify-center gap-4 items-center py-3 rounded-md px-8"
+                className=" border border-white text-black bg-white flex justify-center gap-4 items-center py-3 rounded-md px-8"
               />
             </div>
           </div>
@@ -110,27 +49,20 @@ const IT = () => {
         </div>
       </div>
       <div className="flex justify-center flex-col gap-8 items-center p-9">
-      <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
+        <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
           What Brain Brings To The Table
         </h1>
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-          {[
-            { icon: DoorOpen, title: "Hiring Brain Flow" },
-            { icon: LockOpen, title: "Recruitment Brain Flow" },
-            { icon: Plus, title: "Onboarding Brain Flow" },
-            { icon: TestTube, title: "Training & Evaluation Brain Flow" },
-            { icon: Handshake, title: "Joining & Handover Brain Flow" },
-            { icon: DoorClosed, title: "Seperation Brain Flow" },
-          ].map(({ icon: Icon, title }) => (
+        <div className="grid lg:grid-cols-3 md:w-[80%] md:grid-cols-2 grid-cols-1 gap-4">
+          {sections.map((section, index) => (
             <div
-              key={title}
+              key={index}
               className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-[#6A5ACD] hover:bg-gray-100 duration-200"
             >
-              <Icon size={50} className="mb-6" />
-              <h1 className="text-2xl font-bold">{title}</h1>
+              <section.icon size={50} className="mb-6" />
+              <h1 className="text-2xl font-bold">{section.title}</h1>
               <p className="break-words max-w-[80%] mt-2">
-                All in one social media management software
+                {section.description}
               </p>
             </div>
           ))}

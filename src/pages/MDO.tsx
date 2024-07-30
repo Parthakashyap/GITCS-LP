@@ -6,15 +6,15 @@ import PricingSection from "../components/sections/PricingSection";
 import FaqSection from "../components/sections/FaqSection";
 import { AlarmClock, Building2, InspectionPanel, LockOpen, PartyPopper, Plus, UserCheck, Users, Workflow } from "lucide-react";
 
-import charts from "../Images/charts.svg";
-import flow_chart from "../Images/undraw_bear_market_ania.svg";
-import designation from "../Images/undraw_post_re_mtr4.svg";
-import tasks from "../Images/undraw_add_tasks_re_s5yj.svg";
-import events from "../Images/undraw_events_re_98ue.svg";
-import vault from "../Images/undraw_vault_re_s4my.svg";
-import group_chat from "../Images/undraw_group_chat_re_frmo.svg";
-import master_chat from "../Images/undraw_professor_re_mj1s.svg";
-import crm_plus from "../Images/undraw_projections_re_ulc6.svg";
+import charts from "../Images/MDO/charts.svg";
+import flow_chart from "../Images/MDO/undraw_bear_market_ania.svg";
+import designation from "../Images/MDO/undraw_post_re_mtr4.svg";
+import tasks from "../Images/MDO/undraw_add_tasks_re_s5yj.svg";
+import events from "../Images/MDO/undraw_events_re_98ue.svg";
+import vault from "../Images/MDO/undraw_vault_re_s4my.svg";
+import group_chat from "../Images/MDO/undraw_group_chat_re_frmo.svg";
+import master_chat from "../Images/MDO/undraw_professor_re_mj1s.svg";
+import crm_plus from "../Images/MDO/undraw_projections_re_ulc6.svg";
 import { BrainFlowSection } from "../components/BrainFlow";
 const sections = [
   {
