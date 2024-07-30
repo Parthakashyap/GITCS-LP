@@ -20,7 +20,7 @@ const Body: React.FC = () => {
         </div>
         <h1 className="text-6xl font-bold text-center tracking-tight">
           Unlock the
-          <br /> <span className="text-blue-500">Power</span> of Data
+          <br /> <span className="text-green-500">Power</span> of Data
         </h1>
         <p className="text-center text-lg mt-8">
           Turn Data into Actionable Insights <br />
@@ -32,10 +32,10 @@ const Body: React.FC = () => {
           </button>
         </div>
 
-        <div className="relative w-[90%] mx-auto mt-8">
-          <img src={landingImage} alt="hero" className="w-full" />
-          <div className="absolute inset-x-0 bottom-0 h-[50%] rounded-3xl bg-gradient-to-t from-black to-transparent"></div>
-          <BorderBeam className=" rounded-3xl" />
+        <div className="relative w-[90%] mx-auto mt-8 border-2 border-black rounded-lg">
+          <img src={landingImage} alt="hero" className="w-full rounded-lg" />
+          <div className="absolute inset-x-0 bottom-0 h-[50%] rounded-md bg-gradient-to-t from-black to-transparent"></div>
+          <BorderBeam className=" rounded-lg" />
         </div>
       </div>
       <div className="hidden sm:block">
