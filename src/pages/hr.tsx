@@ -84,7 +84,7 @@ const sections = [
 
 const HR = () => (
   <div className="flex flex-col gap-5 w-full min-h-screen">
-    <div className="bg-blue-700 text-white w-full flex flex-col justify-center p-4 md:h-[800px]">
+    <div className="bg-orange-700 text-white w-full flex flex-col justify-center p-4 md:h-[800px]">
       <div className="flex justify-between lg:flex-row flex-col items-center md:w-[80%] w-full m-auto">
         <div className="flex flex-col gap-8 mt-20 mb-20">
           <WordPullUp
@@ -132,7 +132,7 @@ const HR = () => (
         ].map(({ icon: Icon, title }) => (
           <div
             key={title}
-            className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-blue-600 hover:bg-gray-100 duration-200"
+            className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-orange-700 hover:bg-gray-100 duration-200"
           >
             <Icon size={50} className="mb-6" />
             <h1 className="text-2xl font-bold">{title}</h1>
@@ -150,7 +150,7 @@ const HR = () => (
           key={index}
           index={index}
           title={section.title}
-          color="#1D4CD8"
+          color="#C2410C"
           img={section.img}
           description={section.description}
         />
