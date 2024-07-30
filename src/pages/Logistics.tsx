@@ -128,7 +128,7 @@ const Logistics = () => {
           ].map(({ icon: Icon, title }) => (
             <div
               key={title}
-              className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-[#6A5ACD] hover:bg-gray-100 duration-200"
+              className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-emerald-600 hover:bg-gray-100 duration-200"
             >
               <Icon size={50} className="mb-6" />
               <h1 className="text-2xl font-bold">{title}</h1>
