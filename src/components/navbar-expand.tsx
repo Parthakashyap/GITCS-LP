@@ -43,49 +43,49 @@ const categories: Categories = {
   MDO: [
     {
       title: "Organisation Structure Maker ",
-      href: "/sales/crm",
+      href: "/mdo",
       description: "Comprehensive CRM platform for customer-facing teams.",
     },
     {
       title: "Flow Chart Maker ",
-      href: "/sales/bigin",
+      href: "/mdo",
       description: "Simple CRM for small businesses moving from spreadsheets.",
     },
     {
       title: "Designation Profile ",
-      href: "/sales/forms",
+      href: "/mdo",
       description: "Build online forms for every business need.",
     },
     {
       title: "Task Delegation ",
-      href: "/sales/salesiq",
+      href: "/mdo",
       description: "Live chat app to engage and convert website visitors.",
     },
     {
       title: "Events ",
-      href: "/sales/bookings",
+      href: "/mdo",
       description:
         "Appointment scheduling app for consultations with customers.",
     },
     {
       title: "Vault",
-      href: "/sales/sign",
+      href: "/mdo",
       description: "Digital signature app for businesses.",
     },
     {
       title: "Group Chat",
-      href: "/sales/routeiq",
+      href: "/mdo",
       description:
         "Comprehensive sales map visualization and optimal route planning solution.",
     },
     {
       title: "Master List ",
-      href: "/sales/thrive",
+      href: "/mdo",
       description: "Complete loyalty and affiliate management platform. NEW",
     },
     {
       title: "CRM Plus",
-      href: "/sales/crm-plus",
+      href: "/mdo",
       description:
         "Unified platform to deliver top-notch customer experience. SUITE",
     },
@@ -93,34 +93,34 @@ const categories: Categories = {
   HR: [
     {
       title: "Hiring Brainflow",
-      href: "/marketing/social",
+      href: "/hr",
       description: "All-in-one social media management software.",
     },
     {
       title: "Recruitment Brainflow",
-      href: "/marketing/campaigns",
+      href: "/hr",
       description:
         "Create, send, and track targeted email campaigns that drive sales.",
     },
     {
       title: "Onboarding Brainflow",
-      href: "/marketing/forms",
+      href: "/hr",
       description: "Build online forms for every business need.",
     },
     {
       title: "Training & Evaluation Brainflow ",
-      href: "/marketing/survey",
+      href: "/hr",
       description: "Design surveys to reach and interact with your audience.",
     },
     {
       title: "Joining & Handover Brainflow",
-      href: "/marketing/sites",
+      href: "/hr",
       description:
         "Online website builder with extensive customisation options.",
     },
     {
       title: "Seperation Brainflow",
-      href: "/marketing/pagesense",
+      href: "/hr",
       description:
         "Website conversion optimization and personalisation platform.",
     },
@@ -128,224 +128,224 @@ const categories: Categories = {
   ADMIN: [
     {
       title: "Task Management ",
-      href: "/commerce/commerce",
+      href: "/admin",
       description: "eCommerce platform to manage and market your online store.",
     },
     {
       title: "Front Office ",
-      href: "/commerce/commerce",
+      href: "/admin",
       description: "eCommerce platform to manage and market your online store.",
     },
     {
       title: "Fuel Mgmt System  ",
-      href: "/commerce/commerce",
+      href: "/admin",
       description: "eCommerce platform to manage and market your online store.",
     },
     {
       title: "Event Mgmt System  ",
-      href: "/commerce/commerce",
+      href: "/admin",
       description: "eCommerce platform to manage and market your online store.",
     },
     {
       title: "Greetings Mgmt System  ",
-      href: "/commerce/commerce",
+      href: "/admin",
       description: "eCommerce platform to manage and market your online store.",
     },
     {
       title: "Asset Mgmt System  ",
-      href: "/commerce/commerce",
+      href: "/admin",
       description: "eCommerce platform to manage and market your online store.",
     },
   ],
   IT: [
     {
       title: "IT Mgmt System",
-      href: "/service/desk",
+      href: "/it",
       description: "Helpdesk software to deliver great customer support.",
     },
   ],
   MARKETING: [
     {
       title: "Lead to Order ",
-      href: "/finance/accounting",
+      href: "/marketing",
       description: "Manage your finances and accounts.",
     },
     {
       title: "FMS - Fund Demand",
-      href: "/finance/billing",
+      href: "/marketing",
       description: "Manage and automate your billing processes.",
     },
     {
       title: "Cash Collection Engine ",
-      href: "/finance/expense",
+      href: "/marketing",
       description: "Track and manage your business expenses.",
     },
     {
       title: "Legal Matter System ",
-      href: "/finance/planning",
+      href: "/marketing",
       description: "Plan and forecast your financial strategy.",
     },
     {
       title: "Bank Guarantee System",
-      href: "/finance/payroll",
+      href: "/marketing",
       description: "Manage employee payroll efficiently.",
     },
   ],
   PROCUREMENT: [
     {
       title: "Procurement System ",
-      href: "/email/marketing",
+      href: "/procurement",
       description: "Send marketing emails to your customers.",
     },
     {
       title: "Procurement Funnel  ",
-      href: "/email/marketing",
+      href: "/procurement",
       description: "Send marketing emails to your customers.",
     },
     {
       title: "Vendor Funnel",
-      href: "/email/marketing",
+      href: "/procurement",
       description: "Send marketing emails to your customers.",
     },
   ],
   STORES: [
     {
       title: "Warehouse Mgmt System",
-      href: "/hr/management",
+      href: "/stores",
       description: "Manage your employees and their information.",
     },
     {
       title: "Challan Issue System",
-      href: "/hr/management",
+      href: "/stores",
       description: "Manage your employees and their information.",
     },
     {
       title: "Material Mgm System",
-      href: "/hr/management",
+      href: "/stores",
       description: "Manage your employees and their information.",
     },
     {
       title: "Inventory Mgmt System",
-      href: "/hr/management",
+      href: "/stores",
       description: "Manage your employees and their information.",
     },
   ],
   PROJECTS: [
     {
       title: "Attendance System",
-      href: "/legal/compliance",
+      href: "/projects",
       description: "Ensure your business complies with laws.",
     },
     {
       title: "Contractor Management System",
-      href: "/legal/compliance",
+      href: "/projects",
       description: "Ensure your business complies with laws.",
     },
     {
       title: "BOM Mgmt System",
-      href: "/legal/compliance",
+      href: "/projects",
       description: "Ensure your business complies with laws.",
     },
     {
       title: "Project Mgmt System ",
-      href: "/legal/compliance",
+      href: "/projects",
       description: "Ensure your business complies with laws.",
     },
     {
       title: "TPI System ",
-      href: "/legal/compliance",
+      href: "/projects",
       description: "Ensure your business complies with laws.",
     },
   ],
   FINANCE: [
     {
       title: "CFR",
-      href: "/security/cybersecurity",
+      href: "/finance",
       description: "Protect your business from cyber threats.",
     },
     {
       title: "Statutory Complainces",
-      href: "/security/cybersecurity",
+      href: "/finance",
       description: "Protect your business from cyber threats.",
     },
     {
       title: "Budgeting ",
-      href: "/security/cybersecurity",
+      href: "/finance",
       description: "Protect your business from cyber threats.",
     },
     {
       title: "Payment Mgmt System (Recurring Payments)  ",
-      href: "/security/cybersecurity",
+      href: "/finance",
       description: "Protect your business from cyber threats.",
     },
   ],
   ACCOUNTS: [
     {
       title: "Expense Mgmt System ",
-      href: "/bi/analytics",
+      href: "/accounts",
       description: "Analyze your business data.",
     },
     {
       title: "Financial Summary System",
-      href: "/bi/analytics",
+      href: "/accounts",
       description: "Analyze your business data.",
     },
   ],
   "PROJECT MANAGEMENT": [
     {
       title: "Task Management",
-      href: "/project/task",
+      href: "/project-management",
       description: "Manage your projects and tasks.",
     },
   ],
   GIGS: [
     {
       title: "Help Ticket System ",
-      href: "/developer/api",
+      href: "/gigs",
       description: "Access API documentation for development.",
     },
     {
       title: "Annual Legal Compliance Calendar",
-      href: "/developer/api",
+      href: "/gigs",
       description: "Access API documentation for development.",
     },
     {
       title: "Score Card (MIS)",
-      href: "/developer/api",
+      href: "/gigs",
       description: "Access API documentation for development.",
     },
     {
       title: "To Do List ",
-      href: "/developer/api",
+      href: "/gigs",
       description: "Access API documentation for development.",
     },
     {
       title: "One Time Task",
-      href: "/developer/api",
+      href: "/gigs",
       description: "Access API documentation for development.",
     },
     {
       title: "Calender",
-      href: "/developer/api",
+      href: "/gigs",
       description: "Access API documentation for development.",
     },
     {
       title: "Learning Center ",
-      href: "/developer/api",
+      href: "/gigs",
       description: "Access API documentation for development.",
     },
   ],
   LOGISTICS: [
     {
       title: "FMS – Logistics",
-      href: "/logistics/fms",
+      href: "/logistics",
       description: "Manage your logistics and transportation.",
     },
   ],
   AUDIT: [
     {
       title: "RT – Audit",
-      href: "/audit/audit",
+      href: "/audit",
       description: "Manage your audits and compliance.",
     },
   ],
