@@ -6,16 +6,16 @@ import {
   Plus,
   TestTube,
 } from "lucide-react";
-import hrbg from "../Images/undraw_job_offers_re_634p.svg";
-import charts from "../Images/charts.svg";
-import flow_chart from "../Images/undraw_bear_market_ania.svg";
-import designation from "../Images/undraw_post_re_mtr4.svg";
-import tasks from "../Images/undraw_add_tasks_re_s5yj.svg";
-import events from "../Images/undraw_events_re_98ue.svg";
-import vault from "../Images/undraw_vault_re_s4my.svg";
-import group_chat from "../Images/undraw_group_chat_re_frmo.svg";
-import master_chat from "../Images/undraw_professor_re_mj1s.svg";
-import crm_plus from "../Images/undraw_projections_re_ulc6.svg";
+import hrbg from "../Images/undraw_job_offers_re_634p-cyan.svg";
+import charts from "../Images/charts-cyan.svg";
+import flow_chart from "../Images/undraw_bear_market_ania-cyan.svg";
+import designation from "../Images/undraw_post_re_mtr4-cyan.svg";
+import tasks from "../Images/undraw_add_tasks_re_s5yj-cyan.svg";
+import events from "../Images/undraw_events_re_98ue-cyan.svg";
+import vault from "../Images/undraw_vault_re_s4my-cyan.svg";
+import group_chat from "../Images/undraw_group_chat_re_frmo-cyan.svg";
+import master_chat from "../Images/undraw_professor_re_mj1s-cyan.svg";
+import crm_plus from "../Images/undraw_projections_re_ulc6-cyan.svg";
 import WordPullUp from "../components/magicui/word-pull-up";
 import { FadeText } from "../components/magicui/fade-text";
 import BlurIn from "../components/magicui/blur-in";

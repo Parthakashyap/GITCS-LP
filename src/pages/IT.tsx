@@ -1,4 +1,4 @@
-import hrbg from "../Images/undraw_programming_re_kg9v.svg";
+import hrbg from "../Images/undraw_programming_re_kg9v-pink.svg";
 import WordPullUp from "../components/magicui/word-pull-up";
 import { FadeText } from "../components/magicui/fade-text";
 import BlurIn from "../components/magicui/blur-in";
@@ -12,15 +12,15 @@ import {
   Plus,
   TestTube,
 } from "lucide-react";
-import charts from "../Images/charts.svg";
-import flow_chart from "../Images/undraw_bear_market_ania.svg";
-import designation from "../Images/undraw_post_re_mtr4.svg";
-import tasks from "../Images/undraw_add_tasks_re_s5yj.svg";
-import events from "../Images/undraw_events_re_98ue.svg";
-import vault from "../Images/undraw_vault_re_s4my.svg";
-import group_chat from "../Images/undraw_group_chat_re_frmo.svg";
-import master_chat from "../Images/undraw_professor_re_mj1s.svg";
-import crm_plus from "../Images/undraw_projections_re_ulc6.svg";
+import charts from "../Images/charts-pink.svg";
+import flow_chart from "../Images/undraw_bear_market_ania-pink.svg";
+import designation from "../Images/undraw_post_re_mtr4-pink.svg";
+import tasks from "../Images/undraw_add_tasks_re_s5yj-pink.svg";
+import events from "../Images/undraw_events_re_98ue-pink.svg";
+import vault from "../Images/undraw_vault_re_s4my-pink.svg";
+import group_chat from "../Images/undraw_group_chat_re_frmo-pink.svg";
+import master_chat from "../Images/undraw_professor_re_mj1s-pink.svg";
+import crm_plus from "../Images/undraw_projections_re_ulc6-pink.svg";
 import { BrainFlowSection } from "../components/BrainFlow";
 const sections = [
   {
