@@ -19,7 +19,6 @@ import crm_plus from "../Images/undraw_projections_re_ulc6.svg";
 import WordPullUp from "../components/magicui/word-pull-up";
 import { FadeText } from "../components/magicui/fade-text";
 import BlurIn from "../components/magicui/blur-in";
-import GradualSpacing from "../components/magicui/gradual-spacing";
 import FaqSection from "../components/sections/FaqSection";
 import PricingSection from "../components/sections/PricingSection";
 import { BrainFlowSection } from "../components/BrainFlow";
@@ -113,13 +112,9 @@ const HR = () => (
     </div>
 
     <div className="flex justify-center flex-col gap-8 items-center p-9">
-      <h1 className="text-center text-4xl font-bold md:hidden">
-        What Brain Brings To The Table
-      </h1>
-      <GradualSpacing
-        className="hidden md:block font-display text-center text-4xl font-bold tracking-[-0.1em] text-black dark:text-white md:text-7xl md:leading-[5rem]"
-        text="What Brain Brings To The Table"
-      />
+    <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
+          What Brain Brings To The Table
+        </h1>
 
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
         {[

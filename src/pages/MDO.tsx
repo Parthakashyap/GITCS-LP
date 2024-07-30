@@ -22,7 +22,6 @@ import vault from "../Images/undraw_vault_re_s4my.svg";
 import group_chat from "../Images/undraw_group_chat_re_frmo.svg";
 import master_chat from "../Images/undraw_professor_re_mj1s.svg";
 import crm_plus from "../Images/undraw_projections_re_ulc6.svg";
-import GradualSpacing from "../components/magicui/gradual-spacing";
 import { BrainFlowSection } from "../components/BrainFlow";
 const sections = [
   {
@@ -112,13 +111,9 @@ const MDO = () => {
         </div>
       </div>
       <div className="flex justify-center flex-col gap-8 items-center p-9">
-        <h1 className="text-center text-4xl font-bold md:hidden">
+      <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
           What Brain Brings To The Table
         </h1>
-        <GradualSpacing
-          className="hidden md:block font-display text-center text-4xl font-bold tracking-[-0.1em] text-black dark:text-white md:text-7xl md:leading-[5rem]"
-          text="What Brain Brings To The Table"
-        />
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
           {[

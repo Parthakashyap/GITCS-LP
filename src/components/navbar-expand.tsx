@@ -194,17 +194,17 @@ export const categories: Categories = {
   PROCUREMENT: [
     {
       title: "Procurement System ",
-      href: "/procurement",
+      href: "/procurment",
       description: "Send marketing emails to your customers.",
     },
     {
       title: "Procurement Funnel  ",
-      href: "/procurement",
+      href: "/procurment",
       description: "Send marketing emails to your customers.",
     },
     {
       title: "Vendor Funnel",
-      href: "/procurement",
+      href: "/procurment",
       description: "Send marketing emails to your customers.",
     },
   ],
