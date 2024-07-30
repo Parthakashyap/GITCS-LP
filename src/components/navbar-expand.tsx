@@ -39,7 +39,7 @@ const company = [
     href: "/careers",
   },
 ];
-const categories: Categories = {
+export const categories: Categories = {
   MDO: [
     {
       title: "Organisation Structure Maker ",
