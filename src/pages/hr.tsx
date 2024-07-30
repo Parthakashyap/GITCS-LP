@@ -87,11 +87,13 @@ export const BrainFlowSection = ({
   img,
   description,
   index,
+  color,
 }: {
   title: string;
   img: string;
   description: string;
   index: number;
+  color?: string;
 }) => (
   <>
     <section
@@ -100,22 +102,22 @@ export const BrainFlowSection = ({
       }`}
     >
       <div className="md:w-1/3">
-        <BoxReveal boxColor="#1c4cd8">
+        <BoxReveal boxColor={color}>
           <img src={img} alt={title} />
         </BoxReveal>
       </div>
       <div className="flex gap-8 flex-col">
-        <BoxReveal boxColor="#1c4cd8">
+        <BoxReveal boxColor={color}>
           <h1 className="md:text-5xl text-3xl md:pb-1 font-bold text-left">
             {title}
           </h1>
         </BoxReveal>
-        <BoxReveal duration={0.5} boxColor="#1c4cd8">
+        <BoxReveal duration={0.5} boxColor={color}>
           <p className="max-w-xl text-lg text-left opacity-60">{description}</p>
         </BoxReveal>
         <ul className="flex flex-col gap-3 items-start">
           {[...Array(5)].map((_, idx) => (
-            <BoxReveal key={idx} duration={0.7} boxColor="#1c4cd8">
+            <BoxReveal key={idx} duration={0.7} boxColor={color}>
               <div className="flex gap-3 items-center break-words flex-wrap">
                 <div className="bg-green-500/10 p-2 rounded-full">
                   <Check size={10} />
@@ -199,6 +201,7 @@ const HR = () => (
           key={index}
           index={index}
           title={section.title}
+          color="#1D4CD8"
           img={section.img}
           description={section.description}
         />

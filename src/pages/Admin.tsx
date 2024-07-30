@@ -98,7 +98,7 @@ const Admin = () => {
             <div className="flex gap-3 flex-wrap items-center">
               <BlurIn
                 word={`Get Started `}
-                className=" bg-orange-600 py-3 rounded-md flex gap-2 justify-center items-center px-8"
+                className=" bg-green-600 py-3 rounded-md flex gap-2 justify-center items-center px-8"
               />
               <BlurIn
                 word="Learn More"
@@ -150,6 +150,7 @@ const Admin = () => {
           index={index}
           title={section.title}
           img={section.img}
+          color="#581C87"
           description={section.description}
         />
       ))}
