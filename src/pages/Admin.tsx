@@ -1,314 +1,163 @@
-import {
-  Check,
-  Coins,
-  DoorOpen,
-  Fuel,
-  Handshake,
-  PartyPopper,
-  Workflow,
-} from "lucide-react";
-import BlurIn from "../components/magicui/blur-in";
-import BoxReveal from "../components/magicui/box-reveal";
-import TypingAnimation from "../components/magicui/typing-animation";
+import banner from "../Images/undraw_online_organizer_re_156n.svg";
 import WordPullUp from "../components/magicui/word-pull-up";
-
-import vault from "../Images/undraw_vault_re_s4my.svg";
+import { FadeText } from "../components/magicui/fade-text";
+import BlurIn from "../components/magicui/blur-in";
+import PricingSection from "../components/sections/PricingSection";
+import FaqSection from "../components/sections/FaqSection";
+import {
+  DoorClosed,
+  DoorOpen,
+  Handshake,
+  LockOpen,
+  Plus,
+  TestTube,
+} from "lucide-react";
 import charts from "../Images/charts.svg";
 import flow_chart from "../Images/undraw_bear_market_ania.svg";
 import designation from "../Images/undraw_post_re_mtr4.svg";
 import tasks from "../Images/undraw_add_tasks_re_s5yj.svg";
-import FaqSection from "../components/sections/FaqSection";
 import events from "../Images/undraw_events_re_98ue.svg";
-import PricingSection from "../components/sections/PricingSection";
+import vault from "../Images/undraw_vault_re_s4my.svg";
+import group_chat from "../Images/undraw_group_chat_re_frmo.svg";
+import master_chat from "../Images/undraw_professor_re_mj1s.svg";
+import crm_plus from "../Images/undraw_projections_re_ulc6.svg";
 import GradualSpacing from "../components/magicui/gradual-spacing";
+import { BrainFlowSection } from "./hr";
+const sections = [
+  {
+    title: "Hiring Brain Flow",
+    img: charts,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+  {
+    title: "Recruitment Brain Flow",
+    img: flow_chart,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+  {
+    title: "Onboarding Brain Flow",
+    img: designation,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+  {
+    title: "Training And Evaluation Brain Flow",
+    img: tasks,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+  {
+    title: "Events",
+    img: events,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+  {
+    title: "Joining & Handover Brainflow",
+    img: vault,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+  {
+    title: "Seperating BrainFlow",
+    img: group_chat,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+  {
+    title: "Master Chat",
+    img: master_chat,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+  {
+    title: "CRM PLUS +",
+    img: crm_plus,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+];
 const Admin = () => {
   return (
-    <div className="relative  flex min-h-screen w-full flex-col  overflow-hidden rounded-lg border bg-background md:shadow-xl">
-      <div className="flex flex-col gap-7 mt-20 p-4 md:w-[80%] w-full justify-center items-center m-auto">
-        <WordPullUp
-          words="A reliable admin dashboard for everyone."
-          className="lg:text-6xl text-5xl capitalize font-bold md:max-w-3xl text-center break-words"
-        />
-        <p className=" max-w-xl text-center h-20">
-          <TypingAnimation
-            text="For personal use, teams, and large enterprises, Brain Admin is a
-          secure Admin Dashboard for everyone that safely manages everything and
-          other sensitive information."
-            duration={15}
-            className=" md:text-lg text-md text-center opacity-70"
-          />
-        </p>
-        <div className="flex gap-3 mt-8">
-          <BlurIn
-            word="Get started"
-            className="bg-red-500 text-white px-4 py-3 rounded-md text-md"
-          />
-          <BlurIn
-            word="Learn More"
-            className="bg-white text-blue-500 px-4 py-3 rounded-md border "
-          />
-        </div>
-
-        <div className=" z-10 m-auto rounded-md p-2 bg-black text-center justify-center items-center">
-          <BoxReveal>
-            <img
-              src="https://www.zohowebstatic.com/sites/zweb/images/vault/banner-team-dashboard.jpg"
-              className="rounded-md "
-              alt=""
-              height={500}
-              width={1000}
+    <div className="flex flex-col gap-5 w-full min-h-screen">
+      <div className=" bg-purple-900 text-white w-full flex flex-col justify-center p-4 md:h-[800px]">
+        <div className="flex justify-between lg:flex-row flex-col items-center md:w-[80%] w-full m-auto">
+          <div className="flex flex-col gap-8  mt-20 mb-20">
+            <WordPullUp
+              words="A reliable admin dashboard for everyone."
+              className="text-5xl font-bold text-left max-w-3xl break-words"
             />
-          </BoxReveal>
-        </div>
-        <hr className=" bg-black w-full" />
-        <div className=" z-20">
-          <h1 className="text-center text-4xl mb-10 font-bold md:hidden">
-            What Brain Brings To The Table
-          </h1>
-          <GradualSpacing
-            className="hidden md:block mb-12 font-display text-center text-4xl font-bold tracking-[-0.1em]  text-black dark:text-white md:text-7xl md:leading-[5rem]"
-            text="What Do We Offer"
-          />
-
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-            <div className=" p-8 rounded-md border border-black/10 hover:border-blue-600 duration-200">
-              <Workflow size={50} className=" mb-6" />
-              <h1 className=" text-2xl font-bold">Task Managment</h1>
-              <p className=" break-words max-w-[80%] mt-2">
-                All in one social media management software
-              </p>
+            <div className=" max-w-2xl">
+              <FadeText
+                text="For personal use, teams, and large enterprises, Brain Admin is a secure Admin Dashboard for everyone that safely manages everything and other sensitive information."
+                direction="left"
+              />
             </div>
-
-            <div className=" p-8 rounded-md border border-black/10 hover:border-blue-600 duration-200">
-              <DoorOpen size={50} className=" mb-6" />
-              <h1 className=" text-2xl font-bold">Front Office</h1>
-              <p className=" break-words max-w-[80%] mt-2">
-                All in one social media management software
-              </p>
-            </div>
-            <div className=" p-8 rounded-md border border-black/10 hover:border-blue-600 duration-200">
-              <Fuel size={50} className=" mb-6" />
-              <h1 className=" text-2xl font-bold">Fuel Management System</h1>
-              <p className=" break-words max-w-[80%] mt-2">
-                All in one social media management software
-              </p>
-            </div>
-
-            <div className=" p-8 rounded-md border border-black/10 hover:border-blue-600 duration-200">
-              <PartyPopper size={50} className=" mb-6" />
-              <h1 className=" text-2xl font-bold">Event Management System</h1>
-              <p className=" break-words max-w-[80%] mt-2">
-                All in one social media management software
-              </p>
-            </div>
-
-            <div className=" p-8 rounded-md border border-black/10 hover:border-blue-600 duration-200">
-              <Handshake size={50} className=" mb-6" />
-              <h1 className=" text-2xl font-bold">
-                Greetings Management System
-              </h1>
-              <p className=" break-words max-w-[80%] mt-2">
-                All in one social media management software
-              </p>
-            </div>
-
-            <div className=" p-8 rounded-md border border-black/10 hover:border-blue-600 duration-200">
-              <Coins size={50} className=" mb-6" />
-              <h1 className=" text-2xl font-bold">Asset Management System</h1>
-              <p className=" break-words max-w-[80%] mt-2">
-                All in one social media management software
-              </p>
+            <div className="flex gap-3 flex-wrap items-center">
+              <BlurIn
+                word={`Get Started `}
+                className=" bg-orange-600 py-3 rounded-md flex gap-2 justify-center items-center px-8"
+              />
+              <BlurIn
+                word="Learn More"
+                className=" border border-white text-white flex justify-center gap-4 items-center py-3 rounded-md px-8"
+              />
             </div>
           </div>
-        </div>
 
-        <hr className=" bg-black w-full" />
-
-        <BoxReveal boxColor="#1c4cd8">
-          <section className="flex items-center md:flex-row flex-col p-4 gap-20 md:gap-40 w-full justify-center mt-44">
-            <img src={charts} alt="" className=" md:w-1/3" />
-            <div className="flex gap-8 flex-col">
-              <h1 className="text-5xl font-bold text-left">Task Management</h1>
-              <p className=" max-w-xl text-lg text-left opacity-60">
-                Say goodbye to mundane spreadsheets or rigid systems to manage
-                HR tasks. Get smarter and more efficient software with features
-                designed to free you from administrative work.
-              </p>
-              <ul className="flex flex-col gap-3 items-start">
-                {[1, 2, 3, 4, 5].map((_, index) => (
-                  <div
-                    className="flex gap-3 items-center break-words flex-wrap"
-                    key={index}
-                  >
-                    <div className="bg-green-500/10 p-2 rounded-full">
-                      <Check size={10} />
-                    </div>
-                    <li>Employee Database </li>
-                  </div>
-                ))}
-              </ul>
-            </div>
-          </section>
-        </BoxReveal>
-
-        <hr className=" bg-black w-full" />
-        <BoxReveal boxColor="#1c4cd8">
-          <section className="flex items-center p-4 gap-20 md:gap-40 md:flex-row flex-col w-full justify-center mt-44">
-            <div className="flex gap-8 flex-col">
-              <h1 className="text-5xl font-bold text-left">Front Office</h1>
-              <p className=" max-w-xl text-lg text-left opacity-60">
-                Say goodbye to mundane spreadsheets or rigid systems to manage
-                HR tasks. Get smarter and more efficient software with features
-                designed to free you from administrative work.
-              </p>
-              <ul className="flex flex-col gap-3 items-start">
-                {[1, 2, 3, 4, 5].map((_, index) => (
-                  <div
-                    className="flex gap-3 items-center break-words flex-wrap"
-                    key={index}
-                  >
-                    <div className="bg-green-500/10 p-2 rounded-full">
-                      <Check size={10} />
-                    </div>
-                    <li>Employee Database </li>
-                  </div>
-                ))}
-              </ul>
-            </div>
-
-            <img src={flow_chart} alt="" className=" md:w-1/3" />
-          </section>
-        </BoxReveal>
-
-        <hr className=" bg-black w-full" />
-
-        <BoxReveal boxColor="#1c4cd8">
-          <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col w-full justify-center mt-44">
-            <img src={designation} alt="" className=" md:w-1/3" />
-            <div className="flex gap-8 flex-col">
-              <h1 className="text-5xl font-bold text-left">
-                Fuel Management System
-              </h1>
-              <p className=" max-w-xl text-lg text-left opacity-60">
-                Say goodbye to mundane spreadsheets or rigid systems to manage
-                HR tasks. Get smarter and more efficient software with features
-                designed to free you from administrative work.
-              </p>
-              <ul className="flex flex-col gap-3 items-start">
-                {[1, 2, 3, 4, 5].map((_, index) => (
-                  <div
-                    className="flex gap-3 items-center break-words flex-wrap"
-                    key={index}
-                  >
-                    <div className="bg-green-500/10 p-2 rounded-full">
-                      <Check size={10} />
-                    </div>
-                    <li>Employee Database </li>
-                  </div>
-                ))}
-              </ul>
-            </div>
-          </section>
-        </BoxReveal>
-
-        <hr className=" bg-black w-full" />
-
-        <BoxReveal boxColor="#1c4cd8">
-          <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col-reverse w-full justify-center mt-44">
-            <div className="flex gap-8 flex-col">
-              <h1 className="text-5xl font-bold text-left">
-                Event Management System
-              </h1>
-              <p className=" max-w-xl text-lg text-left opacity-60">
-                Say goodbye to mundane spreadsheets or rigid systems to manage
-                HR tasks. Get smarter and more efficient software with features
-                designed to free you from administrative work.
-              </p>
-              <ul className="flex flex-col gap-3 items-start">
-                {[1, 2, 3, 4, 5].map((_, index) => (
-                  <div
-                    className="flex gap-3 items-center break-words flex-wrap"
-                    key={index}
-                  >
-                    <div className="bg-green-500/10 p-2 rounded-full">
-                      <Check size={10} />
-                    </div>
-                    <li>Employee Database </li>
-                  </div>
-                ))}
-              </ul>
-            </div>
-            <img src={tasks} alt="" className=" md:w-1/3" />
-          </section>
-        </BoxReveal>
-
-        <hr className=" bg-black w-full" />
-        <BoxReveal boxColor="#1c4cd8">
-          <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col  w-full justify-center mt-44">
-            <img src={events} alt="" className=" md:w-1/3" />
-            <div className="flex gap-8 flex-col">
-              <h1 className="text-5xl font-bold text-left">
-                Greetings Management System
-              </h1>
-              <p className=" max-w-xl text-lg text-left opacity-60">
-                Say goodbye to mundane spreadsheets or rigid systems to manage
-                HR tasks. Get smarter and more efficient software with features
-                designed to free you from administrative work.
-              </p>
-              <ul className="flex flex-col gap-3 items-start">
-                {[1, 2, 3, 4, 5].map((_, index) => (
-                  <div
-                    className="flex gap-3 items-center break-words flex-wrap"
-                    key={index}
-                  >
-                    <div className="bg-green-500/10 p-2 rounded-full">
-                      <Check size={10} />
-                    </div>
-                    <li>Employee Database </li>
-                  </div>
-                ))}
-              </ul>
-            </div>
-          </section>
-        </BoxReveal>
-
-        <hr className=" bg-black w-full" />
-        <BoxReveal boxColor="#1c4cd8">
-          <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col-reverse w-full justify-center mt-44">
-            <div className="flex gap-8 flex-col">
-              <h1 className="text-5xl font-bold text-left">
-                Asset Management System
-              </h1>
-              <p className=" max-w-xl text-lg text-left opacity-60">
-                Say goodbye to mundane spreadsheets or rigid systems to manage
-                HR tasks. Get smarter and more efficient software with features
-                designed to free you from administrative work.
-              </p>
-              <ul className="flex flex-col gap-3 items-start">
-                {[1, 2, 3, 4, 5].map((_, index) => (
-                  <div
-                    className="flex gap-3 items-center break-words flex-wrap"
-                    key={index}
-                  >
-                    <div className="bg-green-500/10 p-2 rounded-full">
-                      <Check size={10} />
-                    </div>
-                    <li>Employee Database </li>
-                  </div>
-                ))}
-              </ul>
-            </div>
-            <img src={vault} alt="" className=" md:w-1/3" />
-          </section>
-        </BoxReveal>
-        <hr className=" bg-black w-full" />
-        <div className="mt-20 z-20">
-          <PricingSection />
-        </div>
-        <div className="z-20">
-          <FaqSection />
+          <img src={banner} alt="" className=" md:w-1/2 w-96" />
         </div>
       </div>
+      <div className="flex justify-center flex-col gap-8 items-center p-9">
+        <h1 className="text-center text-4xl font-bold md:hidden">
+          What Brain Brings To The Table
+        </h1>
+        <GradualSpacing
+          className="hidden md:block font-display text-center text-4xl font-bold tracking-[-0.1em] text-black dark:text-white md:text-7xl md:leading-[5rem]"
+          text="What Brain Brings To The Table"
+        />
+
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+          {[
+            { icon: DoorOpen, title: "Hiring Brain Flow" },
+            { icon: LockOpen, title: "Recruitment Brain Flow" },
+            { icon: Plus, title: "Onboarding Brain Flow" },
+            { icon: TestTube, title: "Training & Evaluation Brain Flow" },
+            { icon: Handshake, title: "Joining & Handover Brain Flow" },
+            { icon: DoorClosed, title: "Seperation Brain Flow" },
+          ].map(({ icon: Icon, title }) => (
+            <div
+              key={title}
+              className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-blue-600 hover:bg-gray-100 duration-200"
+            >
+              <Icon size={50} className="mb-6" />
+              <h1 className="text-2xl font-bold">{title}</h1>
+              <p className="break-words max-w-[80%] mt-2">
+                All in one social media management software
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <hr className=" bg-black w-full" />
+
+      {sections.map((section, index) => (
+        <BrainFlowSection
+          key={index}
+          index={index}
+          title={section.title}
+          img={section.img}
+          description={section.description}
+        />
+      ))}
+
+      <div className="mt-20">
+        <PricingSection />
+      </div>
+      <FaqSection />
     </div>
   );
 };

@@ -12,7 +12,6 @@ import {
   Plus,
   TestTube,
 } from "lucide-react";
-import { Check } from "lucide-react";
 import charts from "../Images/charts.svg";
 import flow_chart from "../Images/undraw_bear_market_ania.svg";
 import designation from "../Images/undraw_post_re_mtr4.svg";
@@ -22,7 +21,6 @@ import vault from "../Images/undraw_vault_re_s4my.svg";
 import group_chat from "../Images/undraw_group_chat_re_frmo.svg";
 import master_chat from "../Images/undraw_professor_re_mj1s.svg";
 import crm_plus from "../Images/undraw_projections_re_ulc6.svg";
-import BoxReveal from "../components/magicui/box-reveal";
 import GradualSpacing from "../components/magicui/gradual-spacing";
 import { BrainFlowSection } from "./hr";
 const sections = [
@@ -143,66 +141,6 @@ const IT = () => {
           ))}
         </div>
       </div>
-
-      <hr className=" bg-black w-full" />
-
-      <BoxReveal boxColor="#1c4cd8">
-        <section className="flex items-center md:flex-row flex-col p-4 gap-20 md:gap-40 w-full justify-center mt-44">
-          <img src={charts} alt="" className=" md:w-1/3" />
-          <div className="flex gap-8 flex-col">
-            <h1 className="text-5xl font-bold text-left">Hiring Brain Flow</h1>
-            <p className=" max-w-xl text-lg text-left opacity-60">
-              Say goodbye to mundane spreadsheets or rigid systems to manage HR
-              tasks. Get smarter and more efficient software with features
-              designed to free you from administrative work.
-            </p>
-            <ul className="flex flex-col gap-3 items-start">
-              {[1, 2, 3, 4, 5].map((_, index) => (
-                <div
-                  className="flex gap-3 items-center break-words flex-wrap"
-                  key={index}
-                >
-                  <div className="bg-green-500/10 p-2 rounded-full">
-                    <Check size={10} />
-                  </div>
-                  <li>Employee Database </li>
-                </div>
-              ))}
-            </ul>
-          </div>
-        </section>
-      </BoxReveal>
-
-      <hr className=" bg-black w-full" />
-      <BoxReveal boxColor="#1c4cd8">
-        <section className="flex items-center p-4 gap-20 md:gap-40 md:flex-row flex-col w-full justify-center mt-44">
-          <div className="flex gap-8 flex-col">
-            <h1 className="text-5xl font-bold text-left">
-              Recruitment Brainflow
-            </h1>
-            <p className=" max-w-xl text-lg text-left opacity-60">
-              Say goodbye to mundane spreadsheets or rigid systems to manage HR
-              tasks. Get smarter and more efficient software with features
-              designed to free you from administrative work.
-            </p>
-            <ul className="flex flex-col gap-3 items-start">
-              {[1, 2, 3, 4, 5].map((_, index) => (
-                <div
-                  className="flex gap-3 items-center break-words flex-wrap"
-                  key={index}
-                >
-                  <div className="bg-green-500/10 p-2 rounded-full">
-                    <Check size={10} />
-                  </div>
-                  <li>Employee Database </li>
-                </div>
-              ))}
-            </ul>
-          </div>
-
-          <img src={flow_chart} alt="" className=" md:w-1/3" />
-        </section>
-      </BoxReveal>
 
       <hr className=" bg-black w-full" />
 
