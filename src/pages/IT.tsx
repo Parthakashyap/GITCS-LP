@@ -24,7 +24,63 @@ import master_chat from "../Images/undraw_professor_re_mj1s.svg";
 import crm_plus from "../Images/undraw_projections_re_ulc6.svg";
 import BoxReveal from "../components/magicui/box-reveal";
 import GradualSpacing from "../components/magicui/gradual-spacing";
-
+import { BrainFlowSection } from "./hr";
+const sections = [
+  {
+    title: "Hiring Brain Flow",
+    img: charts,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+  {
+    title: "Recruitment Brain Flow",
+    img: flow_chart,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+  {
+    title: "Onboarding Brain Flow",
+    img: designation,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+  {
+    title: "Training And Evaluation Brain Flow",
+    img: tasks,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+  {
+    title: "Events",
+    img: events,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+  {
+    title: "Joining & Handover Brainflow",
+    img: vault,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+  {
+    title: "Seperating BrainFlow",
+    img: group_chat,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+  {
+    title: "Master Chat",
+    img: master_chat,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+  {
+    title: "CRM PLUS +",
+    img: crm_plus,
+    description:
+      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+  },
+];
 const IT = () => {
   return (
     <div className="flex flex-col gap-5 w-full min-h-screen">
@@ -56,342 +112,117 @@ const IT = () => {
           <img src={hrbg} alt="" className=" md:w-1/2 w-96" />
         </div>
       </div>
-      
-
       <div className="flex justify-center flex-col gap-8 items-center p-9">
         <h1 className="text-center text-4xl font-bold md:hidden">
           What Brain Brings To The Table
         </h1>
         <GradualSpacing
-          className="hidden md:block font-display text-center text-4xl font-bold tracking-[-0.1em]  text-black dark:text-white md:text-7xl md:leading-[5rem]"
+          className="hidden md:block font-display text-center text-4xl font-bold tracking-[-0.1em] text-black dark:text-white md:text-7xl md:leading-[5rem]"
           text="What Brain Brings To The Table"
         />
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-          <div className=" p-8 rounded-md border border-black/10 hover:border-blue-600 duration-200">
-            <DoorOpen size={50} className=" mb-6" />
-            <h1 className=" text-2xl font-bold">Hiring Brain Flow</h1>
-            <p className=" break-words max-w-[80%] mt-2">
-              All in one social media management software
-            </p>
-          </div>
-
-          <div className=" p-8 rounded-md border border-black/10 hover:border-blue-600 duration-200">
-            <LockOpen size={50} className=" mb-6" />
-            <h1 className=" text-2xl font-bold">Recruitment Brain Flow</h1>
-            <p className=" break-words max-w-[80%] mt-2">
-              All in one social media management software
-            </p>
-          </div>
-          <div className=" p-8 rounded-md border border-black/10 hover:border-blue-600 duration-200">
-            <Plus size={50} className=" mb-6" />
-            <h1 className=" text-2xl font-bold">Onboarding Brain Flow</h1>
-            <p className=" break-words max-w-[80%] mt-2">
-              All in one social media management software
-            </p>
-          </div>
-
-          <div className=" p-8 rounded-md border border-black/10 hover:border-blue-600 duration-200">
-            <TestTube size={50} className=" mb-6" />
-            <h1 className=" text-2xl font-bold">
-              Traning & Evaluation Brain Flow
-            </h1>
-            <p className=" break-words max-w-[80%] mt-2">
-              All in one social media management software
-            </p>
-          </div>
-
-          <div className=" p-8 rounded-md border border-black/10 hover:border-blue-600 duration-200">
-            <Handshake size={50} className=" mb-6" />
-            <h1 className=" text-2xl font-bold">
-              Joining & Handover Brain Flow
-            </h1>
-            <p className=" break-words max-w-[80%] mt-2">
-              All in one social media management software
-            </p>
-          </div>
-
-          <div className=" p-8 rounded-md border border-black/10 hover:border-blue-600 duration-200">
-            <DoorClosed size={50} className=" mb-6" />
-            <h1 className=" text-2xl font-bold">Seperation Brain Flow</h1>
-            <p className=" break-words max-w-[80%] mt-2">
-              All in one social media management software
-            </p>
-          </div>
+          {[
+            { icon: DoorOpen, title: "Hiring Brain Flow" },
+            { icon: LockOpen, title: "Recruitment Brain Flow" },
+            { icon: Plus, title: "Onboarding Brain Flow" },
+            { icon: TestTube, title: "Training & Evaluation Brain Flow" },
+            { icon: Handshake, title: "Joining & Handover Brain Flow" },
+            { icon: DoorClosed, title: "Seperation Brain Flow" },
+          ].map(({ icon: Icon, title }) => (
+            <div
+              key={title}
+              className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-blue-600 hover:bg-gray-100 duration-200"
+            >
+              <Icon size={50} className="mb-6" />
+              <h1 className="text-2xl font-bold">{title}</h1>
+              <p className="break-words max-w-[80%] mt-2">
+                All in one social media management software
+              </p>
+            </div>
+          ))}
         </div>
-
-        <hr className=" bg-black w-full" />
-
-        <BoxReveal boxColor="#1c4cd8">
-          <section className="flex items-center md:flex-row flex-col p-4 gap-20 md:gap-40 w-full justify-center mt-44">
-            <img src={charts} alt="" className=" md:w-1/3" />
-            <div className="flex gap-8 flex-col">
-              <h1 className="text-5xl font-bold text-left">
-                Hiring Brain Flow
-              </h1>
-              <p className=" max-w-xl text-lg text-left opacity-60">
-                Say goodbye to mundane spreadsheets or rigid systems to manage
-                HR tasks. Get smarter and more efficient software with features
-                designed to free you from administrative work.
-              </p>
-              <ul className="flex flex-col gap-3 items-start">
-                {[1, 2, 3, 4, 5].map((_, index) => (
-                  <div
-                    className="flex gap-3 items-center break-words flex-wrap"
-                    key={index}
-                  >
-                    <div className="bg-green-500/10 p-2 rounded-full">
-                      <Check size={10} />
-                    </div>
-                    <li>Employee Database </li>
-                  </div>
-                ))}
-              </ul>
-            </div>
-          </section>
-        </BoxReveal>
-
-        <hr className=" bg-black w-full" />
-        <BoxReveal boxColor="#1c4cd8">
-          <section className="flex items-center p-4 gap-20 md:gap-40 md:flex-row flex-col w-full justify-center mt-44">
-            <div className="flex gap-8 flex-col">
-              <h1 className="text-5xl font-bold text-left">
-                Recruitment Brainflow
-              </h1>
-              <p className=" max-w-xl text-lg text-left opacity-60">
-                Say goodbye to mundane spreadsheets or rigid systems to manage
-                HR tasks. Get smarter and more efficient software with features
-                designed to free you from administrative work.
-              </p>
-              <ul className="flex flex-col gap-3 items-start">
-                {[1, 2, 3, 4, 5].map((_, index) => (
-                  <div
-                    className="flex gap-3 items-center break-words flex-wrap"
-                    key={index}
-                  >
-                    <div className="bg-green-500/10 p-2 rounded-full">
-                      <Check size={10} />
-                    </div>
-                    <li>Employee Database </li>
-                  </div>
-                ))}
-              </ul>
-            </div>
-
-            <img src={flow_chart} alt="" className=" md:w-1/3" />
-          </section>
-        </BoxReveal>
-
-        <hr className=" bg-black w-full" />
-
-        <BoxReveal boxColor="#1c4cd8">
-          <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col w-full justify-center mt-44">
-            <img src={designation} alt="" className=" md:w-1/3" />
-            <div className="flex gap-8 flex-col">
-              <h1 className="text-5xl font-bold text-left">
-                Onboarding Brainflow
-              </h1>
-              <p className=" max-w-xl text-lg text-left opacity-60">
-                Say goodbye to mundane spreadsheets or rigid systems to manage
-                HR tasks. Get smarter and more efficient software with features
-                designed to free you from administrative work.
-              </p>
-              <ul className="flex flex-col gap-3 items-start">
-                {[1, 2, 3, 4, 5].map((_, index) => (
-                  <div
-                    className="flex gap-3 items-center break-words flex-wrap"
-                    key={index}
-                  >
-                    <div className="bg-green-500/10 p-2 rounded-full">
-                      <Check size={10} />
-                    </div>
-                    <li>Employee Database </li>
-                  </div>
-                ))}
-              </ul>
-            </div>
-          </section>
-        </BoxReveal>
-
-        <hr className=" bg-black w-full" />
-
-        <BoxReveal boxColor="#1c4cd8">
-          <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col-reverse w-full justify-center mt-44">
-            <div className="flex gap-8 flex-col">
-              <h1 className="text-5xl font-bold text-left">
-                Training & Evalutation Brain Flow
-              </h1>
-              <p className=" max-w-xl text-lg text-left opacity-60">
-                Say goodbye to mundane spreadsheets or rigid systems to manage
-                HR tasks. Get smarter and more efficient software with features
-                designed to free you from administrative work.
-              </p>
-              <ul className="flex flex-col gap-3 items-start">
-                {[1, 2, 3, 4, 5].map((_, index) => (
-                  <div
-                    className="flex gap-3 items-center break-words flex-wrap"
-                    key={index}
-                  >
-                    <div className="bg-green-500/10 p-2 rounded-full">
-                      <Check size={10} />
-                    </div>
-                    <li>Employee Database </li>
-                  </div>
-                ))}
-              </ul>
-            </div>
-            <img src={tasks} alt="" className=" md:w-1/3" />
-          </section>
-        </BoxReveal>
-
-        <hr className=" bg-black w-full" />
-        <BoxReveal boxColor="#1c4cd8">
-          <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col  w-full justify-center mt-44">
-            <img src={events} alt="" className=" md:w-1/3" />
-            <div className="flex gap-8 flex-col">
-              <h1 className="text-5xl font-bold text-left">Events</h1>
-              <p className=" max-w-xl text-lg text-left opacity-60">
-                Say goodbye to mundane spreadsheets or rigid systems to manage
-                HR tasks. Get smarter and more efficient software with features
-                designed to free you from administrative work.
-              </p>
-              <ul className="flex flex-col gap-3 items-start">
-                {[1, 2, 3, 4, 5].map((_, index) => (
-                  <div
-                    className="flex gap-3 items-center break-words flex-wrap"
-                    key={index}
-                  >
-                    <div className="bg-green-500/10 p-2 rounded-full">
-                      <Check size={10} />
-                    </div>
-                    <li>Employee Database </li>
-                  </div>
-                ))}
-              </ul>
-            </div>
-          </section>
-        </BoxReveal>
-
-        <hr className=" bg-black w-full" />
-        <BoxReveal boxColor="#1c4cd8">
-          <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col-reverse w-full justify-center mt-44">
-            <div className="flex gap-8 flex-col">
-              <h1 className="text-5xl font-bold text-left">
-                Joining & Handover Brainflow
-              </h1>
-              <p className=" max-w-xl text-lg text-left opacity-60">
-                Say goodbye to mundane spreadsheets or rigid systems to manage
-                HR tasks. Get smarter and more efficient software with features
-                designed to free you from administrative work.
-              </p>
-              <ul className="flex flex-col gap-3 items-start">
-                {[1, 2, 3, 4, 5].map((_, index) => (
-                  <div
-                    className="flex gap-3 items-center break-words flex-wrap"
-                    key={index}
-                  >
-                    <div className="bg-green-500/10 p-2 rounded-full">
-                      <Check size={10} />
-                    </div>
-                    <li>Employee Database </li>
-                  </div>
-                ))}
-              </ul>
-            </div>
-            <img src={vault} alt="" className=" md:w-1/3" />
-          </section>
-        </BoxReveal>
-        <hr className=" bg-black w-full" />
-        <BoxReveal boxColor="#1c4cd8">
-          <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col w-full justify-center mt-44">
-            <img src={group_chat} alt="" className=" md:w-1/3" />
-            <div className="flex gap-8 flex-col">
-              <h1 className="text-5xl font-bold text-left">
-                Seperating BrainFlow
-              </h1>
-              <p className=" max-w-xl text-lg text-left opacity-60">
-                Say goodbye to mundane spreadsheets or rigid systems to manage
-                HR tasks. Get smarter and more efficient software with features
-                designed to free you from administrative work.
-              </p>
-              <ul className="flex flex-col gap-3 items-start">
-                {[1, 2, 3, 4, 5].map((_, index) => (
-                  <div
-                    className="flex gap-3 items-center break-words flex-wrap"
-                    key={index}
-                  >
-                    <div className="bg-green-500/10 p-2 rounded-full">
-                      <Check size={10} />
-                    </div>
-                    <li>Employee Database </li>
-                  </div>
-                ))}
-              </ul>
-            </div>
-          </section>
-        </BoxReveal>
-        <hr className=" bg-black w-full" />
-        <BoxReveal boxColor="#1c4cd8">
-          <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col-reverse w-full justify-center mt-44">
-            <div className="flex gap-8 flex-col">
-              <h1 className="text-5xl font-bold text-left">Master Chat</h1>
-              <p className=" max-w-xl text-lg text-left opacity-60">
-                Say goodbye to mundane spreadsheets or rigid systems to manage
-                HR tasks. Get smarter and more efficient software with features
-                designed to free you from administrative work.
-              </p>
-              <ul className="flex flex-col gap-3 items-start">
-                {[1, 2, 3, 4, 5].map((_, index) => (
-                  <div
-                    className="flex gap-3 items-center break-words flex-wrap"
-                    key={index}
-                  >
-                    <div className="bg-green-500/10 p-2 rounded-full">
-                      <Check size={10} />
-                    </div>
-                    <li>Employee Database </li>
-                  </div>
-                ))}
-              </ul>
-            </div>
-            <img src={master_chat} alt="" className=" md:w-1/3" />
-          </section>
-        </BoxReveal>
-        <hr className=" bg-black w-full" />
-        <BoxReveal boxColor="#1c4cd8">
-          <section className="flex items-center p-4 md:gap-40 gap-20 md:flex-row flex-col w-full justify-center mt-44">
-            <img src={crm_plus} alt="" className=" md:w-1/3" />
-            <div className="flex gap-8 flex-col">
-              <h1 className="text-5xl font-bold text-left">CRM PLUS+</h1>
-              <p className=" max-w-xl text-lg text-left opacity-60">
-                Say goodbye to mundane spreadsheets or rigid systems to manage
-                HR tasks. Get smarter and more efficient software with features
-                designed to free you from administrative work.
-              </p>
-              <ul className="flex flex-col gap-3 items-start">
-                {[1, 2, 3, 4, 5].map((_, index) => (
-                  <div
-                    className="flex gap-3 items-center break-words flex-wrap"
-                    key={index}
-                  >
-                    <div className="bg-green-500/10 p-2 rounded-full">
-                      <Check size={10} />
-                    </div>
-                    <li>Employee Database </li>
-                  </div>
-                ))}
-              </ul>
-            </div>
-          </section>
-        </BoxReveal>
-        <hr className=" bg-black w-full" />
-        <div className="mt-20">
-          <PricingSection />
-        </div>
-        <FaqSection />
       </div>
+
+      <hr className=" bg-black w-full" />
+
+      <BoxReveal boxColor="#1c4cd8">
+        <section className="flex items-center md:flex-row flex-col p-4 gap-20 md:gap-40 w-full justify-center mt-44">
+          <img src={charts} alt="" className=" md:w-1/3" />
+          <div className="flex gap-8 flex-col">
+            <h1 className="text-5xl font-bold text-left">Hiring Brain Flow</h1>
+            <p className=" max-w-xl text-lg text-left opacity-60">
+              Say goodbye to mundane spreadsheets or rigid systems to manage HR
+              tasks. Get smarter and more efficient software with features
+              designed to free you from administrative work.
+            </p>
+            <ul className="flex flex-col gap-3 items-start">
+              {[1, 2, 3, 4, 5].map((_, index) => (
+                <div
+                  className="flex gap-3 items-center break-words flex-wrap"
+                  key={index}
+                >
+                  <div className="bg-green-500/10 p-2 rounded-full">
+                    <Check size={10} />
+                  </div>
+                  <li>Employee Database </li>
+                </div>
+              ))}
+            </ul>
+          </div>
+        </section>
+      </BoxReveal>
+
+      <hr className=" bg-black w-full" />
+      <BoxReveal boxColor="#1c4cd8">
+        <section className="flex items-center p-4 gap-20 md:gap-40 md:flex-row flex-col w-full justify-center mt-44">
+          <div className="flex gap-8 flex-col">
+            <h1 className="text-5xl font-bold text-left">
+              Recruitment Brainflow
+            </h1>
+            <p className=" max-w-xl text-lg text-left opacity-60">
+              Say goodbye to mundane spreadsheets or rigid systems to manage HR
+              tasks. Get smarter and more efficient software with features
+              designed to free you from administrative work.
+            </p>
+            <ul className="flex flex-col gap-3 items-start">
+              {[1, 2, 3, 4, 5].map((_, index) => (
+                <div
+                  className="flex gap-3 items-center break-words flex-wrap"
+                  key={index}
+                >
+                  <div className="bg-green-500/10 p-2 rounded-full">
+                    <Check size={10} />
+                  </div>
+                  <li>Employee Database </li>
+                </div>
+              ))}
+            </ul>
+          </div>
+
+          <img src={flow_chart} alt="" className=" md:w-1/3" />
+        </section>
+      </BoxReveal>
+
+      <hr className=" bg-black w-full" />
+
+      {sections.map((section, index) => (
+        <BrainFlowSection
+          key={index}
+          index={index}
+          title={section.title}
+          img={section.img}
+          description={section.description}
+        />
+      ))}
+
+      <hr className=" bg-black w-full" />
+      <div className="mt-20">
+        <PricingSection />
+      </div>
+      <FaqSection />
     </div>
   );
-}
+};
 
 export default IT;

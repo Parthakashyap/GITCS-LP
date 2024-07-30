@@ -48,7 +48,7 @@ const Body: React.FC = () => {
           </div>
           <h2 className="md:text-5xl text-4xl font-bold">
             Real-Time Insights, <br />
-            <span className="text-purple-500">Real-Time Results</span>
+            <span className="text-green-600">Real-Time Results</span>
           </h2>
           <p className="mt-4 text-sm md:text-md text-gray-600">
             Saas dashboard that enable users to perform various <br />
