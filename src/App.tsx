@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound";
 import MDO from "./pages/MDO";
 import HR from "./pages/hr";
 import Admin from "./pages/Admin";
+import IT from "./pages/IT";
 const App: React.FC = () => {
   return (
     <BrowserRouter>
@@ -17,6 +18,7 @@ const App: React.FC = () => {
           <Route path="/mdo" element={<MDO />} />
           <Route path="/hr" element={<HR />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/it" element={<IT/>} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer />
