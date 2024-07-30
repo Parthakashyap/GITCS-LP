@@ -79,12 +79,14 @@ const Navbar: React.FC = () => {
         <div ref={menuRef} className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <NavigationMenuDemoMobile />
-            <button className=" text-left bg-black text-white py-2 px-4 rounded-full mt-2">
+            <div className="flex flex-col px-4">
+            <button className="w-[6rem] flex justify-center text-left bg-black text-white py-2 px-4 rounded-full mt-2">
               Sign in
             </button>
-            <button className=" ml-2 text-left bg-black text-white py-2 px-4 rounded-full mt-2">
+            <button className="w-[6rem] flex justify-center text-left bg-black text-white py-2 px-4 rounded-full mt-2">
               Register
             </button>
+            </div>
           </div>
         </div>
       )}

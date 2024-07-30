@@ -365,8 +365,8 @@ export function NavigationMenuDemo() {
                 {Object.keys(categories).map((category) => (
                   <li key={category}>
                     <button
-                      onClick={() => setActiveCategory(category)}
-                      className="block w-full p-2 text-left text-sm hover:bg-accent hover:text-accent-foreground"
+                      onMouseEnter={() => setActiveCategory(category)}
+                      className="block hover:bg-black/10 hover:rounded-md w-full p-2 text-left text-sm hover:bg-accent hover:text-accent-foreground"
                     >
                       {category}
                     </button>
@@ -376,10 +376,9 @@ export function NavigationMenuDemo() {
               <div className="w-[85%]">
                 <ul className="grid gap-3 p-4 md:w-[1300px] lg:w-[1400px] lg:grid-cols-[1fr.90fr_3fr]">
                   {categories[activeCategory]?.map((component) => (
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3" key={component.title}>
                       <Cookie />
                       <ListItem
-                        key={component.title}
                         title={component.title}
                         href={component.href}
                       >

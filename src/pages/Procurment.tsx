@@ -1,21 +1,8 @@
-import {
-  DoorClosed,
-  DoorOpen,
-  Handshake,
-  LockOpen,
-  Plus,
-  TestTube,
-} from "lucide-react";
-import hrbg from "../Images/undraw_job_offers_re_634p-cyan.svg";
-import charts from "../Images/charts-cyan.svg";
-import flow_chart from "../Images/undraw_bear_market_ania-cyan.svg";
-import designation from "../Images/undraw_post_re_mtr4-cyan.svg";
-import tasks from "../Images/undraw_add_tasks_re_s5yj-cyan.svg";
-import events from "../Images/undraw_events_re_98ue-cyan.svg";
-import vault from "../Images/undraw_vault_re_s4my-cyan.svg";
-import group_chat from "../Images/undraw_group_chat_re_frmo-cyan.svg";
-import master_chat from "../Images/undraw_professor_re_mj1s-cyan.svg";
-import crm_plus from "../Images/undraw_projections_re_ulc6-cyan.svg";
+import { Pipette, ShoppingBag, ShoppingBasket } from "lucide-react";
+import banner from "../Images/Procurement/undraw_undraw_undraw_undraw_undraw_undraw_shopping_bags_2ude_-1-_mnw3_-2-_q7y0_muk6_-2-_l1mh_-2-_m4xj.svg";
+import funel from "../Images/Procurement/undraw_online_groceries_a02y.svg";
+import system from "../Images/Procurement/undraw_window_shopping_re_0kbm.svg";
+import vendor from "../Images/Procurement/undraw_delivery_truck_vt6p.svg";
 import WordPullUp from "../components/magicui/word-pull-up";
 import { FadeText } from "../components/magicui/fade-text";
 import BlurIn from "../components/magicui/blur-in";
@@ -25,58 +12,25 @@ import { BrainFlowSection } from "../components/BrainFlow";
 
 const sections = [
   {
-    title: "Hiring Brain Flow",
-    img: charts,
+    title: "Procurement System",
+    img: system,
+    icon: ShoppingBag,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Procurement System is a software solution that helps businesses manage their purchasing process. It automates the procurement process, from requisition to payment, and provides real-time visibility into spending and supplier performance.",
   },
   {
-    title: "Recruitment Brain Flow",
-    img: flow_chart,
+    title: "Procurement Funnel",
+    img: funel,
+    icon: Pipette,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Procurement Funnel is a visual representation of the stages that a buyer goes through before making a purchase. It is a powerful tool that helps you understand the buying process and identify areas where you can improve your sales strategy.",
   },
   {
-    title: "Onboarding Brain Flow",
-    img: designation,
+    title: "Vendor Funnel",
+    icon: ShoppingBasket,
+    img: vendor,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Training And Evaluation Brain Flow",
-    img: tasks,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Events",
-    img: events,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Joining & Handover Brainflow",
-    img: vault,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Seperating BrainFlow",
-    img: group_chat,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Master Chat",
-    img: master_chat,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "CRM PLUS +",
-    img: crm_plus,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Vendor Funnel is a visual representation of the stages that a vendor goes through before making a sale. It helps you understand the vendor's sales process and identify areas where you can improve your procurement strategy.",
   },
 ];
 
@@ -99,40 +53,33 @@ const Procurment = () => {
             <div className="flex gap-3 flex-wrap items-center">
               <BlurIn
                 word="Get Started"
-                className="bg-green-600 py-3 rounded-md flex gap-2 justify-center items-center px-8"
+                className="bg-black py-3 rounded-md flex gap-2 justify-center items-center px-8"
               />
               <BlurIn
                 word="Learn More"
-                className="border border-white text-white flex justify-center gap-4 items-center py-3 rounded-md px-8"
+                className="border border-white text-black bg-white flex justify-center gap-4 items-center py-3 rounded-md px-8"
               />
             </div>
           </div>
-          <img src={hrbg} alt="HR Background" className="md:w-1/2 w-96" />
+          <img src={banner} alt="HR Background" className="md:w-1/2 w-96" />
         </div>
       </div>
 
       <div className="flex justify-center flex-col gap-8 items-center p-9">
-      <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
+        <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
           What Brain Brings To The Table
         </h1>
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-          {[
-            { icon: DoorOpen, title: "Hiring Brain Flow" },
-            { icon: LockOpen, title: "Recruitment Brain Flow" },
-            { icon: Plus, title: "Onboarding Brain Flow" },
-            { icon: TestTube, title: "Training & Evaluation Brain Flow" },
-            { icon: Handshake, title: "Joining & Handover Brain Flow" },
-            { icon: DoorClosed, title: "Seperation Brain Flow" },
-          ].map(({ icon: Icon, title }) => (
+        <div className="grid lg:grid-cols-3 md:max-w-[80%] md:grid-cols-2 grid-cols-1 gap-4">
+          {sections.map((section, index) => (
             <div
-              key={title}
+              key={index}
               className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-blue-900 hover:bg-gray-100 duration-200"
             >
-              <Icon size={50} className="mb-6" />
-              <h1 className="text-2xl font-bold">{title}</h1>
+              <section.icon size={50} className="mb-6" />
+              <h1 className="text-2xl font-bold">{section.title}</h1>
               <p className="break-words max-w-[80%] mt-2">
-                All in one social media management software
+                {section.description}
               </p>
             </div>
           ))}
@@ -156,7 +103,7 @@ const Procurment = () => {
         <FaqSection />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Procurment
+export default Procurment;

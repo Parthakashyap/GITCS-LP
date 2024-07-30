@@ -14,9 +14,6 @@ import {
 } from "./navigation-menu";
 import { Cookie } from "lucide-react";
 
-
-
-
 const company = [
   {
     title: "About",
@@ -31,7 +28,6 @@ const company = [
     href: "/careers",
   },
 ];
-
 
 export function NavigationMenuDemoMobile() {
   const [activeMainCategory, setActiveMainCategory] = useState<string | null>(null);
@@ -48,28 +44,32 @@ export function NavigationMenuDemoMobile() {
 
   return (
     <NavigationMenu>
-      <NavigationMenuList className="flex flex-col sm:flex-row">
-        <div className="flex-1">
+      <NavigationMenuList className="flex flex-col w-[27rem] p-2 px-6 space-y-2">
+        <div className="w-full">
           <NavigationMenuItem>
-            <NavigationMenuTrigger onClick={() => handleMainCategoryClick("Products")}>
-              Products
+            <NavigationMenuTrigger
+              onClick={() => handleMainCategoryClick("Products")}
+              className="flex items-center justify-between rounded-md px-6 py-3 font-semibold w-full text-left"
+            >
+              <span>Products</span>
+              
             </NavigationMenuTrigger>
             {activeMainCategory === "Products" && (
-              <div className="block p-4">
-                <ul className="w-full">
+              <div className="mt-2 p-2 px-4 bg-white shadow-md rounded-md">
+                <ul className="w-full space-y-2">
                   {Object.keys(categories).map((category) => (
-                    <li key={category} className="mb-4">
+                    <li key={category} className="relative">
                       <button
                         onClick={() => handleSubCategoryClick(category)}
-                        className="block w-full p-3 text-left text-sm md:text-base hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                        className="block w-full p-2 text-left text-sm md:text-base text-gray-700 rounded-md"
                       >
                         {category}
                       </button>
                       {activeSubCategory === category && (
-                        <ul className="ml-4 mt-2 space-y-2">
+                        <ul className="ml-4 mt-2 space-y-2 bg-gray-50 rounded-md p-2 shadow-sm">
                           {categories[category].map((component) => (
-                            <li key={component.title} className="flex items-center gap-3">
-                              <Cookie />
+                            <li key={component.title} className="flex items-center gap-3 p-2 rounded-md">
+                              <Cookie className="text-gray-600" />
                               <ListItem
                                 title={component.title}
                                 href={component.href}
@@ -87,13 +87,17 @@ export function NavigationMenuDemoMobile() {
             )}
           </NavigationMenuItem>
         </div>
-        <div className="flex-1">
+        <div className="w-full">
           <NavigationMenuItem>
-            <NavigationMenuTrigger onClick={() => handleMainCategoryClick("Company")}>
-              Company
+            <NavigationMenuTrigger
+              onClick={() => handleMainCategoryClick("Company")}
+              className="flex items-center justify-between rounded-md px-6 py-3 font-semibold w-full text-left"
+            >
+              <span>Company</span>
+              
             </NavigationMenuTrigger>
             {activeMainCategory === "Company" && (
-              <div className="block p-4">
+              <div className="mt-2 p-2 px-4 bg-white shadow-md rounded-md">
                 <ul className="grid grid-cols-1 gap-4">
                   {company.map((component) => (
                     <ListItem
@@ -105,13 +109,6 @@ export function NavigationMenuDemoMobile() {
                 </ul>
               </div>
             )}
-          </NavigationMenuItem>
-        </div>
-        <div className="flex-1 mt-2 mb-2">
-          <NavigationMenuItem>
-            <a href="/docs">
-              <NavigationMenuLink>Documentation</NavigationMenuLink>
-            </a>
           </NavigationMenuItem>
         </div>
       </NavigationMenuList>
@@ -129,13 +126,13 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 rounded-md p-3",
             className
           )}
           {...props}
         >
-          <div className="text-sm md:text-base font-medium leading-none">{title}</div>
-          <p className="text-xs md:text-sm leading-snug text-muted-foreground">
+          <div className="text-sm md:text-base font-medium leading-none text-gray-800">{title}</div>
+          <p className="text-xs md:text-sm leading-snug text-gray-600">
             {children}
           </p>
         </a>
