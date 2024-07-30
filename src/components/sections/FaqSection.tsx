@@ -1,6 +1,6 @@
 import { Plus, Minus } from "lucide-react";
 import React, { useState } from "react";
-import GradualSpacing from "../magicui/gradual-spacing";
+
 
 const FaqSection: React.FC = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
@@ -43,11 +43,7 @@ const FaqSection: React.FC = () => {
   return (
     <div className="mb-24">
       <div className="flex flex-col items-center mt-20">
-        <GradualSpacing
-          text="Frequently Asked Questions"
-          className="hidden md:block font-display text-center text-4xl font-bold tracking-[-0.1em]  text-black dark:text-white md:text-7xl md:leading-[5rem]"
-        />
-        <h1 className=" text-3xl md:hidden md:text-5xl font-bold">
+        <h1 className=" text-3xl md:text-6xl font-bold">
           Frequently Asked Questions
         </h1>
       </div>
