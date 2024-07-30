@@ -1,5 +1,6 @@
 import { Plus, Minus } from "lucide-react";
 import React, { useState } from "react";
+import GradualSpacing from "../magicui/gradual-spacing";
 
 const FaqSection: React.FC = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
@@ -42,12 +43,18 @@ const FaqSection: React.FC = () => {
   return (
     <div className="mb-24">
       <div className="flex flex-col items-center mt-20">
-        <h1 className=" text-3xl md:text-5xl font-bold">Frequently Asked Questions</h1>
+        <GradualSpacing
+          text="Frequently Asked Questions"
+          className="hidden md:block font-display text-center text-4xl font-bold tracking-[-0.1em]  text-black dark:text-white md:text-7xl md:leading-[5rem]"
+        />
+        <h1 className=" text-3xl md:hidden md:text-5xl font-bold">
+          Frequently Asked Questions
+        </h1>
       </div>
       <div className="relative w-full md:px-6 md:pt-10 mt-4 pb-8  text-black sm:px-10">
         <div className="mx-auto px-5 text-black">
           <div className="mx-auto  grid md:max-w-4xl">
-          <hr className=" w-full bg-black/30 h-[2px] mb-4" />
+            <hr className=" w-full bg-black/30 h-[2px] mb-4" />
             {Faq.map((faq, index) => (
               <div className="py-5 text-black" key={index}>
                 <div
@@ -64,10 +71,12 @@ const FaqSection: React.FC = () => {
                       {expandedIndex === index ? <Minus /> : <Plus />}
                     </span>
                   </summary>
-                  <div className={`overflow-hidden transition-max-height duration-500 ease-in-out ${expandedIndex === index ? 'max-h-screen' : 'max-h-0'}`}>
-                    <p className="text-lg mt-6 font-medium">
-                      {faq.answer}
-                    </p>
+                  <div
+                    className={`overflow-hidden transition-max-height duration-500 ease-in-out ${
+                      expandedIndex === index ? "max-h-screen" : "max-h-0"
+                    }`}
+                  >
+                    <p className="text-lg mt-6 font-medium">{faq.answer}</p>
                   </div>
                 </div>
                 <hr className="w-full h-[2px] mt-8 bg-black/30" />

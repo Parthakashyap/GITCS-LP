@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import React, { useState } from "react";
+import GradualSpacing from "../magicui/gradual-spacing";
 
 const PricingSection: React.FC = () => {
   const prices = {
@@ -22,7 +23,11 @@ const PricingSection: React.FC = () => {
   return (
     <div className="flex flex-col w-full p-4 md:p-0 md:gap-8 gap-4 items-center text-center justify-center">
       <h1 className=" md:text-3xl text-lg font-bold">Pricing</h1>
-      <h1 className=" md:text-6xl  text-4xl font-bold tracking-wide leading-1 md:h-16">
+      <GradualSpacing
+        text="Simple pricing for everyone."
+        className="hidden md:block font-display text-center text-4xl font-bold tracking-[-0.1em]  text-black dark:text-white md:text-7xl md:leading-[5rem]"
+      />
+      <h1 className=" md:text-6xl md:hidden  text-4xl font-bold tracking-wide leading-1 md:h-16">
         Simple pricing for everyone.
       </h1>
       <p className="  md:text-lg text-md opacity-60 md:max-w-4xl mt-5 md:mt-0 text-center">
@@ -150,7 +155,10 @@ const PricingSection: React.FC = () => {
             </p>
             <div className="mt-2">
               <h1 className="text-3xl font-bold flex items-end">
-                ${isToggled ? prices.yearly.enterprise : prices.monthly.enterprise}{" "}
+                $
+                {isToggled
+                  ? prices.yearly.enterprise
+                  : prices.monthly.enterprise}{" "}
                 <p className="text-lg">/month</p>
               </h1>
             </div>
