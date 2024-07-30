@@ -59,7 +59,7 @@ const FaqSection: React.FC = () => {
                 >
                   <summary
                     className={`flex md:text-2xl text-lg font-bold items-center justify-between ${
-                      expandedIndex === index ? "text-blue-500" : "text-black"
+                      expandedIndex === index ? "text-green-600" : "text-black"
                     }`}
                   >
                     <span>{faq.question}</span>
