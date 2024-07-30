@@ -1,21 +1,14 @@
 import {
-  DoorClosed,
-  DoorOpen,
-  Handshake,
-  LockOpen,
-  Plus,
-  TestTube,
+  File,
+  HandMetal,
+  MessageCircleWarning,
+  Store,
 } from "lucide-react";
-import hrbg from "../Images/undraw_job_offers_re_634p-light-gray.svg";
-import charts from "../Images/charts-light-gray.svg";
-import flow_chart from "../Images/undraw_bear_market_ania-light-gray.svg";
-import designation from "../Images/undraw_post_re_mtr4-light-gray.svg";
-import tasks from "../Images/undraw_add_tasks_re_s5yj-light-gray.svg";
-import events from "../Images/undraw_events_re_98ue-light-gray.svg";
-import vault from "../Images/undraw_vault_re_s4my-light-gray.svg";
-import group_chat from "../Images/undraw_group_chat_re_frmo-light-gray.svg";
-import master_chat from "../Images/undraw_professor_re_mj1s-light-gray.svg";
-import crm_plus from "../Images/undraw_projections_re_ulc6-light-gray.svg";
+import banner from "../Images/Stores/undraw_cloud_files_wmo8.svg";
+import warehouse from "../Images/Stores/undraw_successful_purchase_re_mpig.svg"
+import challan from "../Images/Stores/undraw_feeling_blue_-4-b7q.svg"
+import material from "../Images/Stores/undraw_collection_re_4h7d.svg"
+import mtrlmgt from "../Images/Stores/undraw_factory_dy-0-a.svg"
 import WordPullUp from "../components/magicui/word-pull-up";
 import { FadeText } from "../components/magicui/fade-text";
 import BlurIn from "../components/magicui/blur-in";
@@ -25,58 +18,31 @@ import { BrainFlowSection } from "../components/BrainFlow";
 
 const sections = [
   {
-    title: "Hiring Brain Flow",
-    img: charts,
+    title: "Warehouse Management System",
+    img: warehouse,
+    icon : Store,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Warehouse Management System is a software solution that helps businesses manage their warehouse operations. It automates the process of receiving, storing, and shipping goods, and provides real-time visibility into inventory levels and order status.",
+  },{
+    title: "Challan Issue System",
+    icon : MessageCircleWarning,
+    img: challan,
+    description:
+      "Challan Issue System is a software solution that helps businesses manage their challan issue process. It automates the process of issuing challans, and provides real-time visibility into challan status and order status.",
   },
   {
-    title: "Recruitment Brain Flow",
-    img: flow_chart,
+    title: "Material Management System",
+    icon : HandMetal,
+    img: mtrlmgt,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Material Mgm System is a software solution that helps businesses manage their material management process. It automates the process of managing materials, and provides real-time visibility into material status and order status.",
   },
   {
-    title: "Onboarding Brain Flow",
-    img: designation,
+    title: "Inventory Mgmt System",
+    icon : File,
+    img: material,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Training And Evaluation Brain Flow",
-    img: tasks,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Events",
-    img: events,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Joining & Handover Brainflow",
-    img: vault,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Seperating BrainFlow",
-    img: group_chat,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Master Chat",
-    img: master_chat,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "CRM PLUS +",
-    img: crm_plus,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Inventory Mgmt System is a software solution that helps businesses manage their inventory management process. It automates the process of managing inventory, and provides real-time visibility into inventory status and order status.",
   },
 ];
 
@@ -99,15 +65,15 @@ const Stores = () => {
           <div className="flex gap-3 flex-wrap items-center">
             <BlurIn
               word="Get Started"
-              className="bg-green-600 py-3 rounded-md flex gap-2 justify-center items-center px-8"
+              className="bg-black py-3 rounded-md flex gap-2 justify-center items-center px-8"
             />
             <BlurIn
               word="Learn More"
-              className="border border-white text-white flex justify-center gap-4 items-center py-3 rounded-md px-8"
+              className="border border-white text-black bg-white flex justify-center gap-4 items-center py-3 rounded-md px-8"
             />
           </div>
         </div>
-        <img src={hrbg} alt="HR Background" className="md:w-1/2 w-96" />
+        <img src={banner} alt="HR Background" className="md:w-1/2 w-96" />
       </div>
     </div>
 
@@ -115,25 +81,18 @@ const Stores = () => {
     <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
           What Brain Brings To The Table
         </h1>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-        {[
-          { icon: DoorOpen, title: "Hiring Brain Flow" },
-          { icon: LockOpen, title: "Recruitment Brain Flow" },
-          { icon: Plus, title: "Onboarding Brain Flow" },
-          { icon: TestTube, title: "Training & Evaluation Brain Flow" },
-          { icon: Handshake, title: "Joining & Handover Brain Flow" },
-          { icon: DoorClosed, title: "Seperation Brain Flow" },
-        ].map(({ icon: Icon, title }) => (
-          <div
-            key={title}
-            className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-gray-600 hover:bg-gray-100 duration-200"
-          >
-            <Icon size={50} className="mb-6" />
-            <h1 className="text-2xl font-bold">{title}</h1>
-            <p className="break-words max-w-[80%] mt-2">
-              All in one social media management software
-            </p>
-          </div>
+      <div className="grid lg:grid-cols-3 md:max-w-[80%] md:grid-cols-2 grid-cols-1 gap-4">
+        {sections.map((section, index) => (
+           <div
+           key={index}
+           className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-gray-600 hover:bg-gray-100 duration-200"
+         >
+           <section.icon size={50} className="mb-6" />
+           <h1 className="text-2xl font-bold">{section.title}</h1>
+           <p className="break-words max-w-[80%] mt-2">
+            {section.description}
+           </p>
+         </div>
         ))}
       </div>
 
