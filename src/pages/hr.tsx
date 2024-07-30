@@ -5,7 +5,6 @@ import {
   LockOpen,
   Plus,
   TestTube,
-  Check,
 } from "lucide-react";
 import hrbg from "../Images/undraw_job_offers_re_634p.svg";
 import charts from "../Images/charts.svg";
@@ -19,11 +18,11 @@ import master_chat from "../Images/undraw_professor_re_mj1s.svg";
 import crm_plus from "../Images/undraw_projections_re_ulc6.svg";
 import WordPullUp from "../components/magicui/word-pull-up";
 import { FadeText } from "../components/magicui/fade-text";
-import BoxReveal from "../components/magicui/box-reveal";
 import BlurIn from "../components/magicui/blur-in";
 import GradualSpacing from "../components/magicui/gradual-spacing";
 import FaqSection from "../components/sections/FaqSection";
 import PricingSection from "../components/sections/PricingSection";
+import { BrainFlowSection } from "../components/BrainFlow";
 
 const sections = [
   {
@@ -82,56 +81,6 @@ const sections = [
   },
 ];
 
-export const BrainFlowSection = ({
-  title,
-  img,
-  description,
-  index,
-  color,
-}: {
-  title: string;
-  img: string;
-  description: string;
-  index: number;
-  color?: string;
-}) => (
-  <>
-    <section
-      className={`flex items-center flex-col md:flex-row md:p-4 gap-20 md:gap-40 w-full justify-center mt-44 ${
-        index % 2 === 0 ? "md:flex-row-reverse" : ""
-      }`}
-    >
-      <div className="md:w-1/3">
-        <BoxReveal boxColor={color}>
-          <img src={img} alt={title} />
-        </BoxReveal>
-      </div>
-      <div className="flex gap-8 flex-col">
-        <BoxReveal boxColor={color}>
-          <h1 className="md:text-5xl text-3xl md:pb-1 font-bold text-left">
-            {title}
-          </h1>
-        </BoxReveal>
-        <BoxReveal duration={0.5} boxColor={color}>
-          <p className="max-w-xl text-lg text-left opacity-60">{description}</p>
-        </BoxReveal>
-        <ul className="flex flex-col gap-3 items-start">
-          {[...Array(5)].map((_, idx) => (
-            <BoxReveal key={idx} duration={0.7} boxColor={color}>
-              <div className="flex gap-3 items-center break-words flex-wrap">
-                <div className="bg-green-500/10 p-2 rounded-full">
-                  <Check size={10} />
-                </div>
-                <li>Employee Database</li>
-              </div>
-            </BoxReveal>
-          ))}
-        </ul>
-      </div>
-    </section>
-    <hr className="w-full bg-black h-[1px]" />
-  </>
-);
 
 const HR = () => (
   <div className="flex flex-col gap-5 w-full min-h-screen">

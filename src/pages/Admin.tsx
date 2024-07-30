@@ -22,7 +22,7 @@ import group_chat from "../Images/undraw_group_chat_re_frmo.svg";
 import master_chat from "../Images/undraw_professor_re_mj1s.svg";
 import crm_plus from "../Images/undraw_projections_re_ulc6.svg";
 import GradualSpacing from "../components/magicui/gradual-spacing";
-import { BrainFlowSection } from "./hr";
+import { BrainFlowSection } from "../components/BrainFlow";
 const sections = [
   {
     title: "Hiring Brain Flow",
