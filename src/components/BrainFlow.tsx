@@ -16,7 +16,7 @@ export const BrainFlowSection = ({
   }) => (
     <>
       <section
-        className={`flex items-center flex-col md:flex-row md:p-4 gap-20 md:gap-40 w-full justify-center mt-44 ${
+        className={`flex items-center p-5 flex-col md:flex-row md:p-4 gap-20 md:gap-40 w-full justify-center mt-44 ${
           index % 2 === 0 ? "md:flex-row-reverse" : ""
         }`}
       >

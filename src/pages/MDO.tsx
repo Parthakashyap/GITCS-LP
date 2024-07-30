@@ -1,17 +1,10 @@
-import banner from "../assets/resume.svg"
+import banner from "../assets/resume.svg";
 import WordPullUp from "../components/magicui/word-pull-up";
 import { FadeText } from "../components/magicui/fade-text";
 import BlurIn from "../components/magicui/blur-in";
 import PricingSection from "../components/sections/PricingSection";
 import FaqSection from "../components/sections/FaqSection";
-import {
-  DoorClosed,
-  DoorOpen,
-  Handshake,
-  LockOpen,
-  Plus,
-  TestTube,
-} from "lucide-react";
+import { AlarmClock, Building2, InspectionPanel, LockOpen, PartyPopper, Plus, UserCheck, Users, Workflow } from "lucide-react";
 
 import charts from "../Images/charts.svg";
 import flow_chart from "../Images/undraw_bear_market_ania.svg";
@@ -25,58 +18,66 @@ import crm_plus from "../Images/undraw_projections_re_ulc6.svg";
 import { BrainFlowSection } from "../components/BrainFlow";
 const sections = [
   {
-    title: "Hiring Brain Flow",
+    title: "Organisation Structure Maker",
+    icon: Building2,
     img: charts,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Comprehensive CRM platform for customer-facing teams. Manage leads, deals, and customers in one place. Automate repetitive tasks and streamline your sales process.",
   },
   {
-    title: "Recruitment Brain Flow",
+    title: "Flow Chart Maker",
     img: flow_chart,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+    icon: Workflow,
+    description: "Simple CRM for small businesses moving from spreadsheets. ",
   },
   {
-    title: "Onboarding Brain Flow",
+    title: "Designation Profile",
     img: designation,
+    icon: UserCheck,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Build online forms and surveys with our user-friendly form builder.",
   },
   {
-    title: "Training And Evaluation Brain Flow",
+    title: "Task Deligation",
     img: tasks,
+    icon : AlarmClock,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Task delegation in our SaaS CRM allows managers to efficiently assign responsibilities to team members, ensuring that tasks are handled by those with the appropriate skills, thereby streamlining workflow and enhancing productivity..",
   },
   {
     title: "Events",
     img: events,
+    icon : PartyPopper,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Appointment scheduling app for consultations with customers..",
   },
   {
-    title: "Joining & Handover Brainflow",
+    title: "Vault",
     img: vault,
+    icon : LockOpen,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Digital signature app for businesses. Sign documents online with legally binding e-signatures.",
   },
   {
-    title: "Seperating BrainFlow",
+    title: "Group Chat",
     img: group_chat,
+    icon : Users,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "The group chat feature in our ERP system enables real-time communication and collaboration among team members, facilitating seamless information sharing and enhancing team productivity..",
   },
   {
-    title: "Master Chat",
+    title: "Master List",
     img: master_chat,
+    icon : InspectionPanel,
     description:
       "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
   },
   {
     title: "CRM PLUS +",
+    icon : Plus,
     img: crm_plus,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Unified platform  to deliver top-notch customer service. Manage customer interactions, automate repetitive tasks, and streamline your sales process.",
   },
 ];
 const MDO = () => {
@@ -98,11 +99,11 @@ const MDO = () => {
             <div className="flex gap-3 flex-wrap items-center">
               <BlurIn
                 word={`Get Started `}
-                className=" bg-green-600 py-3 rounded-md flex gap-2 justify-center items-center px-8"
+                className=" bg-black py-3 rounded-md flex gap-2 justify-center items-center px-8"
               />
               <BlurIn
                 word="Learn More"
-                className=" border border-white text-white flex justify-center gap-4 items-center py-3 rounded-md px-8"
+                className=" border border-white bg-white text-black flex justify-center gap-4 items-center py-3 rounded-md px-8"
               />
             </div>
           </div>
@@ -111,27 +112,20 @@ const MDO = () => {
         </div>
       </div>
       <div className="flex justify-center flex-col gap-8 items-center p-9">
-      <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
+        <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
           What Brain Brings To The Table
         </h1>
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-          {[
-            { icon: DoorOpen, title: "Hiring Brain Flow" },
-            { icon: LockOpen, title: "Recruitment Brain Flow" },
-            { icon: Plus, title: "Onboarding Brain Flow" },
-            { icon: TestTube, title: "Training & Evaluation Brain Flow" },
-            { icon: Handshake, title: "Joining & Handover Brain Flow" },
-            { icon: DoorClosed, title: "Seperation Brain Flow" },
-          ].map(({ icon: Icon, title }) => (
+        <div className="grid lg:grid-cols-3 md:max-w-[80%] md:grid-cols-2 grid-cols-1 gap-4">
+          {sections.map((section, key) => (
             <div
-              key={title}
+              key={key}
               className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-sky-700 hover:bg-gray-100 duration-200"
             >
-              <Icon size={50} className="mb-6" />
-              <h1 className="text-2xl font-bold">{title}</h1>
+              <section.icon size={50} className="mb-6" />
+              <h1 className="text-2xl font-bold">{section.title}</h1>
               <p className="break-words max-w-[80%] mt-2">
-                All in one social media management software
+                {section.description}
               </p>
             </div>
           ))}
@@ -139,10 +133,6 @@ const MDO = () => {
       </div>
 
       <hr className=" bg-black w-full" />
-
-
-  
-
 
       {sections.map((section, index) => (
         <BrainFlowSection
