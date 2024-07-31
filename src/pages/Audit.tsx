@@ -1,21 +1,8 @@
 import {
-  DoorClosed,
-  DoorOpen,
-  Handshake,
-  LockOpen,
-  Plus,
-  TestTube,
+  BarChart
 } from "lucide-react";
-import hrbg from "../Images/undraw_job_offers_re_634p-light-gray.svg";
+import hrbg from "../Images/Audit/undraw_growth_analytics_re_pyxf.svg";
 import charts from "../Images/charts-light-gray.svg";
-import flow_chart from "../Images/undraw_bear_market_ania-light-gray.svg";
-import designation from "../Images/undraw_post_re_mtr4-light-gray.svg";
-import tasks from "../Images/undraw_add_tasks_re_s5yj-light-gray.svg";
-import events from "../Images/undraw_events_re_98ue-light-gray.svg";
-import vault from "../Images/undraw_vault_re_s4my-light-gray.svg";
-import group_chat from "../Images/undraw_group_chat_re_frmo-light-gray.svg";
-import master_chat from "../Images/undraw_professor_re_mj1s-light-gray.svg";
-import crm_plus from "../Images/undraw_projections_re_ulc6-light-gray.svg";
 import WordPullUp from "../components/magicui/word-pull-up";
 import { FadeText } from "../components/magicui/fade-text";
 import BlurIn from "../components/magicui/blur-in";
@@ -25,58 +12,11 @@ import { BrainFlowSection } from "../components/BrainFlow";
 
 const sections = [
   {
-    title: "Hiring Brain Flow",
+    title: "RT Audit System",
     img: charts,
+    icon : BarChart,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Recruitment Brain Flow",
-    img: flow_chart,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Onboarding Brain Flow",
-    img: designation,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Training And Evaluation Brain Flow",
-    img: tasks,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Events",
-    img: events,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Joining & Handover Brainflow",
-    img: vault,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Seperating BrainFlow",
-    img: group_chat,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Master Chat",
-    img: master_chat,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "CRM PLUS +",
-    img: crm_plus,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Enhance your audit processes with our robust dashboard designed for comprehensive analysis and compliance management. Track audit trails, review financial records, and ensure adherence to regulations with ease. Utilize detailed reports and real-time data to identify discrepancies, streamline investigations, and maintain transparency across all operations.",
   },
 ];
 
@@ -117,15 +57,8 @@ const Audit = () => {
           What Brain Brings To The Table
         </h1>
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-          {[
-            { icon: DoorOpen, title: "Hiring Brain Flow" },
-            { icon: LockOpen, title: "Recruitment Brain Flow" },
-            { icon: Plus, title: "Onboarding Brain Flow" },
-            { icon: TestTube, title: "Training & Evaluation Brain Flow" },
-            { icon: Handshake, title: "Joining & Handover Brain Flow" },
-            { icon: DoorClosed, title: "Seperation Brain Flow" },
-          ].map(({ icon: Icon, title }) => (
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 md:w-[80%] grid-cols-1 gap-4">
+          {sections.map(({ icon: Icon, title , description }) => (
             <div
               key={title}
               className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-[#1C1C1C] hover:bg-gray-100 duration-200"
@@ -133,7 +66,7 @@ const Audit = () => {
               <Icon size={50} className="mb-6" />
               <h1 className="text-2xl font-bold">{title}</h1>
               <p className="break-words max-w-[80%] mt-2">
-                All in one social media management software
+                {description}
               </p>
             </div>
           ))}
