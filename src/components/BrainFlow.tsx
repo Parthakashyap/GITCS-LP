@@ -20,7 +20,7 @@ export const BrainFlowSection = ({
           index % 2 === 0 ? "md:flex-row-reverse" : ""
         }`}
       >
-        <div className="md:w-1/3">
+        <div className=" w-64 md:w-1/3">
           <BoxReveal boxColor={color}>
             <img src={img} alt={title} />
           </BoxReveal>

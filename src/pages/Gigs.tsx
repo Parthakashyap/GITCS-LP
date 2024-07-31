@@ -1,21 +1,20 @@
 import {
-  DoorClosed,
-  DoorOpen,
-  Handshake,
-  LockOpen,
-  Plus,
-  TestTube,
+  Calendar,
+  CalendarHeart,
+  HelpingHand,
+  Lightbulb,
+  ListTodo,
+  Notebook,
+  ThermometerSnowflake,
 } from "lucide-react";
-import hrbg from "../Images/undraw_job_offers_re_634p-pink.svg";
-import charts from "../Images/charts-pink.svg";
-import flow_chart from "../Images/undraw_bear_market_ania-pink.svg";
-import designation from "../Images/undraw_post_re_mtr4-pink.svg";
-import tasks from "../Images/undraw_add_tasks_re_s5yj-pink.svg";
-import events from "../Images/undraw_events_re_98ue-pink.svg";
-import vault from "../Images/undraw_vault_re_s4my-pink.svg";
-import group_chat from "../Images/undraw_group_chat_re_frmo-pink.svg";
-import master_chat from "../Images/undraw_professor_re_mj1s-pink.svg";
-import crm_plus from "../Images/undraw_projections_re_ulc6-pink.svg";
+import hrbg from "../Images/Gigs/undraw_cms_re_asu0.svg";
+import charts from "../Images/Gigs/undraw_helpful_sign_re_8ms5.svg";
+import flow_chart from "../Images/Gigs/undraw_calendar_re_ki49.svg";
+import designation from "../Images/Gigs/undraw_result_re_uj08.svg";
+import tasks from "../Images/Gigs/undraw_to_do_list_re_9nt7.svg";
+import events from "../Images/Gigs/undraw_task_re_wi3v.svg";
+import vault from "../Images/Gigs/undraw_calendar_re_ki49.svg";
+import group_chat from "../Images/Gigs/undraw_knowledge_re_5v9l.svg";
 import WordPullUp from "../components/magicui/word-pull-up";
 import { FadeText } from "../components/magicui/fade-text";
 import BlurIn from "../components/magicui/blur-in";
@@ -25,61 +24,55 @@ import { BrainFlowSection } from "../components/BrainFlow";
 
 const sections = [
   {
-    title: "Hiring Brain Flow",
+    title: "Help Ticket System",
     img: charts,
+    icon: HelpingHand,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Streamline your support process with our intuitive Help Ticket System. Track, manage, and resolve issues efficiently, ensuring your team stays focused and productive.",
   },
   {
-    title: "Recruitment Brain Flow",
+    title: "Annual Legal Compliance Calendar",
     img: flow_chart,
+    icon: CalendarHeart,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Stay ahead of regulatory deadlines with our Annual Legal Compliance Calendar. Easily track and manage all compliance tasks to ensure your business meets all legal requirements.",
   },
   {
-    title: "Onboarding Brain Flow",
+    title: "Scorecard (MIS)",
     img: designation,
+    icon: Notebook,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Monitor key performance indicators with our Scorecard (MIS). Gain insights into your business performance and make informed decisions with real-time data analytics.",
   },
   {
-    title: "Training And Evaluation Brain Flow",
+    title: "Todo List",
     img: tasks,
+    icon: ListTodo,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Organize your daily tasks with our Todo List feature. Prioritize and track your to-dos to ensure nothing falls through the cracks and your team stays on top of their responsibilities.",
   },
   {
-    title: "Events",
+    title: "One-Time Task",
     img: events,
+    icon: ThermometerSnowflake,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Manage unique, non-recurring tasks with our One-Time Task feature. Ensure these important tasks are completed on time without the hassle of traditional tracking methods.",
   },
   {
-    title: "Joining & Handover Brainflow",
+    title: "Calendar",
     img: vault,
+    icon: Calendar,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Keep track of all your important events and deadlines with our integrated Calendar. Schedule meetings, set reminders, and never miss an important date again.",
   },
   {
-    title: "Seperating BrainFlow",
+    title: "Learning Center",
     img: group_chat,
+    icon: Lightbulb,
     description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "Master Chat",
-    img: master_chat,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  },
-  {
-    title: "CRM PLUS +",
-    img: crm_plus,
-    description:
-      "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
+      "Empower your team with our Learning Center. Access training materials, tutorials, and resources to enhance skills and knowledge, fostering continuous growth and development.",
   },
 ];
-
 
 const Gigs = () => {
   return (
@@ -100,11 +93,11 @@ const Gigs = () => {
             <div className="flex gap-3 flex-wrap items-center">
               <BlurIn
                 word="Get Started"
-                className="bg-green-600 py-3 rounded-md flex gap-2 justify-center items-center px-8"
+                className="bg-black py-3 rounded-md flex gap-2 justify-center items-center px-8"
               />
               <BlurIn
                 word="Learn More"
-                className="border border-white text-white flex justify-center gap-4 items-center py-3 rounded-md px-8"
+                className="border border-white text-black bg-white flex justify-center gap-4 items-center py-3 rounded-md px-8"
               />
             </div>
           </div>
@@ -113,18 +106,11 @@ const Gigs = () => {
       </div>
 
       <div className="flex justify-center flex-col gap-8 items-center p-9">
-      <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
+        <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
           What Brain Brings To The Table
         </h1>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-          {[
-            { icon: DoorOpen, title: "Hiring Brain Flow" },
-            { icon: LockOpen, title: "Recruitment Brain Flow" },
-            { icon: Plus, title: "Onboarding Brain Flow" },
-            { icon: TestTube, title: "Training & Evaluation Brain Flow" },
-            { icon: Handshake, title: "Joining & Handover Brain Flow" },
-            { icon: DoorClosed, title: "Seperation Brain Flow" },
-          ].map(({ icon: Icon, title }) => (
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 md:w-[80%] grid-cols-1 gap-4">
+          {sections.map(({ icon: Icon, title , description }) => (
             <div
               key={title}
               className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-[#8A2BE2] hover:bg-gray-100 duration-200"
@@ -132,7 +118,7 @@ const Gigs = () => {
               <Icon size={50} className="mb-6" />
               <h1 className="text-2xl font-bold">{title}</h1>
               <p className="break-words max-w-[80%] mt-2">
-                All in one social media management software
+                {description}
               </p>
             </div>
           ))}
@@ -156,7 +142,7 @@ const Gigs = () => {
         <FaqSection />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Gigs
+export default Gigs;
