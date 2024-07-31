@@ -16,7 +16,7 @@ export const BrainFlowSection = ({
   }) => (
     <>
       <section
-        className={`flex items-center p-5 flex-col md:flex-row md:p-4 gap-20 md:gap-40 w-full justify-center mt-44 ${
+        className={`flex items-center p-2 flex-col md:flex-row md:p-4 gap-20 md:gap-40 w-full justify-center mt-44 ${
           index % 2 === 0 ? "md:flex-row-reverse" : ""
         }`}
       >
@@ -27,7 +27,7 @@ export const BrainFlowSection = ({
         </div>
         <div className="flex gap-8 flex-col">
           <BoxReveal boxColor={color}>
-            <h1 className="md:text-5xl text-3xl md:pb-1 font-bold text-left">
+            <h1 className="md:text-5xl text-3xl md:pb-3 font-bold text-left">
               {title}
             </h1>
           </BoxReveal>
