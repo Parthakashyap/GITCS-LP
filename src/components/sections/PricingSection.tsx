@@ -61,7 +61,9 @@ const PricingSection: React.FC = () => {
         Simple pricing for everyone.
       </h1>
       <p className="md:text-lg text-md opacity-60 md:max-w-4xl mt-5 md:mt-0 text-center">
-        Choose an <b>affordable plan</b> that's packed with the best features for engaging your audience, creating customer loyalty, and driving sales.
+        Choose an <b>affordable plan</b> that's packed with the best features
+        for engaging your audience, creating customer loyalty, and driving
+        sales.
       </p>
       <div className="flex flex-wrap items-center gap-4 justify-center">
         <div className="flex gap-2">
@@ -79,24 +81,29 @@ const PricingSection: React.FC = () => {
           </button>
           <span className="ml-2 text-md font-medium text-gray-700">Annual</span>
         </div>
-        <div className="bg-black px-4 py-1 rounded-full text-white">2 months free ✨</div>
+        <div className="bg-black px-4 py-1 rounded-full text-white">
+          2 months free ✨
+        </div>
       </div>
 
       <section className="grid w-full p-4 lg:max-w-[80%] max-w-full gap-8 lg:grid-cols-4 md:grid-cols-3 grid-cols-1">
         {plans.map((plan, index) => (
           <div
             key={index}
-            className={`border rounded-md text-left p-6 duration-200 hover:-translate-y-6 hover:shadow-md hover:shadow-black/10 ${
+            className={`border rounded-md text-left cursor-pointer p-6 duration-200 hover:-translate-y-6 hover:shadow-md hover:shadow-black/10 ${
               plan.highlight ? "border-black/80" : "border-black/20"
             }`}
           >
             <div className="flex flex-col gap-4">
               <h1 className="font-bold text-xl">{plan.name}</h1>
-              <p className="text-lg break-words opacity-70">{plan.description}</p>
+              <p className="text-lg break-words opacity-70">
+                {plan.description}
+              </p>
               <div className="mt-2">
                 <h1 className="text-3xl font-bold flex items-end">
-                  {/* @ts-ignore */}
-                  ${isToggled ? prices.yearly[plan.priceKey] : prices.monthly[plan.priceKey]}{" "}
+                  {isToggled // @ts-ignore
+                    ? prices.yearly[plan.priceKey] // @ts-ignore
+                    : prices.monthly[plan.priceKey]}{" "}
                   <p className="text-lg">/month</p>
                 </h1>
               </div>
