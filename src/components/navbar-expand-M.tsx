@@ -76,7 +76,7 @@ export function NavigationMenuDemoMobile() {
             )}
           </NavigationMenuItem>
         </div>
-        <div className="w-full p-6 flex flex-col gap-4">
+        <div className="w-full px-6 mt-1 flex flex-col gap-4">
           <NavigationMenuItem className=" font-medium text-sm">
             <Link to="/about-us">About</Link>
           </NavigationMenuItem>
