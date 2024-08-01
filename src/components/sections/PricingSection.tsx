@@ -101,6 +101,7 @@ const PricingSection: React.FC = () => {
               </p>
               <div className="mt-2">
                 <h1 className="text-3xl font-bold flex items-end">
+                  ₹
                   {isToggled // @ts-ignore
                     ? prices.yearly[plan.priceKey] // @ts-ignore
                     : prices.monthly[plan.priceKey]}{" "}
