@@ -13,14 +13,10 @@ import {
   NavigationMenuTrigger,
 } from "./navigation-menu";
 import {
-  Cookie,
   Calendar,
-  Box,
   ShoppingBag,
   FileText,
-  Settings,
   Users,
-  PieChart,
   Briefcase,
   Building2,
   Workflow,
@@ -62,33 +58,33 @@ import {
   CalendarHeart,
   HelpingHand,
   BarChart,
-} from "lucide-react"; // Import the required icons
+} from "lucide-react";
 
 interface Category {
   title: string;
   href: string;
   description: string;
-  icon: React.ReactNode; // Add icon property to Category
+  icon: React.ReactNode;
 }
 
 interface Categories {
   [key: string]: Category[];
 }
 
-const company = [
-  {
-    title: "About",
-    href: "/about",
-  },
-  {
-    title: "Brain Stories",
-    href: "/stories",
-  },
-  {
-    title: "Careers",
-    href: "/careers",
-  },
-];
+// const company = [
+//   {
+//     title: "About",
+//     href: "/about",
+//   },
+//   {
+//     title: "Brain Stories",
+//     href: "/stories",
+//   },
+//   {
+//     title: "Careers",
+//     href: "/careers",
+//   },
+// ];
 
 export const categories: Categories = {
   MDO: [
@@ -96,55 +92,55 @@ export const categories: Categories = {
       title: "Organisation Structure Maker",
       href: "/mdo",
       description: "Comprehensive CRM platform for customer-facing teams.",
-      icon: <Building2 />, // Assign an icon
+      icon: <Building2 />,
     },
     {
       title: "Flow Chart Maker",
       href: "/mdo",
       description: "Simple CRM for small businesses moving from spreadsheets.",
-      icon: <Workflow />, // Assign an icon
+      icon: <Workflow />,
     },
     {
       title: "Designation Profile",
       href: "/mdo",
       description: "Build online forms for every business need.",
-      icon: <UserCheck />, // Assign an icon
+      icon: <UserCheck />, 
     },
     {
       title: "Task Delegation",
       href: "/mdo",
       description: "Live chat app to engage and convert website visitors.",
-      icon: <AlarmClock />, // Assign an icon
+      icon: <AlarmClock />, 
     },
     {
       title: "Events",
       href: "/mdo",
       description: "Appointment scheduling app for consultations with customers.",
-      icon: <PartyPopper />, // Assign an icon
+      icon: <PartyPopper />, 
     },
     {
       title: "Vault",
       href: "/mdo",
       description: "Digital signature app for businesses.",
-      icon: <LockOpen />, // Assign an icon
+      icon: <LockOpen />,
     },
     {
       title: "Group Chat",
       href: "/mdo",
       description: "Comprehensive sales map visualization and optimal route planning solution.",
-      icon: <Users />, // Assign an icon
+      icon: <Users />, 
     },
     {
       title: "Master List",
       href: "/mdo",
       description: "Complete loyalty and affiliate management platform. NEW",
-      icon: <InspectionPanel />, // Assign an icon
+      icon: <InspectionPanel />,
     },
     {
       title: "CRM Plus",
       href: "/mdo",
       description: "Unified platform to deliver top-notch customer experience. SUITE",
-      icon: <Plus />, // Assign an icon
+      icon: <Plus />, 
     },
   ],
   HR: [
