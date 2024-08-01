@@ -12,26 +12,15 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "./navigation-menu";
-import { Cookie } from "lucide-react";
-
-const company = [
-  {
-    title: "About",
-    href: "/about",
-  },
-  {
-    title: "Brain Stories",
-    href: "/stories",
-  },
-  {
-    title: "Careers",
-    href: "/careers",
-  },
-];
+import { Link } from "react-router-dom";
 
 export function NavigationMenuDemoMobile() {
-  const [activeMainCategory, setActiveMainCategory] = useState<string | null>(null);
-  const [activeSubCategory, setActiveSubCategory] = useState<string | null>(null);
+  const [activeMainCategory, setActiveMainCategory] = useState<string | null>(
+    null
+  );
+  const [activeSubCategory, setActiveSubCategory] = useState<string | null>(
+    null
+  );
 
   const handleMainCategoryClick = (category: string) => {
     setActiveMainCategory(activeMainCategory === category ? null : category);
@@ -44,15 +33,14 @@ export function NavigationMenuDemoMobile() {
 
   return (
     <NavigationMenu>
-      <NavigationMenuList className="flex flex-col w-[27rem] p-2 px-6 space-y-2">
+      <NavigationMenuList className="flex flex-col w-[27rem] p-2 px-6">
         <div className="w-full">
           <NavigationMenuItem>
             <NavigationMenuTrigger
               onClick={() => handleMainCategoryClick("Products")}
-              className="flex items-center justify-between rounded-md px-6 py-3 font-semibold w-full text-left"
+              className="flex items-center justify-between rounded-md px-6 font-semibold w-full text-left"
             >
               <span>Products</span>
-              
             </NavigationMenuTrigger>
             {activeMainCategory === "Products" && (
               <div className="mt-2 p-2 px-4 bg-white shadow-md rounded-md">
@@ -68,14 +56,15 @@ export function NavigationMenuDemoMobile() {
                       {activeSubCategory === category && (
                         <ul className="ml-4 mt-2 space-y-2 bg-gray-50 rounded-md p-2 shadow-sm">
                           {categories[category].map((component) => (
-                            <li key={component.title} className="flex items-center gap-3 p-2 rounded-md">
-                              <Cookie className="text-gray-600" />
+                            <li
+                              key={component.title}
+                              className="flex items-center gap-3 p-2 rounded-md"
+                            >
+                              {component.icon}
                               <ListItem
                                 title={component.title}
                                 href={component.href}
-                              >
-                                {component.description}
-                              </ListItem>
+                              ></ListItem>
                             </li>
                           ))}
                         </ul>
@@ -87,28 +76,15 @@ export function NavigationMenuDemoMobile() {
             )}
           </NavigationMenuItem>
         </div>
-        <div className="w-full">
-          <NavigationMenuItem>
-            <NavigationMenuTrigger
-              onClick={() => handleMainCategoryClick("Company")}
-              className="flex items-center justify-between rounded-md px-6 py-3 font-semibold w-full text-left"
-            >
-              <span>Company</span>
-              
-            </NavigationMenuTrigger>
-            {activeMainCategory === "Company" && (
-              <div className="mt-2 p-2 px-4 bg-white shadow-md rounded-md">
-                <ul className="grid grid-cols-1 gap-4">
-                  {company.map((component) => (
-                    <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
-                    />
-                  ))}
-                </ul>
-              </div>
-            )}
+        <div className="w-full p-6 flex flex-col gap-4">
+          <NavigationMenuItem className=" font-medium text-sm">
+            <Link to="/about-us">About</Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem className=" font-medium text-sm">
+            <Link to="/brain-stories">Brain Stories</Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem className=" font-medium text-sm">
+            <Link to="/careers">Careers</Link>
           </NavigationMenuItem>
         </div>
       </NavigationMenuList>
@@ -131,7 +107,9 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="text-sm md:text-base font-medium leading-none text-gray-800">{title}</div>
+          <div className="text-sm md:text-base font-medium leading-none text-gray-800">
+            {title}
+          </div>
           <p className="text-xs md:text-sm leading-snug text-gray-600">
             {children}
           </p>

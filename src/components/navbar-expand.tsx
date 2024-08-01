@@ -59,6 +59,7 @@ import {
   HelpingHand,
   BarChart,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface Category {
   title: string;
@@ -85,6 +86,20 @@ interface Categories {
 //     href: "/careers",
 //   },
 // ];
+export const company = [
+  {
+    title: "About",
+    href: "/about",
+  },
+  {
+    title: "Brain Stories",
+    href: "/stories",
+  },
+  {
+    title: "Careers",
+    href: "/careers",
+  },
+];
 
 export const categories: Categories = {
   MDO: [
@@ -104,19 +119,20 @@ export const categories: Categories = {
       title: "Designation Profile",
       href: "/mdo",
       description: "Build online forms for every business need.",
-      icon: <UserCheck />, 
+      icon: <UserCheck />,
     },
     {
       title: "Task Delegation",
       href: "/mdo",
       description: "Live chat app to engage and convert website visitors.",
-      icon: <AlarmClock />, 
+      icon: <AlarmClock />,
     },
     {
       title: "Events",
       href: "/mdo",
-      description: "Appointment scheduling app for consultations with customers.",
-      icon: <PartyPopper />, 
+      description:
+        "Appointment scheduling app for consultations with customers.",
+      icon: <PartyPopper />,
     },
     {
       title: "Vault",
@@ -127,8 +143,9 @@ export const categories: Categories = {
     {
       title: "Group Chat",
       href: "/mdo",
-      description: "Comprehensive sales map visualization and optimal route planning solution.",
-      icon: <Users />, 
+      description:
+        "Comprehensive sales map visualization and optimal route planning solution.",
+      icon: <Users />,
     },
     {
       title: "Master List",
@@ -139,8 +156,9 @@ export const categories: Categories = {
     {
       title: "CRM Plus",
       href: "/mdo",
-      description: "Unified platform to deliver top-notch customer experience. SUITE",
-      icon: <Plus />, 
+      description:
+        "Unified platform to deliver top-notch customer experience. SUITE",
+      icon: <Plus />,
     },
   ],
   HR: [
@@ -155,7 +173,7 @@ export const categories: Categories = {
       href: "/hr",
       description:
         "Create, send, and track targeted email campaigns that drive sales.",
-        icon: <LockOpen />,
+      icon: <LockOpen />,
     },
     {
       title: "Onboarding Brainflow",
@@ -174,14 +192,14 @@ export const categories: Categories = {
       href: "/hr",
       description:
         "Online website builder with extensive customisation options.",
-        icon: <Handshake />,
+      icon: <Handshake />,
     },
     {
       title: "Seperation Brainflow",
       href: "/hr",
       description:
         "Website conversion optimization and personalisation platform.",
-        icon: <DoorClosed />,
+      icon: <DoorClosed />,
     },
   ],
   ADMIN: [
@@ -455,9 +473,11 @@ export function NavigationMenuDemo() {
 
   return (
     <NavigationMenu className="">
-      <NavigationMenuList className="px-12">
+      <NavigationMenuList className="px-12 flex gap-16 flex-row items-center">
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Products</NavigationMenuTrigger>
+          <NavigationMenuTrigger className=" w-18">
+            Products
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
             <div className="flex p-5">
               <ul className=" w-1/4">
@@ -476,14 +496,15 @@ export function NavigationMenuDemo() {
               <div className="w-[86%]">
                 <ul className="grid gap-3 p-4 md:w-[1300px] lg:w-[1400px] lg:grid-cols-[1fr.90fr_3fr]">
                   {categories[activeCategory]?.map((component) => (
-                    <div className="flex items-center gap-3" key={component.title}>
+                    <div
+                      className="flex items-center gap-3"
+                      key={component.title}
+                    >
                       {component.icon}
                       <ListItem
                         title={component.title}
                         href={component.href}
-                      >
-                        {component.description}
-                      </ListItem>
+                      ></ListItem>
                     </div>
                   ))}
                 </ul>
@@ -491,11 +512,14 @@ export function NavigationMenuDemo() {
             </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem className=" font-medium text-sm">Company</NavigationMenuItem>
-        <NavigationMenuItem>
-          {/* <a href="/docs">
-            <NavigationMenuLink>Documentation</NavigationMenuLink>
-          </a> */}
+        <NavigationMenuItem className=" font-medium text-sm">
+          <Link to="/about-us">About</Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem className=" font-medium text-sm">
+          <Link to="/brain-stories">Brain Stories</Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem className=" font-medium text-sm">
+          <Link to="/careers">Careers</Link>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
