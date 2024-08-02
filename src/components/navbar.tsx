@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="sticky z-50 top-0 backdrop-blur-xl shadow-sm">
-      <div className="mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="mx-auto px-4 max-w-[94%] py-4 flex justify-between items-center">
         <div className="flex gap-8 items-center">
           <Link to={"/"} className="text-xl font-bold">
             <img

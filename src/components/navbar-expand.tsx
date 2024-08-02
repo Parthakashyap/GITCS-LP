@@ -472,10 +472,10 @@ export function NavigationMenuDemo() {
   const [activeCategory, setActiveCategory] = useState("MDO");
 
   return (
-    <NavigationMenu className="">
-      <NavigationMenuList className="px-12 flex gap-16 flex-row items-center">
+    <NavigationMenu>
+      <NavigationMenuList className="px-12 flex gap-10 flex-row items-center">
         <NavigationMenuItem>
-          <NavigationMenuTrigger className=" w-18">
+          <NavigationMenuTrigger className="  text-md">
             Products
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -512,13 +512,13 @@ export function NavigationMenuDemo() {
             </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem className=" font-medium text-sm">
+        <NavigationMenuItem className=" font-medium text-md">
           <Link to="/about-us">About</Link>
         </NavigationMenuItem>
-        <NavigationMenuItem className=" font-medium text-sm">
+        <NavigationMenuItem className=" font-medium text-md">
           <Link to="/brain-stories">Brain Stories</Link>
         </NavigationMenuItem>
-        <NavigationMenuItem className=" font-medium text-sm">
+        <NavigationMenuItem className=" font-medium text-md">
           <Link to="/careers">Careers</Link>
         </NavigationMenuItem>
       </NavigationMenuList>

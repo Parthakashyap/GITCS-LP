@@ -20,7 +20,7 @@ const Body: React.FC = () => {
         </div>
         <h1 className="text-6xl font-bold text-center tracking-tight">
           Unlock the
-          <br /> <span className="text-green-500">Power</span> of Data
+          <br /> <span className="text-[#3FEDBC]">Power</span> of Data
         </h1>
         <p className="text-center text-lg mt-8">
           Turn Data into Actionable Insights <br />
@@ -48,7 +48,7 @@ const Body: React.FC = () => {
           </div>
           <h2 className="md:text-5xl text-4xl font-bold">
             Real-Time Insights, <br />
-            <span className="text-green-600">Real-Time Results</span>
+            <span className="text-[#3FEDBC]">Real-Time Results</span>
           </h2>
           <p className="mt-4 text-sm md:text-md text-gray-600">
             Saas dashboard that enable users to perform various <br />
@@ -63,7 +63,9 @@ const Body: React.FC = () => {
           text="What People are Saying"
           className="hidden md:block mb-20 font-display text-center text-4xl font-bold tracking-[-0.1em]  text-black dark:text-white md:text-7xl md:leading-[5rem]"
         />
-          <h1 className=" mb-7 p-4 text-3xl font-bold md:hidden">What people are saying</h1>
+        <h1 className=" mb-7 p-4 text-3xl font-bold md:hidden">
+          What people are saying
+        </h1>
         <MarqueeDemo />
       </div>
       <PricingSection />

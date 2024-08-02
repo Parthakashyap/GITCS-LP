@@ -25,7 +25,7 @@ export function HeroScrollDemo() {
             </div>
             <h1 className="text-8xl font-bold text-center tracking-tight">
               Unlock the
-              <br /> <span className="text-green-600">Power</span> of Data
+              <br /> <span className="text-[#3FEDBC]">Power</span> of Data
             </h1>
 
             <p className="text-center text-lg mt-8">
