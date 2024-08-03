@@ -150,7 +150,7 @@ export const categories: Categories = {
     {
       title: "Master List",
       href: "/mdo",
-      description: "Complete loyalty and affiliate management platform. NEW",
+      description: "Complete loyalty and affiliate Management platform. NEW",
       icon: <InspectionPanel />,
     },
     {
@@ -165,7 +165,7 @@ export const categories: Categories = {
     {
       title: "Hiring Brainflow",
       href: "/hr",
-      description: "All-in-one social media management software.",
+      description: "All-in-one social media Management software.",
       icon: <DoorOpen />,
     },
     {
@@ -216,25 +216,25 @@ export const categories: Categories = {
       icon: <Building />,
     },
     {
-      title: "Fuel Mgmt System  ",
+      title: "Fuel Management System  ",
       href: "/admin",
       description: "eCommerce platform to manage and market your online store.",
       icon: <Fuel />,
     },
     {
-      title: "Event Mgmt System  ",
+      title: "Event Management System  ",
       href: "/admin",
       description: "eCommerce platform to manage and market your online store.",
       icon: <Plus />,
     },
     {
-      title: "Greetings Mgmt System  ",
+      title: "Greetings Management System  ",
       href: "/admin",
       description: "eCommerce platform to manage and market your online store.",
       icon: <Calendar />,
     },
     {
-      title: "Asset Mgmt System  ",
+      title: "Asset Management System  ",
       href: "/admin",
       description: "eCommerce platform to manage and market your online store.",
       icon: <LockIcon />,
@@ -242,7 +242,7 @@ export const categories: Categories = {
   ],
   IT: [
     {
-      title: "IT Mgmt System",
+      title: "IT Management System",
       href: "/it",
       description: "Helpdesk software to deliver great customer support.",
       icon: <Computer />,
@@ -302,7 +302,7 @@ export const categories: Categories = {
   ],
   STORES: [
     {
-      title: "Warehouse Mgmt System",
+      title: "Warehouse Management System",
       href: "/stores",
       description: "Manage your employees and their information.",
       icon: <Store />,
@@ -320,7 +320,7 @@ export const categories: Categories = {
       icon: <HandMetal />,
     },
     {
-      title: "Inventory Mgmt System",
+      title: "Inventory Management System",
       href: "/stores",
       description: "Manage your employees and their information.",
       icon: <FileText />,
@@ -340,13 +340,13 @@ export const categories: Categories = {
       icon: <Construction />,
     },
     {
-      title: "BOM Mgmt System",
+      title: "BOM Management System",
       href: "/projects",
       description: "Ensure your business complies with laws.",
       icon: <Folder />,
     },
     {
-      title: "Project Mgmt System ",
+      title: "Project Management System ",
       href: "/projects",
       description: "Ensure your business complies with laws.",
       icon: <TabletSmartphone />,
@@ -378,7 +378,7 @@ export const categories: Categories = {
       icon: <Percent />,
     },
     {
-      title: "Payment Mgmt System (Recurring Payments)  ",
+      title: "Payment Management System (Recurring Payments)  ",
       href: "/finance",
       description: "Protect your business from cyber threats.",
       icon: <Banknote />,
@@ -386,7 +386,7 @@ export const categories: Categories = {
   ],
   ACCOUNTS: [
     {
-      title: "Expense Mgmt System ",
+      title: "Expense Management System ",
       href: "/accounts",
       description: "Analyze your business data.",
       icon: <Banknote />,
@@ -398,10 +398,10 @@ export const categories: Categories = {
       icon: <Plus />,
     },
   ],
-  "PROJECT MANAGEMENT": [
+  "PROJECT Management": [
     {
       title: "Task Management",
-      href: "/project-management",
+      href: "/project-Management",
       description: "Manage your projects and tasks.",
       icon: <ListTodo />,
     },
