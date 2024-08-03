@@ -493,8 +493,8 @@ export function NavigationMenuDemo() {
                   </li>
                 ))}
               </ul>
-              <div className="w-[86%]">
-                <ul className="grid gap-3 p-4 md:w-[1300px] lg:w-[1400px] lg:grid-cols-[1fr.90fr_3fr]">
+              <div className="w-full">
+                <ul className="grid gap-3 p-4 w-full lg:grid-cols-5">
                   {categories[activeCategory]?.map((component) => (
                     <div
                       className="flex items-center gap-3"
