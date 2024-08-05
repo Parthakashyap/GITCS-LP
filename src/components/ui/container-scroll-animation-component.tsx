@@ -1,6 +1,5 @@
 "use client";
 
-// import AnimatedShinyText from "../animated-introduction";
 import AvatarCircles from "../magicui/avatar";
 import { ContainerScroll } from "./container-scroll-animation";
 import bodyBg from "../../Images/SaaS-Dashboard.png";
@@ -18,11 +17,7 @@ export function HeroScrollDemo() {
       <ContainerScroll
         titleComponent={
           <>
-            <div className="flex items-center flex-col gap-4 justify-center">
-              {/* <div className="bg-black/10 p-1 mb-11 border-2 border-purple-500/40 rounded-full">
-                <AnimatedShinyText children="🎉 7 Day Free Trial - No Credit card required 	&rarr;" />
-              </div> */}
-            </div>
+            <div className="flex items-center flex-col gap-4 justify-center"></div>
             <h1 className="text-8xl font-bold text-center tracking-tight">
               Unlock the
               <br /> <span className="text-[#3FEDBC]">Power</span> of Data
