@@ -56,9 +56,8 @@ const PricingSection: React.FC = () => {
 
   return (
     <div className="flex flex-col w-full p-4 md:p-0 md:gap-8 gap-4 items-center text-center justify-center">
-      <h1 className="md:text-3xl text-lg font-bold">Pricing</h1>
       <h1 className="md:text-6xl text-4xl font-bold tracking-wide leading-1 md:h-16">
-        Simple pricing for everyone.
+        Affordable Pricing for Everyone.
       </h1>
       <p className="md:text-lg text-md opacity-60 md:max-w-4xl mt-5 md:mt-0 text-center">
         Choose an <b>affordable plan</b> that's packed with the best features
@@ -80,9 +79,6 @@ const PricingSection: React.FC = () => {
             ></div>
           </button>
           <span className="ml-2 text-md font-medium text-gray-700">Annual</span>
-        </div>
-        <div className="bg-black px-4 py-1 rounded-full text-white">
-          2 months free ✨
         </div>
       </div>
 

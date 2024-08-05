@@ -4,7 +4,7 @@ import PricingSection from "./sections/PricingSection";
 import BusinessPotentialSection from "./sections/BusinessPotentialSection";
 import FaqSection from "./sections/FaqSection";
 import { BentoDemo } from "./feature-bento-grid";
-import AnimatedShinyText from "./animated-introduction";
+// import AnimatedShinyText from "./animated-introduction";
 import landingImage from "../Images/SaaS-Dashboard.png";
 import { BorderBeam } from "./magicui/border-beam";
 import { MarqueeDemo } from "./sections/TestimonialsSection";
@@ -14,9 +14,9 @@ const Body: React.FC = () => {
     <div className="bg-gray-100 z-10 min-h-screen flex flex-col items-center justify-center">
       <div className="sm:hidden block mt-20">
         <div className="flex items-center flex-col  gap-4 justify-center">
-          <div className="bg-black/10 p-1 mb-5 border-2 border-black/5 rounded-full">
+          {/* <div className="bg-black/10 p-1 mb-5 border-2 border-black/5 rounded-full">
             <AnimatedShinyText children="🎉 7 Day Free Trial - No Credit card required 	&rarr;" />
-          </div>
+          </div> */}
         </div>
         <h1 className="text-6xl font-bold text-center tracking-tight">
           Unlock the
@@ -47,12 +47,12 @@ const Body: React.FC = () => {
             Features
           </div>
           <h2 className="md:text-5xl text-4xl font-bold">
-            Real-Time Insights, <br />
-            <span className="text-[#3FEDBC]">Real-Time Results</span>
+            Instant analytics, <br />
+            <span className="text-[#3FEDBC]">Live reporting dashboard</span>
           </h2>
           <p className="mt-4 text-sm md:text-md text-gray-600">
-            Saas dashboard that enable users to perform various <br />
-            tasks and activities related to their business
+            A SaaS solution offering a dashboard for <br />
+            users to perform diverse business functions.
           </p>
         </div>
         {/* <AnimatedBeamDemo/> */}
@@ -60,11 +60,11 @@ const Body: React.FC = () => {
       </div>
       <div className="m-auto max-w-7xl mt-20 mb-20">
         <GradualSpacing
-          text="What People are Saying"
+          text="What’s being said"
           className="hidden md:block mb-20 font-display text-center text-4xl font-bold tracking-[-0.1em]  text-black dark:text-white md:text-7xl md:leading-[5rem]"
         />
         <h1 className=" mb-7 p-4 text-3xl font-bold md:hidden">
-          What people are saying
+          What’s being said
         </h1>
         <MarqueeDemo />
       </div>
