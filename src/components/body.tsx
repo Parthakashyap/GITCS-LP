@@ -19,8 +19,8 @@ const Body: React.FC = () => {
           <br /> <span className="text-[#3FEDBC]">Power</span> of Data
         </h1>
         <p className="text-center text-lg mt-8">
-          Turn Data into Actionable Insights <br />
-          with Our SaaS Dashboard
+          A SaaS solution offering a dashboard for <br />
+          users to perform diverse business functions.
         </p>
         <div className="items-center justify-center flex">
           <CoolMode>
