@@ -31,7 +31,11 @@ const Body: React.FC = () => {
         </div>
 
         <div className="relative w-[90%] mx-auto mt-8 border-2 border-black rounded-lg">
-          <img src={landingImage} alt="hero" className="w-full rounded-lg" />
+          <img
+            src={landingImage}
+            alt="hero"
+            className="w-full rounded-lg h-[230px]"
+          />
           <div className="absolute inset-x-0 bottom-0 h-[50%] rounded-md bg-gradient-to-t from-black to-transparent"></div>
           <BorderBeam className=" rounded-lg" />
         </div>
