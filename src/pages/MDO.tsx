@@ -4,7 +4,17 @@ import { FadeText } from "../components/magicui/fade-text";
 import BlurIn from "../components/magicui/blur-in";
 import PricingSection from "../components/sections/PricingSection";
 import FaqSection from "../components/sections/FaqSection";
-import { AlarmClock, Building2, InspectionPanel, LockOpen, PartyPopper, Plus, UserCheck, Users, Workflow } from "lucide-react";
+import {
+  AlarmClock,
+  Building2,
+  InspectionPanel,
+  LockOpen,
+  PartyPopper,
+  Plus,
+  UserCheck,
+  Users,
+  Workflow,
+} from "lucide-react";
 
 import charts from "../Images/MDO/charts.svg";
 import flow_chart from "../Images/MDO/undraw_bear_market_ania.svg";
@@ -40,41 +50,41 @@ const sections = [
   {
     title: "Task Deligation",
     img: tasks,
-    icon : AlarmClock,
+    icon: AlarmClock,
     description:
       "Task delegation in our SaaS CRM allows managers to efficiently assign responsibilities to team members, ensuring that tasks are handled by those with the appropriate skills, thereby streamlining workflow and enhancing productivity..",
   },
   {
     title: "Events",
     img: events,
-    icon : PartyPopper,
+    icon: PartyPopper,
     description:
       "Appointment scheduling app for consultations with customers..",
   },
   {
     title: "Vault",
     img: vault,
-    icon : LockOpen,
+    icon: LockOpen,
     description:
       "Digital signature app for businesses. Sign documents online with legally binding e-signatures.",
   },
   {
     title: "Group Chat",
     img: group_chat,
-    icon : Users,
+    icon: Users,
     description:
       "The group chat feature in our ERP system enables real-time communication and collaboration among team members, facilitating seamless information sharing and enhancing team productivity..",
   },
   {
     title: "Master List",
     img: master_chat,
-    icon : InspectionPanel,
+    icon: InspectionPanel,
     description:
       "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
   },
   {
     title: "CRM PLUS +",
-    icon : Plus,
+    icon: Plus,
     img: crm_plus,
     description:
       "Unified platform  to deliver top-notch customer service. Manage customer interactions, automate repetitive tasks, and streamline your sales process.",
@@ -111,7 +121,7 @@ const MDO = () => {
           <img src={banner} alt="" className=" md:w-1/2 w-96" />
         </div>
       </div>
-      <div className="flex justify-center flex-col gap-8 items-center p-9">
+      <div className="flex justify-center flex-col gap-8 items-center md:p-9 p-3">
         <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
           What Brain Brings To The Table
         </h1>

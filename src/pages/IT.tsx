@@ -4,17 +4,16 @@ import { FadeText } from "../components/magicui/fade-text";
 import BlurIn from "../components/magicui/blur-in";
 import PricingSection from "../components/sections/PricingSection";
 import FaqSection from "../components/sections/FaqSection";
-import {
-  Computer,
-} from "lucide-react";
+import { Computer } from "lucide-react";
 import { BrainFlowSection } from "../components/BrainFlow";
-import it_management from "../Images/IT/undraw_server_cluster_jwwq.svg"
+import it_management from "../Images/IT/undraw_server_cluster_jwwq.svg";
 const sections = [
   {
     title: "It Management Software",
     img: it_management,
     icon: Computer,
-    description: "Our IT Management feature streamlines your organization's IT operations, offering comprehensive tools for asset management, network monitoring, and helpdesk support. Enhance efficiency and ensure seamless IT infrastructure management with our robust, user-friendly solution."
+    description:
+      "Our IT Management feature streamlines your organization's IT operations, offering comprehensive tools for asset management, network monitoring, and helpdesk support. Enhance efficiency and ensure seamless IT infrastructure management with our robust, user-friendly solution.",
   },
 ];
 const IT = () => {
@@ -48,7 +47,7 @@ const IT = () => {
           <img src={hrbg} alt="" className=" md:w-1/2 w-96" />
         </div>
       </div>
-      <div className="flex justify-center flex-col gap-8 items-center p-9">
+      <div className="flex justify-center flex-col gap-8 items-center md:p-9 p-3">
         <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
           What Brain Brings To The Table
         </h1>

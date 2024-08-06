@@ -65,7 +65,7 @@ const Procurment = () => {
         </div>
       </div>
 
-      <div className="flex justify-center flex-col gap-8 items-center p-9">
+      <div className="flex justify-center flex-col gap-8 items-center p-4 md:p-9">
         <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
           What Brain Brings To The Table
         </h1>

@@ -1,9 +1,4 @@
-import {
-  Banknote,
-  Compass,
-  Percent,
-  Scale,
-} from "lucide-react";
+import { Banknote, Compass, Percent, Scale } from "lucide-react";
 import designation from "../Images/Finance/undraw_profile_data_re_v81r.svg";
 import tasks from "../Images/Finance/undraw_social_strategy_re_mk87.svg";
 import vault from "../Images/Finance/undraw_financial_data_re_p0fl.svg";
@@ -20,23 +15,21 @@ const sections = [
   {
     title: "CFR",
     img: vault,
-    icon : Scale,
+    icon: Scale,
     description:
       "The CFR (Customer Feedback and Relations) module in the ERP dashboard streamlines customer interactions and feedback management. It enables efficient tracking, analysis, and response to customer feedback to enhance service quality and customer satisfaction.",
   },
   {
     title: "Statutory Compliances",
     img: group_chat,
-    icon:Compass,
-    description:
-      "Ensure your business complies with all statutory regulations",
+    icon: Compass,
+    description: "Ensure your business complies with all statutory regulations",
   },
   {
     title: "Budgeting",
     img: master_chat,
     icon: Percent,
-    description:
-      "Plan and control your business finances effectively",
+    description: "Plan and control your business finances effectively",
   },
   {
     title: "Payment Management System",
@@ -78,24 +71,24 @@ const Finance = () => {
         </div>
       </div>
 
-      <div className="flex justify-center flex-col gap-8 items-center p-9">
+      <div className="flex justify-center flex-col gap-8 items-center md:p-9 p-3">
         <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
           What Brain Brings To The Table
         </h1>
 
         <div className="grid lg:grid-cols-3  md:w-[80%] md:grid-cols-2 grid-cols-1 gap-4">
-{sections.map((section, index) => (
+          {sections.map((section, index) => (
             <div
-            key={index}
-            className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-yellow-600 hover:bg-gray-100 duration-200"
-          >
-            <section.icon size={50} className="mb-6" />
-            <h1 className="text-2xl font-bold">{section.title}</h1>
-            <p className="break-words max-w-[80%] mt-2">
-              {section.description}
-            </p>
-          </div>
-))}
+              key={index}
+              className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-yellow-600 hover:bg-gray-100 duration-200"
+            >
+              <section.icon size={50} className="mb-6" />
+              <h1 className="text-2xl font-bold">{section.title}</h1>
+              <p className="break-words max-w-[80%] mt-2">
+                {section.description}
+              </p>
+            </div>
+          ))}
         </div>
 
         <hr className="bg-black w-full" />

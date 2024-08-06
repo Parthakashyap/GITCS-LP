@@ -13,57 +13,57 @@ import {
   Plus,
 } from "lucide-react";
 
-import task_management from "../Images/Admin/undraw_next_tasks_re_5eyy.svg"
-import office from "../Images/Admin/undraw_in_the_office_re_jtgc.svg"
-import fuel from "../Images/Admin/undraw_automobile_repair_ywci.svg"
-import event_management from "../Images/Admin/undraw_events_re_98ue.svg"
-import greeting_management from "../Images/Admin/undraw_hello_re_3evm.svg"
-import asset_management from "../Images/Admin/undraw_crypto_portfolio_2jy5.svg"
+import task_management from "../Images/Admin/undraw_next_tasks_re_5eyy.svg";
+import office from "../Images/Admin/undraw_in_the_office_re_jtgc.svg";
+import fuel from "../Images/Admin/undraw_automobile_repair_ywci.svg";
+import event_management from "../Images/Admin/undraw_events_re_98ue.svg";
+import greeting_management from "../Images/Admin/undraw_hello_re_3evm.svg";
+import asset_management from "../Images/Admin/undraw_crypto_portfolio_2jy5.svg";
 
 import { BrainFlowSection } from "../components/BrainFlow";
 const sections = [
   {
     title: "Task Management",
     img: task_management,
-    icon : Briefcase,
+    icon: Briefcase,
     description:
       "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
   },
   {
     title: "Front Office",
     img: office,
-    icon : Building,
+    icon: Building,
     description:
       "Streamline your front office operations with our ERP system's Front Office workflow feature. From managing customer inquiries and appointments to handling reservations and check-ins, our feature provides a seamless and efficient experience for your staff and customers. With real-time updates and integration with other modules, you can ensure smooth communication and collaboration across your organization.",
   },
   {
     title: "Fuel Management System",
     img: fuel,
-    icon : Fuel,
+    icon: Fuel,
     description:
       "Efficiently manage and track fuel consumption, inventory, and expenses with our Fuel Management System. Our feature provides real-time monitoring of fuel levels, automated fuel data collection, and comprehensive reporting. With our system, you can optimize fuel usage, reduce costs, and ensure compliance with regulatory requirements.",
   },
   {
     title: "Event Management System",
     img: event_management,
-    icon : Plus,
+    icon: Plus,
     description:
       "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
   },
   {
     title: "Greeting Management System",
     img: greeting_management,
-    icon : Calendar,
+    icon: Calendar,
     description:
       "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
   },
   {
     title: "Asset Management System",
     img: asset_management,
-    icon : LockIcon,
+    icon: LockIcon,
     description:
       "Say goodbye to mundane spreadsheets or rigid systems to manage HR tasks. Get smarter and more efficient software with features designed to free you from administrative work.",
-  }
+  },
 ];
 const Admin = () => {
   return (
@@ -96,7 +96,7 @@ const Admin = () => {
           <img src={banner} alt="" className=" md:w-1/2 w-96" />
         </div>
       </div>
-      <div className="flex justify-center flex-col gap-8 items-center p-9">
+      <div className="flex justify-center flex-col gap-8 items-center md:p-9 p-3">
         <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
           What Brain Brings To The Table
         </h1>

@@ -8,11 +8,11 @@ import {
 } from "lucide-react";
 import hrbg from "../Images/HR/undraw_job_offers_re_634p.svg";
 import hiring from "../Images/HR/undraw_interview_re_e5jn.svg";
-import recruitment from "../Images/HR/undraw_hiring_re_yk5n.svg"
-import onboarding from "../Images/HR/undraw_agreement_re_d4dv.svg"
-import training from "../Images/HR/undraw_progress_tracking_re_ulfg.svg"
-import joining from "../Images/HR/undraw_join_re_w1lh.svg"
-import separation from "../Images/HR/undraw_windy_day_x-63-l.svg"
+import recruitment from "../Images/HR/undraw_hiring_re_yk5n.svg";
+import onboarding from "../Images/HR/undraw_agreement_re_d4dv.svg";
+import training from "../Images/HR/undraw_progress_tracking_re_ulfg.svg";
+import joining from "../Images/HR/undraw_join_re_w1lh.svg";
+import separation from "../Images/HR/undraw_windy_day_x-63-l.svg";
 import WordPullUp from "../components/magicui/word-pull-up";
 import { FadeText } from "../components/magicui/fade-text";
 import BlurIn from "../components/magicui/blur-in";
@@ -96,7 +96,7 @@ const HR = () => (
       </div>
     </div>
 
-    <div className="flex justify-center flex-col gap-8 items-center p-9">
+    <div className="flex justify-center flex-col gap-8 items-center p-3 md:p-9">
       <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
         What Brain Brings To The Table
       </h1>

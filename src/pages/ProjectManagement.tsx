@@ -1,14 +1,12 @@
-import {
-  ListTodo,
-} from "lucide-react";
+import { ListTodo } from "lucide-react";
 import WordPullUp from "../components/magicui/word-pull-up";
 import { FadeText } from "../components/magicui/fade-text";
 import BlurIn from "../components/magicui/blur-in";
 import FaqSection from "../components/sections/FaqSection";
 import PricingSection from "../components/sections/PricingSection";
 import { BrainFlowSection } from "../components/BrainFlow";
-import tasks from "../Images/ProjectManagement/undraw_add_tasks_re_s5yj-light-gray.svg"
-import banner from "../Images/Projects/undraw_organizing_projects_re_9p1k.svg"
+import tasks from "../Images/ProjectManagement/undraw_add_tasks_re_s5yj-light-gray.svg";
+import banner from "../Images/Projects/undraw_organizing_projects_re_9p1k.svg";
 const sections = [
   {
     title: "Task Management",
@@ -50,7 +48,7 @@ const ProjectManagement = () => {
         </div>
       </div>
 
-      <div className="flex justify-center flex-col gap-8 items-center p-9">
+      <div className="flex justify-center flex-col gap-8 items-center md:p-9 p-3">
         <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
           What Brain Brings To The Table
         </h1>

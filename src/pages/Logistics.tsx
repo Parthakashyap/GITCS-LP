@@ -1,6 +1,4 @@
-import {
-  Workflow,
-} from "lucide-react";
+import { Workflow } from "lucide-react";
 import hrbg from "../Images/Logistics/undraw_steps_re_odoy.svg";
 import charts from "../Images/Gigs/undraw_cms_re_asu0.svg";
 import WordPullUp from "../components/magicui/word-pull-up";
@@ -14,12 +12,11 @@ const sections = [
   {
     title: "FMS Management System",
     img: charts,
-    icon : Workflow,
+    icon: Workflow,
     description:
       "Grow your business with our comprehensive FMS Management System. Track, manage, and optimize your fleet operations with real-time data analytics and actionable insights.",
   },
 ];
-
 
 const Logistics = () => {
   return (
@@ -52,22 +49,20 @@ const Logistics = () => {
         </div>
       </div>
 
-      <div className="flex justify-center flex-col gap-8 items-center p-9">
-      <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
+      <div className="flex justify-center flex-col gap-8 items-center md:p-9 p-3">
+        <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
           What Brain Brings To The Table
         </h1>
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 md:max-w-[80%] grid-cols-1 gap-4">
-          {sections.map(({ icon: Icon, title ,description }) => (
+          {sections.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
               className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-emerald-600 hover:bg-gray-100 duration-200"
             >
               <Icon size={50} className="mb-6" />
               <h1 className="text-2xl font-bold">{title}</h1>
-              <p className="break-words max-w-[80%] mt-2">
-                {description}
-              </p>
+              <p className="break-words max-w-[80%] mt-2">{description}</p>
             </div>
           ))}
         </div>
@@ -90,7 +85,7 @@ const Logistics = () => {
         <FaqSection />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Logistics
+export default Logistics;

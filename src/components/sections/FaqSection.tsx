@@ -1,7 +1,6 @@
 import { Plus, Minus } from "lucide-react";
 import React, { useState } from "react";
 
-
 const FaqSection: React.FC = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
@@ -42,8 +41,8 @@ const FaqSection: React.FC = () => {
 
   return (
     <div className="mb-24">
-      <div className="flex flex-col items-center mt-20">
-        <h1 className=" text-3xl md:text-6xl font-bold">
+      <div className="flex flex-col items-center md:mt-20 mt-9">
+        <h1 className=" text-3xl text-center md:text-6xl font-bold">
           Frequently Asked Questions
         </h1>
       </div>

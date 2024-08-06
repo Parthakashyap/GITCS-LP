@@ -1,7 +1,4 @@
-import {
-  Banknote,
-  Plus,
-} from "lucide-react";
+import { Banknote, Plus } from "lucide-react";
 import banner from "../Images/Accounts/undraw_online_transactions_-02-ka.svg";
 import expense_management from "../Images/Accounts/undraw_data_reports_706v.svg";
 import financial_summary from "../Images/Accounts/undraw_receipt_re_fre3.svg";
@@ -16,14 +13,16 @@ const sections = [
   {
     title: "Expense management system",
     img: expense_management,
-    icon : Banknote,
-    description: "Efficiently track and manage employee experiences with our ERP’s intuitive Experiences Management System. Streamline feedback collection, performance evaluations, and career development insights in one centralized platform. Enhance employee engagement and optimize organizational growth through real-time analytics and actionable insights.",
+    icon: Banknote,
+    description:
+      "Efficiently track and manage employee experiences with our ERP’s intuitive Experiences Management System. Streamline feedback collection, performance evaluations, and career development insights in one centralized platform. Enhance employee engagement and optimize organizational growth through real-time analytics and actionable insights.",
   },
   {
     title: "Financial Summary System",
     img: financial_summary,
-    icon : Plus,
-    description: "Efficiently manage your financial data with our comprehensive Financial Summary System. Gain real-time insights into income, expenses, and profitability with intuitive dashboards and reports. Streamline your financial operations and make informed decisions with ease.",
+    icon: Plus,
+    description:
+      "Efficiently manage your financial data with our comprehensive Financial Summary System. Gain real-time insights into income, expenses, and profitability with intuitive dashboards and reports. Streamline your financial operations and make informed decisions with ease.",
   },
 ];
 
@@ -58,23 +57,23 @@ const Accounts = () => {
         </div>
       </div>
 
-      <div className="flex justify-center flex-col gap-8 items-center p-9">
+      <div className="flex justify-center flex-col gap-8 items-center md:p-9 p-3">
         <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
           What Brain Brings To The Table
         </h1>
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 md:max-w-[80%] grid-cols-1 gap-4">
           {sections.map((section, index) => (
-                <div
-                key={index}
-                className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-cyan-600 hover:bg-gray-100 duration-200"
-              >
-                <section.icon size={50} className="mb-6" />
-                <h1 className="text-2xl font-bold">{section.title}</h1>
-                <p className="break-words max-w-[80%] mt-2">
-                  {section.description}
-                </p>
-              </div>
+            <div
+              key={index}
+              className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-cyan-600 hover:bg-gray-100 duration-200"
+            >
+              <section.icon size={50} className="mb-6" />
+              <h1 className="text-2xl font-bold">{section.title}</h1>
+              <p className="break-words max-w-[80%] mt-2">
+                {section.description}
+              </p>
+            </div>
           ))}
         </div>
 

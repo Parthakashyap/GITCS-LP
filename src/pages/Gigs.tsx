@@ -105,21 +105,19 @@ const Gigs = () => {
         </div>
       </div>
 
-      <div className="flex justify-center flex-col gap-8 items-center p-9">
+      <div className="flex justify-center flex-col gap-8 items-center md:p-9 p-3">
         <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
           What Brain Brings To The Table
         </h1>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 md:w-[80%] grid-cols-1 gap-4">
-          {sections.map(({ icon: Icon, title , description }) => (
+          {sections.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
               className="p-8 rounded-md border border-black/10 hover:-translate-y-4 hover:border-[#8A2BE2] hover:bg-gray-100 duration-200"
             >
               <Icon size={50} className="mb-6" />
               <h1 className="text-2xl font-bold">{title}</h1>
-              <p className="break-words max-w-[80%] mt-2">
-                {description}
-              </p>
+              <p className="break-words max-w-[80%] mt-2">{description}</p>
             </div>
           ))}
         </div>

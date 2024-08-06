@@ -5,10 +5,10 @@ import {
   ListCheck,
   TabletSmartphone,
 } from "lucide-react";
-import banner from "../Images/Projects/undraw_data_trends_re_2cdy.svg"
-import contractor from "../Images/Projects/undraw_contract_re_ves9.svg"
-import bom from "../Images/Projects/undraw_factory_dy-0-a.svg"
-import project_management from "../Images/Projects/undraw_organizing_projects_re_9p1k.svg"
+import banner from "../Images/Projects/undraw_data_trends_re_2cdy.svg";
+import contractor from "../Images/Projects/undraw_contract_re_ves9.svg";
+import bom from "../Images/Projects/undraw_factory_dy-0-a.svg";
+import project_management from "../Images/Projects/undraw_organizing_projects_re_9p1k.svg";
 import tpi from "../Images/Projects/undraw_product_iteration_kjok.svg";
 import WordPullUp from "../components/magicui/word-pull-up";
 import { FadeText } from "../components/magicui/fade-text";
@@ -16,7 +16,7 @@ import BlurIn from "../components/magicui/blur-in";
 import FaqSection from "../components/sections/FaqSection";
 import PricingSection from "../components/sections/PricingSection";
 import { BrainFlowSection } from "../components/BrainFlow";
-import attendance from "../Images/Projects/undraw_businessman_re_mlee.svg"
+import attendance from "../Images/Projects/undraw_businessman_re_mlee.svg";
 
 const sections = [
   {
@@ -87,7 +87,7 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="flex justify-center flex-col gap-8 items-center p-9">
+      <div className="flex justify-center flex-col gap-8 items-center md:p-9 p-3">
         <h1 className="text-center text-4xl font-bold md:text-6xl mb-5">
           What Brain Brings To The Table
         </h1>
