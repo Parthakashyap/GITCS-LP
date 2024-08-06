@@ -34,7 +34,9 @@ const Body: React.FC = () => {
           <img
             src={landingImage}
             alt="hero"
-            className="w-full rounded-lg h-[230px]"
+            className="rounded-lg w-full"
+            height={60}
+            width={100}
           />
           <div className="absolute inset-x-0 bottom-0 h-[50%] rounded-md bg-gradient-to-t from-black to-transparent"></div>
           <BorderBeam className=" rounded-lg" />
