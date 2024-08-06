@@ -8,6 +8,7 @@ import landingImage from "../Images/SaaS-Dashboard.png";
 import { BorderBeam } from "./magicui/border-beam";
 import { MarqueeDemo } from "./sections/TestimonialsSection";
 import GradualSpacing from "./magicui/gradual-spacing";
+import { CoolMode } from "./magicui/cool-mode";
 const Body: React.FC = () => {
   return (
     <div className="bg-gray-100 z-10 min-h-screen flex flex-col items-center justify-center">
@@ -22,9 +23,11 @@ const Body: React.FC = () => {
           with Our SaaS Dashboard
         </p>
         <div className="items-center justify-center flex">
-          <button className="mt-8 bg-black text-white py-2 px-6 rounded-full">
-            Get Started &rarr;
-          </button>
+          <CoolMode>
+            <button className="mt-8 mb-24 bg-black text-white py-4 px-6 rounded-full">
+              Get Started &rarr;
+            </button>
+          </CoolMode>
         </div>
 
         <div className="relative w-[90%] mx-auto mt-8 border-2 border-black rounded-lg">
